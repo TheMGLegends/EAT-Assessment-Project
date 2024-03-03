@@ -1,22 +1,150 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Program Files">
+      <UniqueIdentifier>{2f95e454-905f-48a8-b2f1-3a32ade1d70d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Shape Files">
+      <UniqueIdentifier>{ba1e1cf5-386b-40d6-9a5a-595c93b368f2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Shape Files\Shape Base Class Files">
+      <UniqueIdentifier>{757a4432-e05c-4a72-b141-0edf07168a2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager Files">
+      <UniqueIdentifier>{2323b9af-4149-44a9-aae1-2afa1f99d680}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager Files\Manager Base Class Files">
+      <UniqueIdentifier>{cb0d7862-ccb9-43a6-beb0-c44546a1f702}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collision System Files">
+      <UniqueIdentifier>{d2e8c91c-aba7-421d-81d3-b12a1444e5f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component Files">
+      <UniqueIdentifier>{75cea579-6790-4378-8752-d6df22bf5de0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collision System Files\Collider Type Files">
+      <UniqueIdentifier>{a3e49331-de06-4dda-8127-8144237e96a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component Files\Component Base Class Files">
+      <UniqueIdentifier>{e0e433ae-1d10-4056-99a0-66ea2b470872}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collision System Files\Collider Type Files\Collider Base Class Files">
+      <UniqueIdentifier>{4d4172ff-d092-420a-bab7-2d263030ae05}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Program Files</Filter>
     </ClCompile>
+    <ClCompile Include="Program.cpp">
+      <Filter>Program Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Singleton.cpp">
+      <Filter>Manager Files\Manager Base Class Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Square.cpp">
+      <Filter>Shape Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rectangle.cpp">
+      <Filter>Shape Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Circle.cpp">
+      <Filter>Shape Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape.cpp">
+      <Filter>Shape Files\Shape Base Class Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Manager Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetManager.cpp">
+      <Filter>Manager Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionManager.cpp">
+      <Filter>Collision System Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeManager.cpp">
+      <Filter>Manager Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsManager.cpp">
+      <Filter>Manager Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rigidbody.cpp">
+      <Filter>Component Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>Component Files\Component Base Class Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>Component Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2.cpp">
+      <Filter>Component Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>Collision System Files\Collider Type Files\Collider Base Class Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCollider.cpp">
+      <Filter>Collision System Files\Collider Type Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CircleCollider.cpp">
+      <Filter>Collision System Files\Collider Type Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Program.h">
+      <Filter>Program Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>Manager Files\Manager Base Class Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Square.h">
+      <Filter>Shape Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>Shape Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Circle.h">
+      <Filter>Shape Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>Shape Files\Shape Base Class Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Manager Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetManager.h">
+      <Filter>Manager Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionManager.h">
+      <Filter>Collision System Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeManager.h">
+      <Filter>Manager Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsManager.h">
+      <Filter>Manager Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rigidbody.h">
+      <Filter>Component Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>Component Files\Component Base Class Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Component Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.h">
+      <Filter>Component Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>Collision System Files\Collider Type Files\Collider Base Class Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCollider.h">
+      <Filter>Collision System Files\Collider Type Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleCollider.h">
+      <Filter>Collision System Files\Collider Type Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
