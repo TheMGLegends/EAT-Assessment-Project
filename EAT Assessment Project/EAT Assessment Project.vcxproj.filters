@@ -43,6 +43,9 @@
     <Filter Include="Event System Files\Event Manager Files">
       <UniqueIdentifier>{6890719a-4b28-40f6-ad34-e1e5e5496160}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Debug Files">
+      <UniqueIdentifier>{7067fb57-5f02-4e56-817b-2293bbbcbdd5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -175,6 +178,9 @@
     </ClInclude>
     <ClInclude Include="EventManager.h">
       <Filter>Event System Files\Event Manager Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryLeakDetector.h">
+      <Filter>Debug Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
