@@ -139,6 +139,8 @@
     <ClCompile Include="CircleCollider.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="CollisionManager.cpp" />
+    <ClCompile Include="EventListener.cpp" />
+    <ClCompile Include="EventManager.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PhysicsManager.cpp" />
@@ -159,7 +161,11 @@
     <ClInclude Include="Circle.h" />
     <ClInclude Include="CircleCollider.h" />
     <ClInclude Include="Collider.h" />
+    <ClInclude Include="CollisionEvent.h" />
     <ClInclude Include="CollisionManager.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="EventListener.h" />
+    <ClInclude Include="EventManager.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="PhysicsManager.h" />
     <ClInclude Include="Point.h" />

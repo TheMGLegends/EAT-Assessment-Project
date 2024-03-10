@@ -31,6 +31,18 @@
     <Filter Include="Collision System Files\Collider Type Files\Collider Base Class Files">
       <UniqueIdentifier>{4d4172ff-d092-420a-bab7-2d263030ae05}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Event System Files">
+      <UniqueIdentifier>{95c92a89-b479-4343-8dbd-7ec517c24640}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Event System Files\Event Type Files">
+      <UniqueIdentifier>{ed430078-8a75-492e-bddf-76a3cf950cd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Event System Files\Event System Base Class Files">
+      <UniqueIdentifier>{c2b78142-efb9-4bd7-a2a3-aca2fd3885c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Event System Files\Event Manager Files">
+      <UniqueIdentifier>{6890719a-4b28-40f6-ad34-e1e5e5496160}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -90,6 +102,12 @@
     <ClCompile Include="CircleCollider.cpp">
       <Filter>Collision System Files\Collider Type Files</Filter>
     </ClCompile>
+    <ClCompile Include="EventListener.cpp">
+      <Filter>Event System Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EventManager.cpp">
+      <Filter>Event System Files\Event Manager Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Program.h">
@@ -145,6 +163,18 @@
     </ClInclude>
     <ClInclude Include="CircleCollider.h">
       <Filter>Collision System Files\Collider Type Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EventListener.h">
+      <Filter>Event System Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>Event System Files\Event System Base Class Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionEvent.h">
+      <Filter>Event System Files\Event Type Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EventManager.h">
+      <Filter>Event System Files\Event Manager Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

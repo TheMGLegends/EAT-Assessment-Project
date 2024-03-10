@@ -1,5 +1,6 @@
 #pragma once
-class Shape
+#include "EventListener.h"
+class Shape : public EventListener
 {
 };
 
