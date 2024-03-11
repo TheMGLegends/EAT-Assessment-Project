@@ -19,6 +19,10 @@ Vector2& Vector2::Normalize(Vector2& v)
 	if (magnitude != 0.0f)
 		v /= magnitude;
 
+	// INFO: Round the Vector Based on the Level of Decimal Precision
+	v.X = float(roundf(float(v.X * std::pow(10, DECIMAL_PRECISION))) / std::pow(10, DECIMAL_PRECISION));
+	v.Y = float(roundf(float(v.Y * std::pow(10, DECIMAL_PRECISION))) / std::pow(10, DECIMAL_PRECISION));
+
 	return v;
 }
 
@@ -51,7 +55,13 @@ float Vector2::Distance(Vector2 a, Vector2 b)
 /// <returns></returns>
 float Vector2::Magnitude()
 {
-	return float(std::sqrt(std::pow(X, 2) + std::powf(Y, 2)));
+	// INFO: Calculate the Magnitude of the Vector
+	float magnitude = float(std::sqrt(std::pow(X, 2) + std::powf(Y, 2)));
+
+	// INFO: Round the Magnitude Based on the Level of Decimal Precision
+	magnitude = float(roundf(float(magnitude * std::pow(10, DECIMAL_PRECISION))) / std::pow(10, DECIMAL_PRECISION));
+
+	return magnitude;
 }
 
 /// <summary>
@@ -67,6 +77,10 @@ Vector2 Vector2::normalized() const
 	// INFO: Prevents Dividing Vector by Zero (Undefined Behaviour)
 	if (magnitude != 0.0f)
 		v /= magnitude;
+
+	// INFO: Round the Vector Based on the Level of Decimal Precision
+	v.X = float(roundf(float(v.X * std::pow(10, DECIMAL_PRECISION))) / std::pow(10, DECIMAL_PRECISION));
+	v.Y = float(roundf(float(v.Y * std::pow(10, DECIMAL_PRECISION))) / std::pow(10, DECIMAL_PRECISION));
 	
 	return v;
 }

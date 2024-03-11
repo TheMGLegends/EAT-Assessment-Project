@@ -20,5 +20,7 @@ public:
 	inline void Translate(Vector2 v) { X += v.X; Y += v.Y; }
 	inline void TranslateX(float x) { X += x; }
 	inline void TranslateY(float y) { Y += y; }
+
+	inline void DisplayXY() const override { std::cout << "Transform Position (" << X << ", " << Y << ")" << std::endl; }
 };
 

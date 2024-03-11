@@ -25,5 +25,7 @@ public:
 	
 	float Magnitude();
 	Vector2 normalized() const;
+
+	inline void DisplayXY() const override { std::cout << "Vector (" << X << ", " << Y << ")" << std::endl; }
 };
 

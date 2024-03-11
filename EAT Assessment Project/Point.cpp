@@ -9,10 +9,24 @@ Point& Point::operator+=(const Point& p)
 	return *this;
 }
 
+Point& Point::operator+=(const float s)
+{
+	X += s;
+	Y += s;
+	return *this;
+}
+
 Point& Point::operator-=(const Point& p)
 {
 	X -= p.X;
 	Y -= p.Y;
+	return *this;
+}
+
+Point& Point::operator-=(const float s)
+{
+	X -= s;
+	Y -= s;
 	return *this;
 }
 
@@ -23,10 +37,24 @@ Point& Point::operator/=(const Point& p)
 	return *this;
 }
 
+Point& Point::operator/=(const float s)
+{
+	X /= s;
+	Y /= s;
+	return *this;
+}
+
 Point& Point::operator*=(const Point& p)
 {
 	X *= p.X;
 	Y *= p.Y;
+	return *this;
+}
+
+Point& Point::operator*=(const float s)
+{
+	X *= s;
+	Y *= s;
 	return *this;
 }
 

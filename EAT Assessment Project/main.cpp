@@ -2,6 +2,9 @@
 
 #include <iostream>
 
+// TEMPORARY INCLUDES FOR TESTING
+#include "Transform.h"
+
 int main(int argc, char* argv[])
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
@@ -15,6 +18,8 @@ int main(int argc, char* argv[])
 	{
 		std::cout << "Failed to create window. SDL error: " << SDL_GetError() << std::endl;
 	}
+
+	// TEMPORARY TESTING AREAS
 
 	(void)getchar();
 
