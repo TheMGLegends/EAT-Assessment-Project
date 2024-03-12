@@ -4,6 +4,7 @@
 
 // TEMPORARY INCLUDES FOR TESTING
 #include "Transform.h"
+#include "Vector2.h"
 
 int main(int argc, char* argv[])
 {
@@ -20,6 +21,12 @@ int main(int argc, char* argv[])
 	}
 
 	// TEMPORARY TESTING AREAS
+	Transform t{};
+	Vector2 v{ 5, 2 };
+	t.Rotate(1);
+	std::cout << std::endl;
+	t.Up().DisplayXY();
+	t.Right().DisplayXY();
 
 	(void)getchar();
 
