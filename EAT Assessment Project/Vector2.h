@@ -19,6 +19,7 @@ public:
 public:
 	inline Vector2(float x = 0, float y = 0) : Point{ x,y } {}
 
+	// INFO: Calculation Methods
 	static Vector2& Normalize(Vector2& v);
 	static float Dot(Vector2 v1, Vector2 v2);
 	static float Distance(Vector2 a, Vector2 b);
@@ -26,6 +27,7 @@ public:
 	float Magnitude();
 	Vector2 normalized() const;
 
+	// INFO: Debug Methods
 	inline void DisplayXY() const override { std::cout << "Vector (" << X << ", " << Y << ")" << std::endl; }
 };
 

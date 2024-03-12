@@ -44,6 +44,7 @@ public:
 	inline bool operator==(const Point& p) const { return (X == p.X) && (Y == p.Y); }
 	inline bool operator!=(const Point& p) const { return (X != p.X) || (Y != p.Y); }
 
+	// INFO: Debug Methods
 	inline virtual void DisplayXY() const { std::cout << "Location (" << X << ", " << Y << ")" << std::endl; }
 };
 
