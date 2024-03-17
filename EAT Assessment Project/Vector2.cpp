@@ -1,5 +1,7 @@
 #include "Vector2.h"
 
+#include "MemoryLeakDetector.h"
+
 const Vector2 Vector2::UP(0, 1);
 const Vector2 Vector2::DOWN(0, -1);
 const Vector2 Vector2::LEFT(-1, 0);

@@ -1,7 +1,21 @@
 #include "TimeManager.h"
 
+#include <SDL.h>
+
+#include "MemoryLeakDetector.h"
+
 TimeManager* Singleton<TimeManager>::instance = nullptr;
 
+TimeManager::TimeManager() :
+	deltaTime{ 0 },
+	previousTime{ 0 },
+	currentTime{ 0 }
+{
+}
+
+/// <summary>
+/// Clean up method during program termination
+/// </summary>
 void TimeManager::Clean()
 {
 	// INFO: Clean up the instance
@@ -11,3 +25,22 @@ void TimeManager::Clean()
 		instance = nullptr;
 	}
 }
+
+/// <summary>
+/// Calculates the deltaTime in seconds based on the previous 
+/// and current time values
+/// </summary>
+void TimeManager::Tick()
+{
+	// INFO: Gets the current time
+	currentTime = (float)SDL_GetTicks();
+
+	// INFO: Subtracts the previous time from the current time to
+	// get the time between frames (deltaTime) in seconds
+	deltaTime = (currentTime - previousTime) / MILLISECONDS_IN_SECOND;
+
+	// INFO: Sets the old currentTime to the previousTime ready for
+	// the next SDL_GetTicks call
+	previousTime = currentTime;
+}
+

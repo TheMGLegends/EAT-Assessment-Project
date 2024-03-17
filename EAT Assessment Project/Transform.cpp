@@ -1,5 +1,7 @@
 #include "Transform.h"
 
+#include "MemoryLeakDetector.h"
+
 #include <cmath>
 
 Transform::Transform(float x, float y) : Point{ x, y }
