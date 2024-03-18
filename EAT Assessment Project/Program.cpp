@@ -1,6 +1,13 @@
 #include "Program.h"
 
+#include "InputManager.h"
+#include "TimeManager.h"
+
 #include "SDL_image.h"
+
+#include <iostream>
+
+Program* Singleton<Program>::instance = nullptr;
 
 Program::Program() :
 	window{ nullptr },
@@ -9,11 +16,12 @@ Program::Program() :
 {
 }
 
-/// <summary>
-/// Clean up method during program termination
-/// </summary>
 void Program::Clean()
 {
+	// INFO: Clean Managers
+	InputManager::Instance()->Clean();
+	TimeManager::Instance()->Clean();
+
 	// INFO: Destroys the SDL renderer & window
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
@@ -32,45 +40,73 @@ void Program::Clean()
 	}
 }
 
-/// <summary>
-/// Initializes the SDL Libraries as well as other things like textures and game objects
-/// </summary>
-/// <param name="WINDOW_TITLE">: The title of the SDL window</param>
-/// <param name="screenWidth">: The width of the SDL window</param>
-/// <param name="screenHeight">: The height of the SDL window</param>
-/// <returns></returns>
 bool Program::Initialize(const char* WINDOW_TITLE, int screenWidth, int screenHeight)
 {
-	return false;
+	// INFO: Initialize and Verify the SDL Library
+	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
+	{
+		std::cout << "Failed to initialize SDL. SDL Error: " << SDL_GetError() << std::endl;
+		return false;
+	}
+
+	// INFO: Initialize and Verify the SDL Image Library
+	int flags = IMG_INIT_JPG | IMG_INIT_PNG;
+
+	if (IMG_Init(flags) != flags)
+	{
+		std::cout << "Failed to initialize SDL Image. SDL Image Error: " << IMG_GetError() << std::endl;
+		return false;
+	}
+	
+	// INFO: Create and Verify SDL Window
+	window = SDL_CreateWindow(WINDOW_TITLE, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 
+							  screenWidth, screenHeight, NULL);
+
+	if (window == nullptr)
+	{
+		std::cout << "Failed to create window. SDL Error: " << SDL_GetError() << std::endl;
+		return false;
+	}
+
+	// INFO: Create and Verify SDL Renderer
+	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+
+	if (renderer == nullptr)
+	{
+		std::cout << "Failed to create renderer. SDL Error: " << SDL_GetError() << std::endl;
+		return false;
+	}
+
+	// INFO: Set the Initial Screen Color (White and Fully Opaque)
+	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+
+	// INFO: Activate Program Loop
+	isRunning = true;
+
+	return isRunning;
 }
 
-/// <summary>
-/// Handles the users input
-/// </summary>
 void Program::HandleInput()
 {
+	InputManager::Instance()->PollEvents();
 }
 
-/// <summary>
-/// Processes the events that occur during the execution of the program
-/// e.g. (Collision Events)
-/// </summary>
 void Program::ProcessEvents()
 {
 }
 
-/// <summary>
-/// Updates all logic associated with each game object that exists in the program
-/// </summary>
-/// <param name="dt">: The deltaTime value used for scaling things with time</param>
 void Program::Update(float dt)
 {
 }
 
-/// <summary>
-/// Calls the draw function of each game object and draws them on the screen
-/// </summary>
 void Program::Draw()
 {
+	// INFO: Clear the renderer ready for the next frame to be shown
+	SDL_RenderClear(renderer);
+
+	
+
+	// INFO: Present the new frame to the screen
+	SDL_RenderPresent(renderer);
 }
 

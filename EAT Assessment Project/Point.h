@@ -2,7 +2,6 @@
 
 #include <iostream>
 
-// INFO: Global Constants
 const int DECIMAL_PRECISION = 2;
 
 /// <summary>
@@ -17,7 +16,9 @@ public:
 public:
 	inline Point(float x = 0, float y = 0) : X{ x }, Y{ y } {}
 
+
 	// INFO: Overloaded Operators
+
 	inline Point operator+(const Point& p) const { return Point(X + p.X, Y + p.Y); }
 	inline Point operator-(const Point& p) const { return Point(X - p.X, Y - p.Y); }
 
@@ -44,7 +45,9 @@ public:
 	inline bool operator==(const Point& p) const { return (X == p.X) && (Y == p.Y); }
 	inline bool operator!=(const Point& p) const { return (X != p.X) || (Y != p.Y); }
 
+
 	// INFO: Debug Methods
+
 	inline virtual void DisplayXY() const { std::cout << "Location (" << X << ", " << Y << ")" << std::endl; }
 };
 

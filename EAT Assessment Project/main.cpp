@@ -1,36 +1,28 @@
-#include "SDL.h"
+#include "Program.h"
+#include "TimeManager.h"
 
 #include "MemoryLeakDetector.h"
-
-#include <iostream>
-
-// TEMPORARY INCLUDES FOR TESTING
-
 
 int main(int argc, char* argv[])
 {
 	// INFO: Detection Flags for Memory Leaks
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
-	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
+	Program::Instance()->Initialize("Engine Architecture and Tools Assessment Project");
+
+	while (Program::Instance()->IsRunning())
 	{
-		std::cout << "Failed to initialise SDL. SDL error: " << SDL_GetError() << std::endl;
+		// INFO: Calculate deltaTime at the beginning of the loop
+		TimeManager::Instance()->Tick();
+
+		Program::Instance()->HandleInput();
+		Program::Instance()->ProcessEvents();
+		Program::Instance()->Update(TimeManager::Instance()->DeltaTime());
+		Program::Instance()->Draw();
 	}
 
-	SDL_Window* sdlWindow = SDL_CreateWindow("Engine Architecture and Tools Assessment Project", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, NULL);
-
-	if (sdlWindow == nullptr)
-	{
-		std::cout << "Failed to create window. SDL error: " << SDL_GetError() << std::endl;
-	}
-
-	// TEMPORARY TESTING AREAS
-
-
-	(void)getchar();
-
-	SDL_DestroyWindow(sdlWindow);
-	SDL_Quit();
+	// INFO: Clean Program Class Before Exit
+	Program::Instance()->Clean();
 
 	return 0;
 }

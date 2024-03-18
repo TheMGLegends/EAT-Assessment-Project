@@ -17,9 +17,21 @@ private:
 	float currentTime;
 
 public:
+	/// <summary>
+	/// Clean up method during program termination
+	/// </summary>
 	void Clean() override;
+
+	/// <summary>
+	/// Calculates the deltaTime in seconds based on the previous 
+	/// and current time values
+	/// </summary>
 	void Tick();
 
+	/// <summary>
+	/// The getter for delta time
+	/// </summary>
+	/// <returns>Returns the delta time</returns>
 	inline float DeltaTime() const { return deltaTime; }
 
 private:

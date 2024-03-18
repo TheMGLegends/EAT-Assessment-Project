@@ -13,9 +13,6 @@ TimeManager::TimeManager() :
 {
 }
 
-/// <summary>
-/// Clean up method during program termination
-/// </summary>
 void TimeManager::Clean()
 {
 	// INFO: Clean up the instance
@@ -26,10 +23,6 @@ void TimeManager::Clean()
 	}
 }
 
-/// <summary>
-/// Calculates the deltaTime in seconds based on the previous 
-/// and current time values
-/// </summary>
 void TimeManager::Tick()
 {
 	// INFO: Gets the current time
