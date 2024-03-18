@@ -1,5 +1,7 @@
 #include "Program.h"
 
+#include "SDL_image.h"
+
 Program::Program() :
 	window{ nullptr },
 	renderer{ nullptr },
@@ -16,7 +18,8 @@ void Program::Clean()
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 
-	//IMG_Quit();
+	// INFO: Unloads the SDL Image Library
+	IMG_Quit();
 
 	// INFO: Unloads the main SDL Library
 	SDL_Quit();
