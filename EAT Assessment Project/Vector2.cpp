@@ -61,3 +61,15 @@ Vector2 Vector2::normalized() const
 	
 	return v;
 }
+
+Vector2& Vector2::operator=(const Point& p)
+{
+	// INFO: Prevents Self-Assignment
+	if (this != &p)
+	{
+		X = p.X;
+		Y = p.Y;
+	}
+
+	return *this;
+}

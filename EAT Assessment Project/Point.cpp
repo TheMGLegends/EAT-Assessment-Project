@@ -69,3 +69,4 @@ Point& Point::operator=(const Point& p)
 
 	return *this;
 }
+

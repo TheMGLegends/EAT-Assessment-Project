@@ -59,6 +59,11 @@ public:
 	Vector2 normalized() const;
 
 
+	// INFO: Overloaded Operators
+
+	Vector2& operator=(const Point& p);
+
+
 	// INFO: Debug Methods
 
 	inline void DisplayXY() const override { std::cout << "Vector (" << X << ", " << Y << ")" << std::endl; }
