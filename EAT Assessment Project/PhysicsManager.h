@@ -2,9 +2,17 @@
 
 #include "Singleton.h"
 
-#include "Vector2.h"
+#include "Rigidbody.h"
 
 const float BASE_GRAVITY = 9.8f;
+
+enum class ForceMode
+{
+	Force,
+	Acceleration,
+	Impulse,
+	VelocityChange
+};
 
 class PhysicsManager : public Singleton<PhysicsManager>
 {
@@ -27,14 +35,25 @@ public:
 	/// to them so that the original values are changed rather than working
 	/// with copies
 	/// </summary>
+	/// <param name="rb">: Reference to the Rigidbody</param>
 	/// <param name="dt">: Delta Time</param>
-	/// <param name="mass">: A reference to the mass of the rb</param>
-	/// <param name="force">: A reference to the force of the rb</param>
-	/// <param name="acceleration">: A reference to the acceleration of the rb</param>
-	/// <param name="velocity">: A reference to the velocity of the rb</param>
-	/// <param name="displacement">: A reference to the displacement of the rb</param>
-	void UpdatePhysics(float dt, float& mass, Vector2& force, Vector2& acceleration,
-					   Vector2& velocity, Vector2& displacement);
+	void UpdatePhysics(Rigidbody& rb, float dt) const;
+
+	/// <summary>
+	/// Used to add forces to a rigidbody to change the movement of the GO that
+	/// they are attached to
+	/// </summary>
+	/// <param name="rb">: Reference to the Rigidbody</param>
+	/// <param name="force">: The force to be applied to the rigidbody</param>
+	/// <param name="dt">: Delta Time</param>
+	/// <param name="mode">: How the force should be applied to the rigidbody</param>
+	void AddForce(Rigidbody& rb, Vector2 force, float dt, ForceMode mode = ForceMode::Force);
+
+	/// <summary>
+	/// Cancels the force currently affecting the rigidbody
+	/// </summary>
+	/// <param name="rb">: Reference to the Rigidbody</param>
+	inline void CancelForce(Rigidbody& rb) { rb.force = Vector2::ZERO; }
 
 	/// <summary>
 	/// The setter for global gravity

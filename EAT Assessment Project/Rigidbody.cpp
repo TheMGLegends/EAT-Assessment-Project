@@ -11,7 +11,3 @@ Rigidbody::Rigidbody() :
 {
 }
 
-void Rigidbody::UpdateRigidbody(float dt)
-{
-	PhysicsManager::Instance()->UpdatePhysics(dt, mass, force, acceleration, velocity, displacement);
-}

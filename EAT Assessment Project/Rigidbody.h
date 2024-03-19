@@ -4,17 +4,9 @@
 
 const float BASE_MASS = 1.0f;
 
-enum class ForceMode
-{
-	Force,
-	Acceleration,
-	Impulse,
-	VelocityChange
-};
-
 class Rigidbody
 {
-private:
+public:
 	float mass;
 	
 	Vector2 force;
@@ -24,11 +16,5 @@ private:
 	
 public:
 	Rigidbody();
-
-	/// <summary>
-	/// Updates the values held in the rigidbody by passing them to the physics managers'
-	/// update physics method
-	/// </summary>
-	void UpdateRigidbody(float dt);
 };
 
