@@ -69,6 +69,12 @@ public:
 	/// <param name="isRunning">: Whether the loop should continue looping</param>
 	inline void SetIsRunning(bool isRunning) { this->isRunning = isRunning; }
 
+	/// <summary>
+	/// The getter for the renderer
+	/// </summary>
+	/// <returns>Returns the renderer member variable held inside of program</returns>
+	inline SDL_Renderer* GetRenderer() { return renderer; }
+
 private:
 	Program();
 };
