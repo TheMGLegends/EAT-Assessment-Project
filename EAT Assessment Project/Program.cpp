@@ -1,13 +1,24 @@
 #include "Program.h"
 
 #include "InputManager.h"
+#include "AssetManager.h"
 #include "TimeManager.h"
 
 #include "SDL_image.h"
 
 #include <iostream>
 
+// TESTING INCLUDES
+#include "Square.h"
+#include "Rectangle.h"
+#include "Circle.h"
+
 Program* Singleton<Program>::instance = nullptr;
+
+// TESTING GAME OBJECTS
+Square* square = nullptr;
+Rectangle* rectangle = nullptr;
+Circle* circle = nullptr;
 
 Program::Program() :
 	window{ nullptr },
@@ -21,6 +32,29 @@ void Program::Clean()
 	// INFO: Clean Managers
 	InputManager::Instance()->Clean();
 	TimeManager::Instance()->Clean();
+	AssetManager::Instance()->Clean();
+
+	// TESTING DELETE GAME OBJECTS
+	if (square != nullptr)
+	{
+		square->Clean();
+		delete square;
+		square = nullptr;
+	}
+
+	if (rectangle != nullptr)
+	{
+		rectangle->Clean();
+		delete rectangle;
+		rectangle = nullptr;
+	}
+
+	if (circle != nullptr)
+	{
+		circle->Clean();
+		delete circle;
+		circle = nullptr;
+	}
 
 	// INFO: Destroys the SDL renderer & window
 	SDL_DestroyRenderer(renderer);
@@ -83,6 +117,15 @@ bool Program::Initialize(const char* WINDOW_TITLE, int screenWidth, int screenHe
 	// INFO: Activate Program Loop
 	isRunning = true;
 
+	// TESTING INITIALIZATION OF GAME OBJECTS
+	square = new Square(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 20);
+	rectangle = new Rectangle(SCREEN_WIDTH / 4, SCREEN_HEIGHT / 2, 50, 100);
+	circle = new Circle(SCREEN_WIDTH * 0.75f, SCREEN_HEIGHT / 2, 25);
+
+	AssetManager::Instance()->LoadTexture(square, renderer);
+	AssetManager::Instance()->LoadTexture(rectangle, renderer);
+	AssetManager::Instance()->LoadTexture(circle, renderer);
+
 	return isRunning;
 }
 
@@ -104,7 +147,9 @@ void Program::Draw()
 	// INFO: Clear the renderer ready for the next frame to be shown
 	SDL_RenderClear(renderer);
 
-	
+	square->Draw();
+	rectangle->Draw();
+	circle->Draw();
 
 	// INFO: Present the new frame to the screen
 	SDL_RenderPresent(renderer);

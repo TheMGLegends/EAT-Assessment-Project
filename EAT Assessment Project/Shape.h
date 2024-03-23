@@ -79,6 +79,11 @@ public:
 	virtual void Clean();
 
 	/// <summary>
+	/// Gets the centre point of the shape
+	/// </summary>
+	virtual Point GetCentrePoint() = 0;
+
+	/// <summary>
 	/// Getter for the Shapes' ID
 	/// </summary>
 	/// <returns>The ID of the Shape</returns>

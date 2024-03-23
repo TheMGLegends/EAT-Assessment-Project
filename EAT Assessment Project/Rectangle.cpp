@@ -1,5 +1,7 @@
 #include "Rectangle.h"
 
+#include "AssetManager.h"
+
 #include "MemoryLeakDetector.h"
 
 Rectangle::Rectangle(float x, float y, int width, int height) : Shape(x, y)
@@ -29,6 +31,7 @@ void Rectangle::Update(float dt)
 
 void Rectangle::Draw()
 {
+	AssetManager::Instance()->DrawRect(GetID(), position.X, position.Y, width, height);
 }
 
 void Rectangle::Clean()
@@ -38,4 +41,9 @@ void Rectangle::Clean()
 
 	// INFO: Clean up Base Class Contents
 	Shape::Clean();
+}
+
+Point Rectangle::GetCentrePoint()
+{
+	return Point(position.X + width / 2, position.Y + height / 2);
 }

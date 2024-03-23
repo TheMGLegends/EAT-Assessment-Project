@@ -33,23 +33,17 @@ public:
 	void LoadTexture(Shape* shape, SDL_Renderer* renderer);
 
 	/// <summary>
-	/// Used for drawing rects
+	/// Used for drawing a rect
 	/// </summary>
-	/// <param name="key">: The key used to access the value in the texture library</param>
-	/// <param name="x">: The x-axis value of the objects position</param>
-	/// <param name="y">: The y-axis value of the objects position</param>
-	/// <param name="width">: The width of the object</param>
-	/// <param name="height">: The height of the object</param>
-	//void Draw(int key, int x, int y, int width, int height, const double angle = 0);
+	/// <param name="id">: The id of the texture to use to draw the rect with</param>
+	/// <param name="x">: The x position of the rect</param>
+	/// <param name="y">: The y position of the rect</param>
+	/// <param name="width">: The width of the rect</param>
+	/// <param name="height">: The height of the rect</param>
+	void DrawRect(int id, int x, int y, int width, int height);
 
-	/// <summary>
-	/// Used for drawing circles
-	/// </summary>
-	/// <param name="key">: The key used to access the value in the texture library</param>
-	/// <param name="x">: The x-axis value of the objects position</param>
-	/// <param name="y">: The y-axis value of the objects position</param>
-	/// <param name="radius">: The radius of object</param>
-	//void Draw(int key, int x, int y, int radius, const double angle = 0);
+	// STUPID REDO THIS MAY ALSO HAVE TO REDO LOAD CIRCLE
+	void DrawCircle(int id, Color color);
 
 private:
 	AssetManager();
@@ -57,10 +51,19 @@ private:
 	/// <summary>
 	/// Used for loading squares and rectangles
 	/// </summary>
+	/// <param name="id">: The id of the texture to load</param>
 	/// <param name="width">: The width of the rect</param>
 	/// <param name="height">: The height of the rect</param>
 	/// <param name="color">: The color values of the object</param>
 	/// <param name="renderer">: The SDL renderer</param>
-	void LoadRect(int key, int width, int height, Color color, SDL_Renderer* renderer);
+	void LoadRect(int id, int width, int height, Color color, SDL_Renderer* renderer);
+
+	/// <summary>
+	/// Used for loading circles
+	/// </summary>
+	/// <param name="id">: The id of the texture to load</param>
+	/// <param name="centre">: The centre of the circle</param>
+	/// <param name="radius">: The radius of the circle</param>
+	void LoadCircle(int id, Point centre, int radius);
 };
 

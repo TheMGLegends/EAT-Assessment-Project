@@ -5,7 +5,7 @@
 #include <SDL.h>
 
 constexpr auto SCREEN_WIDTH = 960;
-constexpr auto SCREEN_HEIGHT = 480;
+constexpr auto SCREEN_HEIGHT = 960;
 
 class Program : public Singleton<Program>
 {

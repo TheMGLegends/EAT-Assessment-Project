@@ -31,5 +31,16 @@ public:
 	/// Clean up method during program termination
 	/// </summary>
 	void Clean() override;
+
+	/// <summary>
+	/// Gets the centre point of the shape
+	/// </summary>
+	Point GetCentrePoint() override;
+
+	/// <summary>
+	/// Getter for the Squares' Size
+	/// </summary>
+	/// <returns>Size of the square</returns>
+	inline int GetSize() const { return size; }
 };
 

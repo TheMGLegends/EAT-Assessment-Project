@@ -1,8 +1,10 @@
 #include "Circle.h"
 
+#include "AssetManager.h"
+
 #include "MemoryLeakDetector.h"
 
-Circle::Circle(float x, float y, float radius) : Shape(x, y)
+Circle::Circle(float x, float y, int radius) : Shape(x, y)
 {
 	this->radius = radius;
 
@@ -19,6 +21,7 @@ void Circle::Update(float dt)
 
 void Circle::Draw()
 {
+	AssetManager::Instance()->DrawCircle(GetID(), color);
 }
 
 void Circle::Clean()
@@ -28,4 +31,9 @@ void Circle::Clean()
 
 	// INFO: Clean up Base Class Contents
 	Shape::Clean();
+}
+
+Point Circle::GetCentrePoint()
+{
+	return Point(position.X + radius, position.Y + radius);
 }

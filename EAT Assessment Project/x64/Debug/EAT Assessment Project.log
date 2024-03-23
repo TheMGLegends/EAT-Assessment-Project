@@ -1,7 +1,17 @@
-﻿  main.cpp
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\crtdbg.h(307,1): warning C4005: '_malloca': macro redefinition
-  (compiling source file 'main.cpp')
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\malloc.h(124,1):
-  see previous definition of '_malloca'
-  
+﻿  AssetManager.cpp
+B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\AssetManager.cpp(31,31): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\AssetManager.cpp(31,31): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\AssetManager.cpp(31,41): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\AssetManager.cpp(31,41): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\AssetManager.cpp(161,29): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Circle.cpp
+  Program.cpp
+  Rectangle.cpp
+B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\Rectangle.cpp(34,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\Rectangle.cpp(34,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Square.cpp
+B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\Square.cpp(9,15): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\Square.cpp(24,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\Square.cpp(24,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
   EAT Assessment Project.vcxproj -> B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\x64\Debug\EAT Assessment Project.exe

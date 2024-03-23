@@ -33,5 +33,22 @@ public:
 	/// Clean up method during program termination
 	/// </summary>
 	void Clean() override;
+
+	/// <summary>
+	/// Gets the centre point of the shape
+	/// </summary>
+	Point GetCentrePoint() override;
+
+	/// <summary>
+	/// Getter for the Rectangles' Width
+	/// </summary>
+	/// <returns>The width of the rectangle</returns>
+	inline int GetWidth() const { return width; }
+
+	/// <summary>
+	/// Getter for the Rectangles' Height
+	/// </summary>
+	/// <returns>The height of the rectangle</returns>
+	inline int GetHeight() const { return height; }
 };
 

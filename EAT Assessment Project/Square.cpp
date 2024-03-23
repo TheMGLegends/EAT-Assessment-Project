@@ -1,5 +1,7 @@
 #include "Square.h"
 
+#include "AssetManager.h"
+
 #include "MemoryLeakDetector.h"
 
 Square::Square(float x, float y, float size) : Shape(x, y)
@@ -19,6 +21,7 @@ void Square::Update(float dt)
 
 void Square::Draw()
 {
+	AssetManager::Instance()->DrawRect(GetID(), position.X, position.Y, size, size);
 }
 
 void Square::Clean()
@@ -28,4 +31,9 @@ void Square::Clean()
 
 	// INFO: Clean up Base Class Contents
 	Shape::Clean();
+}
+
+Point Square::GetCentrePoint()
+{
+	return Point(position.X + size / 2, position.Y + size / 2);
 }
