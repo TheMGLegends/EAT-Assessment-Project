@@ -2,6 +2,8 @@
 
 #include "Program.h"
 
+#include "MemoryLeakDetector.h"
+
 AssetManager* Singleton<AssetManager>::instance = nullptr;
 
 AssetManager::AssetManager()
@@ -40,7 +42,7 @@ void AssetManager::Draw(int key, int x, int y, int width, int height, const doub
 
 void AssetManager::Draw(int key, int x, int y, int radius, const double angle)
 {
-	if (HasTexture(key))
+	//if (HasTexture(key))
 		//Draw Circle
 }
 
