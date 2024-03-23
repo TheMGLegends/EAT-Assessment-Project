@@ -4,6 +4,7 @@
 #include "Square.h"
 #include "Rectangle.h"
 #include "Circle.h"
+#include "Vector2.h"
 
 #include "MemoryLeakDetector.h"
 
@@ -13,61 +14,6 @@ AssetManager::AssetManager()
 {
 }
 
-void AssetManager::LoadRect(int id, int width, int height, Color color, SDL_Renderer* renderer)
-{
-	SDL_Surface* surface = SDL_CreateRGBSurface(0, width, height, 32, 0, 0, 0, 0);
-	Uint32 rectColor = SDL_MapRGBA(surface->format, color.R, color.G, color.B, color.A);
-	SDL_FillRect(surface, NULL, rectColor);
-
-	SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
-
-	SDL_FreeSurface(surface);
-
-	rectLib[id] = texture;
-}
-
-void AssetManager::LoadCircle(int id, Point centre, int radius)
-{
-	SDL_Point centrePoint{ centre.X, centre.Y };
-
-	std::vector<SDL_Point> points;
-
-	int diameter = radius * 2;
-
-	int x = radius - 1;
-	int y = 0;
-	int tx = 1;
-	int ty = 1;
-	int error = tx - diameter;
-
-	while (x >= y)
-	{
-		points.push_back({ centrePoint.x + x, centrePoint.y - y });
-		points.push_back({ centrePoint.x + x, centrePoint.y + y });
-		points.push_back({ centrePoint.x - x, centrePoint.y - y });
-		points.push_back({ centrePoint.x - x, centrePoint.y + y });
-		points.push_back({ centrePoint.x + y, centrePoint.y - x });
-		points.push_back({ centrePoint.x + y, centrePoint.y + x });
-		points.push_back({ centrePoint.x - y, centrePoint.y - x });
-		points.push_back({ centrePoint.x - y, centrePoint.y + x });
-
-		if (error <= 0)
-		{
-			++y;
-			error += ty;
-			ty += 2;
-		}
-
-		if (error > 0)
-		{
-			--x;
-			tx += 2;
-			error += (tx - diameter);
-		}
-	}
-
-	circleLib[id] = points;
-}
 
 void AssetManager::Clean()
 {
@@ -117,21 +63,29 @@ void AssetManager::LoadTexture(Shape* shape, SDL_Renderer* renderer)
 	}
 		break;
 	case ShapeType::Circle:
-	{
-		Circle* circle = dynamic_cast<Circle*>(shape);
-
-		if (circle != nullptr)
-			LoadCircle(circle->GetID(), circle->GetCentrePoint(), 
-				circle->GetRadius());
-		else
-			std::cout << "Failed downcast to circle!" << std::endl;
-	}
-		break;
 	case ShapeType::None:
-		break;
 	default:
 		break;
 	}
+}
+
+void AssetManager::LoadRect(int id, int width, int height, Color color, SDL_Renderer* renderer)
+{
+	// INFO: Creates a Surface that can be colored on
+	SDL_Surface* surface = SDL_CreateRGBSurface(0, width, height, 32, 0, 0, 0, 0);
+
+	// INFO: Converts RGBA values into pixel values which can then be used
+	// to fill in the surface
+	Uint32 rectColor = SDL_MapRGBA(surface->format, color.R, color.G, color.B, color.A);
+
+	// INFO: Fills the surface provided with the specified color
+	SDL_FillRect(surface, NULL, rectColor);
+
+	SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
+
+	SDL_FreeSurface(surface);
+
+	rectLib[id] = texture;
 }
 
 void AssetManager::DrawRect(int id, int x, int y, int width, int height)
@@ -147,19 +101,43 @@ void AssetManager::DrawRect(int id, int x, int y, int width, int height)
 					 &destinationRect, 0, NULL, SDL_FLIP_NONE);
 }
 
-void AssetManager::DrawCircle(int id, Color color)
+void AssetManager::DrawCircle(Point centre, int radius, Color color)
 {
 	// INFO: Given that there is no renderer or the ID doesn't match a texture
 	// we exit out of the function
-	if (Program::Instance()->GetRenderer() == nullptr || circleLib[id].empty())
+	if (Program::Instance()->GetRenderer() == nullptr)
 		return;
 
-	SDL_SetRenderDrawColor(Program::Instance()->GetRenderer(), color.R, color.G, 
-						   color.B, color.A);
+	// INFO: Set the renderer draw color to the color that is going to represent
+	// the circle
+	SDL_SetRenderDrawColor(Program::Instance()->GetRenderer(), color.R, color.G,
+		color.B, color.A);
 
-	SDL_RenderDrawPoints(Program::Instance()->GetRenderer(), circleLib[id].data(), 
-					     circleLib[id].size());
+	int diameter = radius * 2;
 
-	// INFO: Set the Initial Screen Color (White and Fully Opaque)
-	SDL_SetRenderDrawColor(Program::Instance()->GetRenderer(), 255, 255, 255, 255);
+	// INFO: Scans the rect sized area of the circle and detects whether the current
+	// point is within the bounds of the circle, if so it will be drawn otherwise
+	// it will be ignored
+	for (int width = 0; width < diameter; width++)
+	{
+		for (int height = 0; height < diameter; height++)
+		{
+			int dx = radius - width; // INFO: Starts far right going all the way left
+			int dy = radius - height; // INFO: Starts bottom going all the way up
+
+			Vector2 displacedVector{ (float)dx, (float)dy };
+
+			// INFO: Given that the displaced vector is within the bounds of circle
+			// (smaller than the radius) we will draw a point at that point
+			if (displacedVector.Magnitude() <= radius)
+				SDL_RenderDrawPoint(Program::Instance()->GetRenderer(), centre.X + dx, centre.Y + dy);
+		}
+	}
+
+	// INFO: Set the renderer draw color back to the screen color after having
+	// drawn the circle
+	Color originalColor = Program::Instance()->GetScreenColor();
+
+	SDL_SetRenderDrawColor(Program::Instance()->GetRenderer(), originalColor.R, 
+		originalColor.G, originalColor.B, originalColor.A);
 }

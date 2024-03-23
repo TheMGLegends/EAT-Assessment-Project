@@ -1,17 +1,2 @@
-﻿  AssetManager.cpp
-B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\AssetManager.cpp(31,31): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\AssetManager.cpp(31,31): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\AssetManager.cpp(31,41): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\AssetManager.cpp(31,41): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\AssetManager.cpp(161,29): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-  Circle.cpp
-  Program.cpp
-  Rectangle.cpp
-B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\Rectangle.cpp(34,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\Rectangle.cpp(34,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  Square.cpp
-B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\Square.cpp(9,15): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\Square.cpp(24,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\Square.cpp(24,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  Generating Code...
+﻿  Program.cpp
   EAT Assessment Project.vcxproj -> B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\x64\Debug\EAT Assessment Project.exe

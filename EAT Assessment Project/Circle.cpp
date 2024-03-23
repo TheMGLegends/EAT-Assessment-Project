@@ -21,7 +21,7 @@ void Circle::Update(float dt)
 
 void Circle::Draw()
 {
-	AssetManager::Instance()->DrawCircle(GetID(), color);
+	AssetManager::Instance()->DrawCircle(GetCentrePoint(), radius, color);
 }
 
 void Circle::Clean()

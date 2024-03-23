@@ -6,6 +6,8 @@
 #include "Rigidbody.h"
 #include "Collider.h"
 
+#include "Program.h"
+
 enum class ShapeType
 {
 	None,
@@ -13,29 +15,6 @@ enum class ShapeType
 	Square,
 	Rectangle,
 	Circle
-};
-
-struct Color
-{
-	int R;
-	int G;
-	int B;
-	int A;
-
-	Color() {
-		R = 0;
-		G = 255;
-		B = 0;
-		A = 255;
-	}
-
-	Color(int R, int G, int B, int A)
-	{
-		this->R = R;
-		this->G = G;
-		this->B = B;
-		this->A = A;
-	}
 };
 
 class Shape : public EventListener

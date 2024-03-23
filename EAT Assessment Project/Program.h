@@ -7,6 +7,29 @@
 constexpr auto SCREEN_WIDTH = 960;
 constexpr auto SCREEN_HEIGHT = 960;
 
+struct Color
+{
+	int R;
+	int G;
+	int B;
+	int A;
+
+	Color() {
+		R = 0;
+		G = 255;
+		B = 0;
+		A = 255;
+	}
+
+	Color(int R, int G, int B, int A)
+	{
+		this->R = R;
+		this->G = G;
+		this->B = B;
+		this->A = A;
+	}
+};
+
 class Program : public Singleton<Program>
 {
 	// INFO: Grants the base class access to the private and protected
@@ -19,6 +42,7 @@ private:
 	SDL_Renderer* renderer;
 
 	bool isRunning;
+	Color screenColor;
 
 public:
 	/// <summary>
@@ -74,6 +98,12 @@ public:
 	/// </summary>
 	/// <returns>Returns the renderer member variable held inside of program</returns>
 	inline SDL_Renderer* GetRenderer() { return renderer; }
+
+	/// <summary>
+	/// The getter for the screen color
+	/// </summary>
+	/// <returns>Returns the color of the screen</returns>
+	inline Color GetScreenColor() const { return screenColor; }
 
 private:
 	Program();

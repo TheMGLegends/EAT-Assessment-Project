@@ -16,7 +16,6 @@ class AssetManager : public Singleton<AssetManager>
 
 private:
 	std::unordered_map<int, SDL_Texture*> rectLib;
-	std::unordered_map<int, std::vector<SDL_Point>> circleLib;
 
 public:
 	/// <summary>
@@ -42,8 +41,13 @@ public:
 	/// <param name="height">: The height of the rect</param>
 	void DrawRect(int id, int x, int y, int width, int height);
 
-	// STUPID REDO THIS MAY ALSO HAVE TO REDO LOAD CIRCLE
-	void DrawCircle(int id, Color color);
+	/// <summary>
+	/// Used for drawing a circle
+	/// </summary>
+	/// <param name="centre">: The centre point of the circle</param>
+	/// <param name="radius">: The radius of the circle</param>
+	/// <param name="color">: The color that the circle will be drawn in</param>
+	void DrawCircle(Point centre, int radius, Color color);
 
 private:
 	AssetManager();
@@ -57,13 +61,5 @@ private:
 	/// <param name="color">: The color values of the object</param>
 	/// <param name="renderer">: The SDL renderer</param>
 	void LoadRect(int id, int width, int height, Color color, SDL_Renderer* renderer);
-
-	/// <summary>
-	/// Used for loading circles
-	/// </summary>
-	/// <param name="id">: The id of the texture to load</param>
-	/// <param name="centre">: The centre of the circle</param>
-	/// <param name="radius">: The radius of the circle</param>
-	void LoadCircle(int id, Point centre, int radius);
 };
 

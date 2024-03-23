@@ -23,7 +23,8 @@ Circle* circle = nullptr;
 Program::Program() :
 	window{ nullptr },
 	renderer{ nullptr },
-	isRunning{ false }
+	isRunning{ false },
+	screenColor{ 255, 255, 255, 255 }
 {
 }
 
@@ -111,8 +112,8 @@ bool Program::Initialize(const char* WINDOW_TITLE, int screenWidth, int screenHe
 		return false;
 	}
 
-	// INFO: Set the Initial Screen Color (White and Fully Opaque)
-	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+	// INFO: Set the Initial Screen Color
+	SDL_SetRenderDrawColor(renderer, screenColor.R, screenColor.G, screenColor.B, screenColor.A);
 
 	// INFO: Activate Program Loop
 	isRunning = true;
@@ -120,11 +121,10 @@ bool Program::Initialize(const char* WINDOW_TITLE, int screenWidth, int screenHe
 	// TESTING INITIALIZATION OF GAME OBJECTS
 	square = new Square(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 20);
 	rectangle = new Rectangle(SCREEN_WIDTH / 4, SCREEN_HEIGHT / 2, 50, 100);
-	circle = new Circle(SCREEN_WIDTH * 0.75f, SCREEN_HEIGHT / 2, 25);
+	circle = new Circle(SCREEN_WIDTH * 0.75f, SCREEN_HEIGHT / 2, 100);
 
 	AssetManager::Instance()->LoadTexture(square, renderer);
 	AssetManager::Instance()->LoadTexture(rectangle, renderer);
-	AssetManager::Instance()->LoadTexture(circle, renderer);
 
 	return isRunning;
 }
@@ -147,6 +147,7 @@ void Program::Draw()
 	// INFO: Clear the renderer ready for the next frame to be shown
 	SDL_RenderClear(renderer);
 
+	// TEST DRAWING GAME OBJECTS
 	square->Draw();
 	rectangle->Draw();
 	circle->Draw();
