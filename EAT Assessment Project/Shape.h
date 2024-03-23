@@ -15,8 +15,32 @@ enum class ShapeType
 	Circle
 };
 
+struct Color
+{
+	int R;
+	int G;
+	int B;
+	int A;
+
+	Color() {
+		R = 0;
+		G = 255;
+		B = 0;
+		A = 255;
+	}
+
+	Color(int R, int G, int B, int A)
+	{
+		this->R = R;
+		this->G = G;
+		this->B = B;
+		this->A = A;
+	}
+};
+
 class Shape : public EventListener
 {
+
 private:
 	static int shapeCount;
 	int id;
@@ -27,6 +51,7 @@ protected:
 	Transform futurePosition;
 	Rigidbody rb;
 	Collider* collider;
+	Color color;
 
 public:
 	/// <summary>
@@ -70,5 +95,11 @@ public:
 	/// </summary>
 	/// <param name="type">: The type of shape</param>
 	inline void SetShapeType(ShapeType type) { shapeType = type; }
+
+	/// <summary>
+	/// Getter for the Color Values
+	/// </summary>
+	/// <returns>The R, G, B, A values</returns>
+	inline Color GetColor() const { return color; }
 };
 

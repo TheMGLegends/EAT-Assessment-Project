@@ -15,7 +15,8 @@ class AssetManager : public Singleton<AssetManager>
 	friend class Singleton<AssetManager>;
 
 private:
-	std::unordered_map<int, SDL_Texture*> textureLib;
+	std::unordered_map<int, SDL_Texture*> rectLib;
+	std::unordered_map<int, std::vector<SDL_Point>> circleLib;
 
 public:
 	/// <summary>
@@ -24,10 +25,12 @@ public:
 	void Clean() override;
 
 	/// <summary>
-	/// Loads a default SDL shape texture
+	/// Used for checking what type of shape is being passed in and based on this
+	/// a different loading function will be run
 	/// </summary>
 	/// <param name="shape">: The game object you want to load a texture for</param>
-	void LoadTexture(Shape& shape);
+	/// <param name="renderer">: The SDL renderer</param>
+	void LoadTexture(Shape* shape, SDL_Renderer* renderer);
 
 	/// <summary>
 	/// Used for drawing rects
@@ -37,7 +40,7 @@ public:
 	/// <param name="y">: The y-axis value of the objects position</param>
 	/// <param name="width">: The width of the object</param>
 	/// <param name="height">: The height of the object</param>
-	void Draw(int key, int x, int y, int width, int height, const double angle = 0);
+	//void Draw(int key, int x, int y, int width, int height, const double angle = 0);
 
 	/// <summary>
 	/// Used for drawing circles
@@ -46,11 +49,18 @@ public:
 	/// <param name="x">: The x-axis value of the objects position</param>
 	/// <param name="y">: The y-axis value of the objects position</param>
 	/// <param name="radius">: The radius of object</param>
-	void Draw(int key, int x, int y, int radius, const double angle = 0);
+	//void Draw(int key, int x, int y, int radius, const double angle = 0);
 
 private:
 	AssetManager();
 
-	inline bool HasTexture(int key) { return textureLib[key] != nullptr; }
+	/// <summary>
+	/// Used for loading squares and rectangles
+	/// </summary>
+	/// <param name="width">: The width of the rect</param>
+	/// <param name="height">: The height of the rect</param>
+	/// <param name="color">: The color values of the object</param>
+	/// <param name="renderer">: The SDL renderer</param>
+	void LoadRect(int key, int width, int height, Color color, SDL_Renderer* renderer);
 };
 
