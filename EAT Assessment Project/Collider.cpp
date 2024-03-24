@@ -5,6 +5,6 @@
 Collider::Collider()
 {
 	// INFO: Set Collider Type to None ready for it 
-	// to be set elsewhere
+	// to be set during the construction of shapes
 	colliderType = ColliderType::None;
 }

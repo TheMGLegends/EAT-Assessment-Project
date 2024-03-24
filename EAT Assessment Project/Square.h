@@ -2,9 +2,12 @@
 
 #include "Shape.h"
 
+#include "BoxCollider.h"
+
 class Square : public Shape
 {
 private:
+	BoxCollider* boxCollider;
 	int size;
 
 public:
@@ -14,7 +17,7 @@ public:
 	/// <param name="x">: X-Coordinate of the square</param>
 	/// <param name="y">: Y-Coordinate of the square</param>
 	/// <param name="size">: Size of the square</param>
-	Square(float x, float y, float size);
+	Square(float x, float y, int size, bool isStatic = false, Color color = GREEN);
 
 	/// <summary>
 	/// Updates the various values of the game object e.g. (rb values, position)

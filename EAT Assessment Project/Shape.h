@@ -4,7 +4,6 @@
 
 #include "Transform.h"
 #include "Rigidbody.h"
-#include "Collider.h"
 
 #include "Program.h"
 
@@ -29,8 +28,8 @@ protected:
 	Transform position;
 	Transform futurePosition;
 	Rigidbody rb;
-	Collider* collider;
 	Color color;
+	bool isStatic;
 
 public:
 	/// <summary>
@@ -38,7 +37,7 @@ public:
 	/// </summary>
 	/// <param name="x">: X-Coordinate of the shape</param>
 	/// <param name="y">: Y-Coordinate of the shape</param>
-	Shape(float x, float y);
+	Shape(float x, float y, bool isStatic = false, Color color = GREEN);
 
 	/// <summary>
 	/// Updates the various values of the game object e.g. (rb values, position)
@@ -55,7 +54,7 @@ public:
 	/// <summary>
 	/// Clean up method during program termination
 	/// </summary>
-	virtual void Clean();
+	virtual void Clean() = 0;
 
 	/// <summary>
 	/// Gets the centre point of the shape

@@ -47,7 +47,8 @@ public:
 	/// <param name="centre">: The centre point of the circle</param>
 	/// <param name="radius">: The radius of the circle</param>
 	/// <param name="color">: The color that the circle will be drawn in</param>
-	void DrawCircle(Point centre, int radius, Color color);
+	/// <param name="isFilled">: Whether the shape should be colored in or outlined</param>
+	void DrawCircle(Point centre, int radius, Color color, bool isFilled = true);
 
 private:
 	AssetManager();

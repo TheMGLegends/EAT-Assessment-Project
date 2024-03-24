@@ -4,15 +4,19 @@
 
 #include "MemoryLeakDetector.h"
 
-Square::Square(float x, float y, float size) : Shape(x, y)
+Square::Square(float x, float y, int size, bool isStatic, Color color) 
+	: Shape(x, y, isStatic, color)
 {
 	this->size = size;
+
+	// INFO: Instantiate and Initialize the Box Collider
+	boxCollider = new BoxCollider((int)position.X, (int)position.Y, this->size, this->size);
 
 	// INFO: Specify the Shape Type to be Square
 	SetShapeType(ShapeType::Square);
 
 	// INFO: Specify the Collider Type to be Rect
-	collider->SetColliderType(ColliderType::Rect);
+	boxCollider->SetColliderType(ColliderType::Rect);
 }
 
 void Square::Update(float dt)
@@ -21,16 +25,18 @@ void Square::Update(float dt)
 
 void Square::Draw()
 {
-	AssetManager::Instance()->DrawRect(GetID(), position.X, position.Y, size, size);
+	AssetManager::Instance()->DrawRect(GetID(), (int)position.X, (int)position.Y, size, size);
+	boxCollider->DrawCollider();
 }
 
 void Square::Clean()
 {
 	// INFO: Clean up Square Contents
-
-
-	// INFO: Clean up Base Class Contents
-	Shape::Clean();
+	if (boxCollider != nullptr)
+	{
+		delete boxCollider;
+		boxCollider = nullptr;
+	}
 }
 
 Point Square::GetCentrePoint()

@@ -1,2 +1,40 @@
-﻿  Program.cpp
+﻿  AssetManager.cpp
+  BoxCollider.cpp
+  Circle.cpp
+  CircleCollider.cpp
+  Collider.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\crtdbg.h(307,1): warning C4005: '_malloca': macro redefinition
+  (compiling source file 'Collider.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\malloc.h(124,1):
+  see previous definition of '_malloca'
+  
+  CollisionManager.cpp
+  EventListener.cpp
+  EventManager.cpp
+  InputManager.cpp
+  main.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\crtdbg.h(307,1): warning C4005: '_malloca': macro redefinition
+  (compiling source file 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\malloc.h(124,1):
+  see previous definition of '_malloca'
+  
+  PhysicsManager.cpp
+  Point.cpp
+  Program.cpp
+  Rectangle.cpp
+  Rigidbody.cpp
+  Shape.cpp
+  Singleton.cpp
+  Square.cpp
+  TimeManager.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\crtdbg.h(307,1): warning C4005: '_malloca': macro redefinition
+  (compiling source file 'TimeManager.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\malloc.h(124,1):
+  see previous definition of '_malloca'
+  
+  Transform.cpp
+  Generating Code...
+  Compiling...
+  Vector2.cpp
+  Generating Code...
   EAT Assessment Project.vcxproj -> B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\x64\Debug\EAT Assessment Project.exe

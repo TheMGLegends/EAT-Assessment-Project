@@ -2,9 +2,12 @@
 
 #include "Shape.h"
 
+#include "BoxCollider.h"
+
 class Rectangle : public Shape
 {
 private:
+	BoxCollider* boxCollider;
 	int width;
 	int height;
 
@@ -16,7 +19,7 @@ public:
 	/// <param name="y">: Y-Coordinate of the square</param>
 	/// <param name="width">: Width of the rectangle</param>
 	/// <param name="height">: Height of the rectangle</param>
-	Rectangle(float x, float y, int width, int height);
+	Rectangle(float x, float y, int width, int height, bool isStatic = false, Color color = GREEN);
 
 	/// <summary>
 	/// Updates the various values of the game object e.g. (rb values, position)

@@ -4,15 +4,19 @@
 
 #include "MemoryLeakDetector.h"
 
-Circle::Circle(float x, float y, int radius) : Shape(x, y)
+Circle::Circle(float x, float y, int radius, bool isStatic, Color color) 
+	: Shape(x, y, isStatic, color)
 {
 	this->radius = radius;
+
+	// INFO: Instantiate and Initialize the Box Collider
+	circleCollider = new CircleCollider((int)position.X, (int)position.Y, this->radius);
 
 	// INFO: Specify the Shape Type to be Rectangle
 	SetShapeType(ShapeType::Circle);
 
 	// INFO: Specify the Collider Type to be Circle
-	collider->SetColliderType(ColliderType::Circle);
+	circleCollider->SetColliderType(ColliderType::Circle);
 }
 
 void Circle::Update(float dt)
@@ -22,15 +26,18 @@ void Circle::Update(float dt)
 void Circle::Draw()
 {
 	AssetManager::Instance()->DrawCircle(GetCentrePoint(), radius, color);
+	circleCollider->DrawCollider();
 }
 
 void Circle::Clean()
 {
 	// INFO: Clean up Circle Contents
+	if (circleCollider != nullptr)
+	{
+		delete circleCollider;
+		circleCollider = nullptr;
+	}
 
-
-	// INFO: Clean up Base Class Contents
-	Shape::Clean();
 }
 
 Point Circle::GetCentrePoint()

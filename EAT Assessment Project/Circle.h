@@ -2,9 +2,12 @@
 
 #include "Shape.h"
 
+#include "CircleCollider.h"
+
 class Circle : public Shape
 {
 private:
+	CircleCollider* circleCollider;
 	int radius;
 
 public:
@@ -14,7 +17,7 @@ public:
 	/// <param name="x">: X-Coordinate of the circle</param>
 	/// <param name="y">: Y-Coordinate of the circle</param>
 	/// <param name="radius">: Radius of the circle</param>
-	Circle(float x, float y, int radius);
+	Circle(float x, float y, int radius, bool isStatic = false, Color color = GREEN);
 
 	/// <summary>
 	/// Updates the various values of the game object e.g. (rb values, position)

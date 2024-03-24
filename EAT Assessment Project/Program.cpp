@@ -24,7 +24,7 @@ Program::Program() :
 	window{ nullptr },
 	renderer{ nullptr },
 	isRunning{ false },
-	screenColor{ 255, 255, 255, 255 }
+	screenColor{ WHITE }
 {
 }
 
@@ -156,3 +156,7 @@ void Program::Draw()
 	SDL_RenderPresent(renderer);
 }
 
+void Program::DefaultScreenColor()
+{
+	SDL_SetRenderDrawColor(renderer, screenColor.R, screenColor.G, screenColor.B, screenColor.A);
+}

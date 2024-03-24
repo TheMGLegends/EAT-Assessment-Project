@@ -30,6 +30,12 @@ struct Color
 	}
 };
 
+const Color RED{ 255, 0, 0, 255 };
+const Color GREEN{ 0, 255, 0, 255 };
+const Color BLUE{ 0, 0, 255, 255 };
+const Color WHITE{ 255,255,255,255 };
+const Color BLACK{ 0, 0, 0, 255 };
+
 class Program : public Singleton<Program>
 {
 	// INFO: Grants the base class access to the private and protected
@@ -104,6 +110,11 @@ public:
 	/// </summary>
 	/// <returns>Returns the color of the screen</returns>
 	inline Color GetScreenColor() const { return screenColor; }
+
+	/// <summary>
+	/// Sets the renderer back to the default screen color
+	/// </summary>
+	void DefaultScreenColor();
 
 private:
 	Program();

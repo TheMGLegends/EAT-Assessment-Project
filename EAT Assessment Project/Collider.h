@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Program.h"
+
 enum class ColliderType
 {
 	None,
@@ -20,7 +22,7 @@ public:
 	/// Used for drawing an outline of the collider
 	/// for debugging purposes
 	/// </summary>
-	virtual void DrawCollider() {}
+	virtual void DrawCollider(Color color = RED) {}
 
 	/// <summary>
 	/// Getter for the Colliders' Type

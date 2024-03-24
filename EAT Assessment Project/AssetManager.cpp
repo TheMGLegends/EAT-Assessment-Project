@@ -101,7 +101,7 @@ void AssetManager::DrawRect(int id, int x, int y, int width, int height)
 					 &destinationRect, 0, NULL, SDL_FLIP_NONE);
 }
 
-void AssetManager::DrawCircle(Point centre, int radius, Color color)
+void AssetManager::DrawCircle(Point centre, int radius, Color color, bool isFilled)
 {
 	// INFO: Given that there is no renderer or the ID doesn't match a texture
 	// we exit out of the function
@@ -127,17 +127,25 @@ void AssetManager::DrawCircle(Point centre, int radius, Color color)
 
 			Vector2 displacedVector{ (float)dx, (float)dy };
 
-			// INFO: Given that the displaced vector is within the bounds of circle
-			// (smaller than the radius) we will draw a point at that point
-			if (displacedVector.Magnitude() <= radius)
-				SDL_RenderDrawPoint(Program::Instance()->GetRenderer(), centre.X + dx, centre.Y + dy);
+			// INFO: Either fills the entire inside of the circle or only the outline
+			if (isFilled)
+			{
+				// INFO: Given that the displaced vector is inside of the circle,
+				// a point will be drawn
+				if (displacedVector.Magnitude() <= radius)
+					SDL_RenderDrawPoint(Program::Instance()->GetRenderer(), (int)(centre.X + dx), (int)(centre.Y + dy));
+			}
+			else
+			{
+				// INFO: Given that the displaced vector is on the circumference
+				// of the circle a point will be drawn
+				if (std::ceil(displacedVector.Magnitude()) == radius)
+					SDL_RenderDrawPoint(Program::Instance()->GetRenderer(), (int)(centre.X + dx), (int)(centre.Y + dy));
+			}
 		}
 	}
 
 	// INFO: Set the renderer draw color back to the screen color after having
 	// drawn the circle
-	Color originalColor = Program::Instance()->GetScreenColor();
-
-	SDL_SetRenderDrawColor(Program::Instance()->GetRenderer(), originalColor.R, 
-		originalColor.G, originalColor.B, originalColor.A);
+	Program::Instance()->DefaultScreenColor();
 }
