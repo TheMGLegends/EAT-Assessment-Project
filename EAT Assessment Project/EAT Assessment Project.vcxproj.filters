@@ -111,6 +111,9 @@
     <ClCompile Include="EventManager.cpp">
       <Filter>Event System Files\Event Manager Files</Filter>
     </ClCompile>
+    <ClCompile Include="Color.cpp">
+      <Filter>Component Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Program.h">
@@ -181,6 +184,9 @@
     </ClInclude>
     <ClInclude Include="MemoryLeakDetector.h">
       <Filter>Debug Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Component Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

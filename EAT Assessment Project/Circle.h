@@ -17,7 +17,7 @@ public:
 	/// <param name="x">: X-Coordinate of the circle</param>
 	/// <param name="y">: Y-Coordinate of the circle</param>
 	/// <param name="radius">: Radius of the circle</param>
-	Circle(float x, float y, int radius, bool isStatic = false, Color color = GREEN);
+	Circle(float x, float y, int radius, bool isStatic = false, Color color = Color::GREEN);
 
 	/// <summary>
 	/// Updates the various values of the game object e.g. (rb values, position)
@@ -45,5 +45,8 @@ public:
 	/// </summary>
 	/// <returns>The radius of the circle</returns>
 	inline int GetRadius() const { return radius; }
+
+	// TEMP FUNCTION <--------------------------------------------------------------------------------------------------------------------------------------------
+	inline void tempMoveXLeft() { position.X -= 5; }
 };
 

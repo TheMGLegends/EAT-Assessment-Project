@@ -10,7 +10,7 @@ Square::Square(float x, float y, int size, bool isStatic, Color color)
 	this->size = size;
 
 	// INFO: Instantiate and Initialize the Box Collider
-	boxCollider = new BoxCollider((int)position.X, (int)position.Y, this->size, this->size);
+	boxCollider = new BoxCollider((int&)position.X, (int&)position.Y, this->size, this->size);
 
 	// INFO: Specify the Shape Type to be Square
 	SetShapeType(ShapeType::Square);
@@ -26,7 +26,9 @@ void Square::Update(float dt)
 void Square::Draw()
 {
 	AssetManager::Instance()->DrawRect(GetID(), (int)position.X, (int)position.Y, size, size);
-	boxCollider->DrawCollider();
+	
+	// INFO: Debug Outline for Showcasing Box Collider
+	AssetManager::Instance()->DrawBoxCollider((int)position.X, (int)position.Y, size, size);
 }
 
 void Square::Clean()

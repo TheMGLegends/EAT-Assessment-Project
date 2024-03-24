@@ -4,6 +4,7 @@
 
 #include "SDL.h"
 #include "Shape.h"
+#include "Color.h"
 
 #include <unordered_map>
 
@@ -42,7 +43,17 @@ public:
 	void DrawRect(int id, int x, int y, int width, int height);
 
 	/// <summary>
-	/// Used for drawing a circle
+	/// Used for drawing the outline for a box collider
+	/// </summary>
+	/// <param name="x">: The colliders' x-value</param>
+	/// <param name="y">: The colliders' y-value</param>
+	/// <param name="width">: The colliders' width</param>
+	/// <param name="height">: The colliders' height</param>
+	/// <param name="color">: The outline color</param>
+	void DrawBoxCollider(int x, int y, int width, int height, Color color = Color::RED);
+
+	/// <summary>
+	/// Used for drawing a circle as well as the outline for the circle collider
 	/// </summary>
 	/// <param name="centre">: The centre point of the circle</param>
 	/// <param name="radius">: The radius of the circle</param>

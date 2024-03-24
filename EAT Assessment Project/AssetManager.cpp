@@ -14,7 +14,6 @@ AssetManager::AssetManager()
 {
 }
 
-
 void AssetManager::Clean()
 {
 	// INFO: Clean up the contents of the unordered rect map
@@ -99,6 +98,15 @@ void AssetManager::DrawRect(int id, int x, int y, int width, int height)
 
 	SDL_RenderCopyEx(Program::Instance()->GetRenderer(), rectLib[id], NULL, 
 					 &destinationRect, 0, NULL, SDL_FLIP_NONE);
+}
+
+void AssetManager::DrawBoxCollider(int x, int y, int width, int height, Color color)
+{
+	SDL_Rect boxCollider{ x, y, width, height };
+
+	SDL_SetRenderDrawColor(Program::Instance()->GetRenderer(), color.R, color.G, color.B, color.A);
+	SDL_RenderDrawRect(Program::Instance()->GetRenderer(), &boxCollider);
+	Program::Instance()->DefaultScreenColor();
 }
 
 void AssetManager::DrawCircle(Point centre, int radius, Color color, bool isFilled)

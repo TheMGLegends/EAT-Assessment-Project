@@ -139,6 +139,7 @@
     <ClCompile Include="CircleCollider.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="CollisionManager.cpp" />
+    <ClCompile Include="Color.cpp" />
     <ClCompile Include="EventListener.cpp" />
     <ClCompile Include="EventManager.cpp" />
     <ClCompile Include="InputManager.cpp" />
@@ -163,6 +164,7 @@
     <ClInclude Include="Collider.h" />
     <ClInclude Include="CollisionEvent.h" />
     <ClInclude Include="CollisionManager.h" />
+    <ClInclude Include="Color.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="EventListener.h" />
     <ClInclude Include="EventManager.h" />

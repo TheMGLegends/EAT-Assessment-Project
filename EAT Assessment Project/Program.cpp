@@ -8,14 +8,14 @@
 
 #include <iostream>
 
-// TESTING INCLUDES
+// TESTING INCLUDES <--------------------------------------------------------------------------------------------------------------------------------------------
 #include "Square.h"
 #include "Rectangle.h"
 #include "Circle.h"
 
 Program* Singleton<Program>::instance = nullptr;
 
-// TESTING GAME OBJECTS
+// TESTING GAME OBJECTS <--------------------------------------------------------------------------------------------------------------------------------------------
 Square* square = nullptr;
 Rectangle* rectangle = nullptr;
 Circle* circle = nullptr;
@@ -24,7 +24,7 @@ Program::Program() :
 	window{ nullptr },
 	renderer{ nullptr },
 	isRunning{ false },
-	screenColor{ WHITE }
+	screenColor{ Color::WHITE }
 {
 }
 
@@ -35,7 +35,7 @@ void Program::Clean()
 	TimeManager::Instance()->Clean();
 	AssetManager::Instance()->Clean();
 
-	// TESTING DELETE GAME OBJECTS
+	// TESTING DELETE GAME OBJECTS <--------------------------------------------------------------------------------------------------------------------------------------------
 	if (square != nullptr)
 	{
 		square->Clean();
@@ -118,7 +118,7 @@ bool Program::Initialize(const char* WINDOW_TITLE, int screenWidth, int screenHe
 	// INFO: Activate Program Loop
 	isRunning = true;
 
-	// TESTING INITIALIZATION OF GAME OBJECTS
+	// TESTING INITIALIZATION OF GAME OBJECTS <--------------------------------------------------------------------------------------------------------------------------------------------
 	square = new Square(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 20);
 	rectangle = new Rectangle(SCREEN_WIDTH / 4, SCREEN_HEIGHT / 2, 50, 100);
 	circle = new Circle(SCREEN_WIDTH * 0.75f, SCREEN_HEIGHT / 2, 100);
@@ -132,6 +132,10 @@ bool Program::Initialize(const char* WINDOW_TITLE, int screenWidth, int screenHe
 void Program::HandleInput()
 {
 	InputManager::Instance()->PollEvents();
+
+	// TEMP TESTING <--------------------------------------------------------------------------------------------------------------------------------------------
+	if (InputManager::Instance()->GetKeyDown(SDL_SCANCODE_A))
+		circle->tempMoveXLeft();
 }
 
 void Program::ProcessEvents()
@@ -147,7 +151,7 @@ void Program::Draw()
 	// INFO: Clear the renderer ready for the next frame to be shown
 	SDL_RenderClear(renderer);
 
-	// TEST DRAWING GAME OBJECTS
+	// TEST DRAWING GAME OBJECTS <--------------------------------------------------------------------------------------------------------------------------------------------
 	square->Draw();
 	rectangle->Draw();
 	circle->Draw();

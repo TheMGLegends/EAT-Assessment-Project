@@ -19,7 +19,7 @@ public:
 	/// <param name="y">: Y-Coordinate of the square</param>
 	/// <param name="width">: Width of the rectangle</param>
 	/// <param name="height">: Height of the rectangle</param>
-	Rectangle(float x, float y, int width, int height, bool isStatic = false, Color color = GREEN);
+	Rectangle(float x, float y, int width, int height, bool isStatic = false, Color color = Color::GREEN);
 
 	/// <summary>
 	/// Updates the various values of the game object e.g. (rb values, position)

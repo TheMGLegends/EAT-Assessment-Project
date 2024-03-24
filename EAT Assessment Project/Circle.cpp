@@ -10,7 +10,7 @@ Circle::Circle(float x, float y, int radius, bool isStatic, Color color)
 	this->radius = radius;
 
 	// INFO: Instantiate and Initialize the Box Collider
-	circleCollider = new CircleCollider((int)position.X, (int)position.Y, this->radius);
+	circleCollider = new CircleCollider((int&)position.X, (int&)position.Y, this->radius);
 
 	// INFO: Specify the Shape Type to be Rectangle
 	SetShapeType(ShapeType::Circle);
@@ -26,7 +26,9 @@ void Circle::Update(float dt)
 void Circle::Draw()
 {
 	AssetManager::Instance()->DrawCircle(GetCentrePoint(), radius, color);
-	circleCollider->DrawCollider();
+
+	// INFO: Debug Outline for Showcasing Circle Collider
+	AssetManager::Instance()->DrawCircle(GetCentrePoint(), radius, Color::RED, false);
 }
 
 void Circle::Clean()
@@ -37,7 +39,6 @@ void Circle::Clean()
 		delete circleCollider;
 		circleCollider = nullptr;
 	}
-
 }
 
 Point Circle::GetCentrePoint()

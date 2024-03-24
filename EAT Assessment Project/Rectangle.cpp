@@ -20,7 +20,7 @@ Rectangle::Rectangle(float x, float y, int width, int height, bool isStatic, Col
 	this->height = height;
 
 	// INFO: Instantiate and Initialize the Box Collider
-	boxCollider = new BoxCollider((int)position.X, (int)position.Y, this->width, this->height);
+	boxCollider = new BoxCollider((int&)position.X, (int&)position.Y, this->width, this->height);
 
 	// INFO: Specify the Shape Type to be Rectangle
 	SetShapeType(ShapeType::Rectangle);
@@ -36,7 +36,9 @@ void Rectangle::Update(float dt)
 void Rectangle::Draw()
 {
 	AssetManager::Instance()->DrawRect(GetID(), (int)position.X, (int)position.Y, width, height);
-	boxCollider->DrawCollider();
+
+	// INFO: Debug Outline for Showcasing Box Collider
+	AssetManager::Instance()->DrawBoxCollider((int)position.X, (int)position.Y, width, height);
 }
 
 void Rectangle::Clean()

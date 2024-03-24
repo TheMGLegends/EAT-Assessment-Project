@@ -1,8 +1,7 @@
-﻿  Collider.cpp
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\crtdbg.h(307,1): warning C4005: '_malloca': macro redefinition
-  (compiling source file 'Collider.cpp')
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\malloc.h(124,1):
-  see previous definition of '_malloca'
-  
-  LINK : B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\x64\Debug\EAT Assessment Project.exe not found or not built by the last incremental link; performing full link
+﻿  AssetManager.cpp
+  Circle.cpp
+  Program.cpp
+  Rectangle.cpp
+  Square.cpp
+  Generating Code...
   EAT Assessment Project.vcxproj -> B:\University Projects\EAT-Assessment-Project\EAT Assessment Project\x64\Debug\EAT Assessment Project.exe

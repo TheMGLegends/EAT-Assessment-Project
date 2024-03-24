@@ -5,7 +5,7 @@
 #include "Transform.h"
 #include "Rigidbody.h"
 
-#include "Program.h"
+#include "Color.h"
 
 enum class ShapeType
 {
@@ -37,7 +37,7 @@ public:
 	/// </summary>
 	/// <param name="x">: X-Coordinate of the shape</param>
 	/// <param name="y">: Y-Coordinate of the shape</param>
-	Shape(float x, float y, bool isStatic = false, Color color = GREEN);
+	Shape(float x, float y, bool isStatic = false, Color color = Color::GREEN);
 
 	/// <summary>
 	/// Updates the various values of the game object e.g. (rb values, position)

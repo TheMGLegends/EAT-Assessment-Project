@@ -17,7 +17,7 @@ public:
 	/// <param name="x">: X-Coordinate of the square</param>
 	/// <param name="y">: Y-Coordinate of the square</param>
 	/// <param name="size">: Size of the square</param>
-	Square(float x, float y, int size, bool isStatic = false, Color color = GREEN);
+	Square(float x, float y, int size, bool isStatic = false, Color color = Color::GREEN);
 
 	/// <summary>
 	/// Updates the various values of the game object e.g. (rb values, position)
