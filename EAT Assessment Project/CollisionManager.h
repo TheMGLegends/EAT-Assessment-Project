@@ -30,7 +30,16 @@ public:
 	/// </summary>
 	void Clean();
 
+	/// <summary>
+	/// Checks the collisions between all colliders stored in the Collision Manager
+	/// </summary>
 	void CheckCollisions();
+
+	/// <summary>
+	/// Used for adding a collider to the colliders list in collision manager
+	/// </summary>
+	/// <param name="c">: The reference of the collider to be added to the list</param>
+	void AddColliderToVector(Collider* c);
 
 private:
 	CollisionManager() {}

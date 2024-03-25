@@ -50,6 +50,11 @@ void CollisionManager::CheckCollisions()
 	}
 }
 
+void CollisionManager::AddColliderToVector(Collider* c)
+{
+	colliders.push_back(c);
+}
+
 void CollisionManager::CircleCircleCollision(CircleCollider* c1, CircleCollider* c2)
 {
 }
