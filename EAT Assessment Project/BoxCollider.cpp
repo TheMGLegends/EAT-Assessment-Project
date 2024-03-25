@@ -1,6 +1,6 @@
 #include "BoxCollider.h"
 
-BoxCollider::BoxCollider(int &x, int &y, int &width, int &height)
+BoxCollider::BoxCollider(float &x, float &y, int &width, int &height)
 {
 	this->x = &x;
 	this->y = &y;

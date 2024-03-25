@@ -10,7 +10,7 @@ Square::Square(float x, float y, int size, bool isStatic, Color color)
 	this->size = size;
 
 	// INFO: Instantiate and Initialize the Box Collider
-	boxCollider = new BoxCollider((int&)position.X, (int&)position.Y, this->size, this->size);
+	boxCollider = new BoxCollider(position.X, position.Y, this->size, this->size);
 
 	// INFO: Specify the Shape Type to be Square
 	SetShapeType(ShapeType::Square);

@@ -49,3 +49,15 @@ void CollisionManager::CheckCollisions()
 		}
 	}
 }
+
+void CollisionManager::CircleCircleCollision(CircleCollider* c1, CircleCollider* c2)
+{
+}
+
+void CollisionManager::RectRectCollision(BoxCollider* b1, BoxCollider* b2)
+{
+}
+
+void CollisionManager::CircleRectCollision(CircleCollider* c, BoxCollider* b)
+{
+}

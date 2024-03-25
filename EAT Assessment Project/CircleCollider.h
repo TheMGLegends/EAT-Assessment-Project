@@ -5,11 +5,11 @@
 class CircleCollider : public Collider
 {
 private:
-	int* centreX;
-	int* centreY;
+	float* centreX;
+	float* centreY;
 	int* radius;
 
 public:
-	CircleCollider(int &x, int &y, int &radius);
+	CircleCollider(float &x, float &y, int &radius);
 };
 

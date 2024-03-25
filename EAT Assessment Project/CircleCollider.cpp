@@ -1,6 +1,6 @@
 #include "CircleCollider.h"
 
-CircleCollider::CircleCollider(int &x, int &y, int &radius)
+CircleCollider::CircleCollider(float &x, float &y, int &radius)
 {
 	centreX = &x;
 	centreY = &y;

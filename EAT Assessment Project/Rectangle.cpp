@@ -20,7 +20,7 @@ Rectangle::Rectangle(float x, float y, int width, int height, bool isStatic, Col
 	this->height = height;
 
 	// INFO: Instantiate and Initialize the Box Collider
-	boxCollider = new BoxCollider((int&)position.X, (int&)position.Y, this->width, this->height);
+	boxCollider = new BoxCollider(position.X, position.Y, this->width, this->height);
 
 	// INFO: Specify the Shape Type to be Rectangle
 	SetShapeType(ShapeType::Rectangle);

@@ -5,12 +5,12 @@
 class BoxCollider : public Collider
 {
 private:
-	int* x;
-	int* y;
+	float* x;
+	float* y;
 	int* width;
 	int* height;
 
 public:
-	BoxCollider(int &x, int &y, int &width, int &height);
+	BoxCollider(float &x, float &y, int &width, int &height);
 };
 

@@ -10,7 +10,7 @@ Circle::Circle(float x, float y, int radius, bool isStatic, Color color)
 	this->radius = radius;
 
 	// INFO: Instantiate and Initialize the Box Collider
-	circleCollider = new CircleCollider((int&)position.X, (int&)position.Y, this->radius);
+	circleCollider = new CircleCollider(position.X, position.Y, this->radius);
 
 	// INFO: Specify the Shape Type to be Rectangle
 	SetShapeType(ShapeType::Circle);

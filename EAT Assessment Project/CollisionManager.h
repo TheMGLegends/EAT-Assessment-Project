@@ -1,6 +1,8 @@
 #pragma once
 
 #include "Collider.h"
+#include "CircleCollider.h"
+#include "BoxCollider.h"
 
 #include <vector>
 
@@ -35,5 +37,9 @@ private:
 	~CollisionManager() {}
 
 	static CollisionManager* instance;
+
+	void CircleCircleCollision(CircleCollider* c1, CircleCollider* c2);
+	void RectRectCollision(BoxCollider* b1, BoxCollider* b2);
+	void CircleRectCollision(CircleCollider* c, BoxCollider* b);
 };
 

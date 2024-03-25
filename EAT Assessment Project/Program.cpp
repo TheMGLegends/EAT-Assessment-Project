@@ -145,6 +145,7 @@ void Program::ProcessEvents()
 
 void Program::Update(float dt)
 {
+
 }
 
 void Program::Draw()
