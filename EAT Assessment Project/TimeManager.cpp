@@ -4,24 +4,9 @@
 
 #include "MemoryLeakDetector.h"
 
-TimeManager* Singleton<TimeManager>::instance = nullptr;
-
-TimeManager::TimeManager() :
-	deltaTime{ 0 },
-	previousTime{ 0 },
-	currentTime{ 0 }
-{
-}
-
-void TimeManager::Clean()
-{
-	// INFO: Clean up the instance
-	if (instance != nullptr)
-	{
-		delete instance;
-		instance = nullptr;
-	}
-}
+float TimeManager::deltaTime = 0;
+float TimeManager::previousTime = 0;
+float TimeManager::currentTime = 0;
 
 void TimeManager::Tick()
 {

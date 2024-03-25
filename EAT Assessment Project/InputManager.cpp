@@ -6,12 +6,11 @@
 
 #include "MemoryLeakDetector.h"
 
-InputManager* Singleton<InputManager>::instance = nullptr;
+Uint8* InputManager::previousKeyboardState = nullptr;
+const Uint8* InputManager::KEYBOARD_STATE = nullptr;
+int InputManager::keyLength = 0;
 
-InputManager::InputManager() : 
-	previousKeyboardState{ nullptr }, 
-	KEYBOARD_STATE{ nullptr },
-	keyLength{ 0 }
+void InputManager::Initialize()
 {
 	// INFO: Get the state of the keyboard
 	KEYBOARD_STATE = SDL_GetKeyboardState(&keyLength);
@@ -31,13 +30,6 @@ void InputManager::Clean()
 	{
 		delete[] previousKeyboardState;
 		previousKeyboardState = nullptr;
-	}
-
-	// INFO: Clean up the instance
-	if (instance != nullptr)
-	{
-		delete instance;
-		instance = nullptr;
 	}
 }
 

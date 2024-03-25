@@ -13,11 +13,11 @@ int main(int argc, char* argv[])
 	while (Program::Instance()->IsRunning())
 	{
 		// INFO: Calculate deltaTime at the beginning of the loop
-		TimeManager::Instance()->Tick();
+		TimeManager::Tick();
 
 		Program::Instance()->HandleInput();
 		Program::Instance()->ProcessEvents();
-		Program::Instance()->Update(TimeManager::Instance()->DeltaTime());
+		Program::Instance()->Update(TimeManager::DeltaTime());
 		Program::Instance()->Draw();
 	}
 

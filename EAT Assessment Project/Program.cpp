@@ -2,7 +2,6 @@
 
 #include "InputManager.h"
 #include "AssetManager.h"
-#include "TimeManager.h"
 
 #include "SDL_image.h"
 
@@ -31,8 +30,7 @@ Program::Program() :
 void Program::Clean()
 {
 	// INFO: Clean Managers
-	InputManager::Instance()->Clean();
-	TimeManager::Instance()->Clean();
+	InputManager::Clean();
 	AssetManager::Instance()->Clean();
 
 	// TESTING DELETE GAME OBJECTS <--------------------------------------------------------------------------------------------------------------------------------------------
@@ -118,6 +116,9 @@ bool Program::Initialize(const char* WINDOW_TITLE, int screenWidth, int screenHe
 	// INFO: Activate Program Loop
 	isRunning = true;
 
+	// INFO: Initialize Input Manager
+	InputManager::Initialize();
+
 	// TESTING INITIALIZATION OF GAME OBJECTS <--------------------------------------------------------------------------------------------------------------------------------------------
 	square = new Square(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 20);
 	rectangle = new Rectangle(SCREEN_WIDTH / 4, SCREEN_HEIGHT / 2, 50, 100);
@@ -131,10 +132,10 @@ bool Program::Initialize(const char* WINDOW_TITLE, int screenWidth, int screenHe
 
 void Program::HandleInput()
 {
-	InputManager::Instance()->PollEvents();
+	InputManager::PollEvents();
 
 	// TEMP TESTING <--------------------------------------------------------------------------------------------------------------------------------------------
-	if (InputManager::Instance()->GetKeyDown(SDL_SCANCODE_A))
+	if (InputManager::GetKeyDown(SDL_SCANCODE_A))
 		circle->tempMoveXLeft();
 }
 
