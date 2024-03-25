@@ -2,11 +2,7 @@
 
 #include "MemoryLeakDetector.h"
 
-CollisionManager* Singleton<CollisionManager>::instance = nullptr;
-
-CollisionManager::CollisionManager()
-{
-}
+CollisionManager* CollisionManager::instance = nullptr;
 
 void CollisionManager::Clean()
 {

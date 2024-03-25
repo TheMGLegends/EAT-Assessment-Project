@@ -5,7 +5,7 @@ class Singleton
 {
 public:
 	// INFO: Delete the Copy Constructor and Assignment Operator for each class that 
-	// derives from singleton, so that you can't  accidentally create more than one 
+	// derives from singleton, so that you can't accidentally create more than one 
 	// instance of the class
 
 	Singleton(const T&) = delete;
