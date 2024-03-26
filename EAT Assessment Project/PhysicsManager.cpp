@@ -1,5 +1,7 @@
 #include "PhysicsManager.h"
 
+#include "MemoryLeakDetector.h"
+
 PhysicsManager* Singleton<PhysicsManager>::instance = nullptr;
 
 PhysicsManager::PhysicsManager() :

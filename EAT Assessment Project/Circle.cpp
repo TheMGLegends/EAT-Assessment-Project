@@ -33,12 +33,6 @@ void Circle::Draw()
 
 void Circle::Clean()
 {
-	// INFO: Clean up Circle Contents
-	if (circleCollider != nullptr)
-	{
-		delete circleCollider;
-		circleCollider = nullptr;
-	}
 }
 
 Point Circle::GetCentrePoint()

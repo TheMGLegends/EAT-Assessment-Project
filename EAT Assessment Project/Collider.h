@@ -15,6 +15,7 @@ protected:
 
 public:
 	Collider();
+	virtual ~Collider() {}
 
 	/// <summary>
 	/// Getter for the Colliders' Type

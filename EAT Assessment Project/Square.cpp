@@ -33,12 +33,6 @@ void Square::Draw()
 
 void Square::Clean()
 {
-	// INFO: Clean up Square Contents
-	if (boxCollider != nullptr)
-	{
-		delete boxCollider;
-		boxCollider = nullptr;
-	}
 }
 
 Point Square::GetCentrePoint()

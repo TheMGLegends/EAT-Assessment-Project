@@ -43,12 +43,6 @@ void Rectangle::Draw()
 
 void Rectangle::Clean()
 {
-	// INFO: Clean up Rectangle Contents
-	if (boxCollider != nullptr)
-	{
-		delete boxCollider;
-		boxCollider = nullptr;
-	}
 }
 
 Point Rectangle::GetCentrePoint()

@@ -2,10 +2,12 @@
 
 #include "CollisionManager.h"
 
+#include "MemoryLeakDetector.h"
+
 CircleCollider::CircleCollider(float &x, float &y, int &radius)
 {
-	centreX = &x;
-	centreY = &y;
+	X = &x;
+	Y = &y;
 	this->radius = &radius;
 
 	// INFO: Adds the Collider to the Collision Manager

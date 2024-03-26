@@ -8,6 +8,9 @@ int main(int argc, char* argv[])
 	// INFO: Detection Flags for Memory Leaks
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
+	// INFO: Specify Line at which to break at
+	//_CrtSetBreakAlloc(LINE NUMBER)
+
 	Program::Instance()->Initialize("Engine Architecture and Tools Assessment Project");
 
 	while (Program::Instance()->IsRunning())

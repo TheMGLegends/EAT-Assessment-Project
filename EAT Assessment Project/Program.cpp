@@ -2,6 +2,7 @@
 
 #include "InputManager.h"
 #include "AssetManager.h"
+#include "CollisionManager.h"
 
 #include "SDL_image.h"
 
@@ -32,6 +33,7 @@ void Program::Clean()
 	// INFO: Clean Managers
 	InputManager::Clean();
 	AssetManager::Instance()->Clean();
+	CollisionManager::Instance()->Clean();
 
 	// TESTING DELETE GAME OBJECTS <--------------------------------------------------------------------------------------------------------------------------------------------
 	if (square != nullptr)
@@ -145,7 +147,7 @@ void Program::ProcessEvents()
 
 void Program::Update(float dt)
 {
-
+	CollisionManager::Instance()->CheckCollisions();
 }
 
 void Program::Draw()

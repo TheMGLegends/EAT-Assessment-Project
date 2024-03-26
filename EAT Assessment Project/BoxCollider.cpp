@@ -2,6 +2,8 @@
 
 #include "CollisionManager.h"
 
+#include "MemoryLeakDetector.h"
+
 BoxCollider::BoxCollider(float &x, float &y, int &width, int &height)
 {
 	this->x = &x;
