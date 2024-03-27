@@ -4,7 +4,8 @@
 
 #include "MemoryLeakDetector.h"
 
-CircleCollider::CircleCollider(float &x, float &y, int &radius)
+CircleCollider::CircleCollider(std::function<void(Collider*)> Response, float &x, float &y, int &radius) :
+	Collider(Response)
 {
 	X = &x;
 	Y = &y;

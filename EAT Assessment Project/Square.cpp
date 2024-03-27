@@ -9,14 +9,20 @@ Square::Square(float x, float y, int size, bool isStatic, Color color)
 {
 	this->size = size;
 
-	// INFO: Instantiate and Initialize the Box Collider
-	boxCollider = new BoxCollider(position.X, position.Y, this->size, this->size);
+	// INFO: Instantiate and Initialize the Box Collider along with the bounded 
+	// function that you want to call when a collision occurs
+	boxCollider = new BoxCollider(std::bind(&Square::OnCollisionEnter, this, std::placeholders::_1), position.X, position.Y, this->size, this->size);
 
 	// INFO: Specify the Shape Type to be Square
 	SetShapeType(ShapeType::Square);
 
 	// INFO: Specify the Collider Type to be Rect
 	boxCollider->SetColliderType(ColliderType::Rect);
+}
+
+void Square::OnCollisionEnter(Collider* other)
+{
+	std::cout << "I am a square and I have just collided with another collider" << std::endl;
 }
 
 void Square::Update(float dt)

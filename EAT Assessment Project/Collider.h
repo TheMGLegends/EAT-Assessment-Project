@@ -1,5 +1,7 @@
 #pragma once
 
+#include <functional>
+
 enum class ColliderType
 {
 	None,
@@ -14,8 +16,13 @@ protected:
 	ColliderType colliderType;
 
 public:
-	Collider();
+	Collider(std::function<void(Collider*)> Response);
 	virtual ~Collider() {}
+
+	/// <summary>
+	/// Holds a bound function that is called when a collision occurs
+	/// </summary>
+	std::function<void(Collider*)> CollisionResponse;
 
 	/// <summary>
 	/// Getter for the Colliders' Type

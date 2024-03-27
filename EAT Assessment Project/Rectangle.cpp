@@ -19,14 +19,20 @@ Rectangle::Rectangle(float x, float y, int width, int height, bool isStatic, Col
 	this->width = width;
 	this->height = height;
 
-	// INFO: Instantiate and Initialize the Box Collider
-	boxCollider = new BoxCollider(position.X, position.Y, this->width, this->height);
+	// INFO: Instantiate and Initialize the Box Collider along with the bounded 
+	// function that you want to call when a collision occurs
+	boxCollider = new BoxCollider(std::bind(&Rectangle::OnCollisionEnter, this, std::placeholders::_1), position.X, position.Y, this->width, this->height);
 
 	// INFO: Specify the Shape Type to be Rectangle
 	SetShapeType(ShapeType::Rectangle);
 
 	// INFO: Specify the Collider Type to be Rect
 	boxCollider->SetColliderType(ColliderType::Rect);
+}
+
+void Rectangle::OnCollisionEnter(Collider* other)
+{
+	std::cout << "I am a rectangle and I have just collided with another collider" << std::endl;
 }
 
 void Rectangle::Update(float dt)

@@ -17,7 +17,7 @@ public:
 	/// <param name="x">: The centre x of the circle</param>
 	/// <param name="y">: The centre y of the circle</param>
 	/// <param name="radius">: The radius of the circle</param>
-	CircleCollider(float &x, float &y, int &radius);
+	CircleCollider(std::function<void(Collider*)> Response, float &x, float &y, int &radius);
 
 	/// <summary>
 	/// Getter for the circle colliders' centre x

@@ -168,6 +168,7 @@
     <ClInclude Include="Event.h" />
     <ClInclude Include="EventListener.h" />
     <ClInclude Include="EventManager.h" />
+    <ClInclude Include="ICollision.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="MemoryLeakDetector.h" />
     <ClInclude Include="PhysicsManager.h" />

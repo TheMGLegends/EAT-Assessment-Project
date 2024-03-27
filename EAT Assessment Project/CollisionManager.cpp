@@ -151,8 +151,9 @@ void CollisionManager::CircleRectCollision(CircleCollider* c, BoxCollider* b)
 	// is less than the circles' radius, then they are colliding
 	if (std::sqrt(std::pow(dx, 2) + std::pow(dy, 2)) < c->GetRadius())
 	{
-		std::cout << "Hey hey, circle and rect are colliding!" << std::endl;
-		// INFO: Collision Detected
+		// INFO: Collision Detected Callbacks for both colliders
+		c->CollisionResponse(b);
+		b->CollisionResponse(c);
 		// CALLBACKS FOR BOTH COLLIDERS PASSING IN THE OTHER COLLIDER AS PARAMETER
 	}
 }

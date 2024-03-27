@@ -20,7 +20,7 @@ public:
 	/// <param name="y">: The y position of the rect</param>
 	/// <param name="width">: The width of the rect</param>
 	/// <param name="height">: The height of the rect</param>
-	BoxCollider(float &x, float &y, int &width, int &height);
+	BoxCollider(std::function<void(Collider*)> Response, float &x, float &y, int &width, int &height);
 
 	/// <summary>
 	/// Getter for the box colliders' x position

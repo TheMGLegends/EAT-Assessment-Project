@@ -1,11 +1,13 @@
 #pragma once
 
-#include "EventListener.h"
+#include "ICollision.h"
 
 #include "Transform.h"
 #include "Rigidbody.h"
 
 #include "Color.h"
+
+#include <functional>
 
 enum class ShapeType
 {
@@ -16,7 +18,7 @@ enum class ShapeType
 	Circle
 };
 
-class Shape : public EventListener
+class Shape : public ICollision
 {
 
 private:
@@ -38,6 +40,12 @@ public:
 	/// <param name="x">: X-Coordinate of the shape</param>
 	/// <param name="y">: Y-Coordinate of the shape</param>
 	Shape(float x, float y, bool isStatic = false, Color color = Color::GREEN);
+
+	/// <summary>
+	/// Inherited from the ICollision interface used for responding to collisions
+	/// </summary>
+	/// <param name="other">: The other collider involved in the collision</param>
+	virtual void OnCollisionEnter(Collider* other) = 0;
 
 	/// <summary>
 	/// Updates the various values of the game object e.g. (rb values, position)

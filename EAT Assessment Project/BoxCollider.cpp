@@ -4,7 +4,8 @@
 
 #include "MemoryLeakDetector.h"
 
-BoxCollider::BoxCollider(float &x, float &y, int &width, int &height)
+BoxCollider::BoxCollider(std::function<void(Collider*)> Response, float &x, float &y, int &width, int &height) :
+	Collider(Response)
 {
 	this->x = &x;
 	this->y = &y;

@@ -46,6 +46,9 @@
     <Filter Include="Debug Files">
       <UniqueIdentifier>{7067fb57-5f02-4e56-817b-2293bbbcbdd5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Collision System Files\Collision Interface Files">
+      <UniqueIdentifier>{0b0d2518-f536-479a-8921-fada86f1288e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -187,6 +190,9 @@
     </ClInclude>
     <ClInclude Include="Color.h">
       <Filter>Component Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ICollision.h">
+      <Filter>Collision System Files\Collision Interface Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

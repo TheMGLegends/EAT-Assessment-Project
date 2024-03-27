@@ -22,6 +22,12 @@ public:
 	Rectangle(float x, float y, int width, int height, bool isStatic = false, Color color = Color::GREEN);
 
 	/// <summary>
+	/// Inherited from the ICollision interface used for responding to collisions
+	/// </summary>
+	/// <param name="other">: The other collider involved in the collision</param>
+	void OnCollisionEnter(Collider* other) override;
+
+	/// <summary>
 	/// Updates the various values of the game object e.g. (rb values, position)
 	/// </summary>
 	/// <param name="dt">: Delta Time</param>
