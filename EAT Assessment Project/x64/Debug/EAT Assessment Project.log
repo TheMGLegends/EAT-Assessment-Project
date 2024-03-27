@@ -1,6 +1,2 @@
-﻿  BoxCollider.cpp
-  CircleCollider.cpp
-  CollisionManager.cpp
-  Program.cpp
-  Generating Code...
+﻿  CollisionManager.cpp
   EAT Assessment Project.vcxproj -> C:\Users\5CINCM67\Downloads\EAT-Assessment-Project\EAT Assessment Project\x64\Debug\EAT Assessment Project.exe

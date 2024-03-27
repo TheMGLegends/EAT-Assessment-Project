@@ -9,6 +9,7 @@ CollisionManager* CollisionManager::instance = nullptr;
 
 void CollisionManager::Clean()
 {
+	// INFO: Clean all colliders
 	for (int i = 0; i < colliders.size(); i++)
 	{
 		if (colliders[i] != nullptr)
@@ -81,7 +82,7 @@ void CollisionManager::CircleCircleCollision(CircleCollider* c1, CircleCollider*
 	if (std::sqrt(std::pow(dx, 2) + std::pow(dy, 2)) < totalRadius)
 	{
 		// INFO: Collision Detected
-		// GENERATE COLLISION EVENT HERE
+		// CALLBACKS FOR BOTH COLLIDERS PASSING IN THE OTHER COLLIDER AS PARAMETER
 	}
 }
 
@@ -104,7 +105,7 @@ void CollisionManager::RectRectCollision(BoxCollider* b1, BoxCollider* b2)
 	if (b1MaxX > b2MinX && b1MinX < b2MaxX && b1MaxY > b2MinY && b1MinY < b2MaxY)
 	{
 		// INFO: Collision Detected
-		// GENERATE COLLISION EVENT HERE
+		// CALLBACKS FOR BOTH COLLIDERS PASSING IN THE OTHER COLLIDER AS PARAMETER
 	}
 }
 
@@ -152,6 +153,6 @@ void CollisionManager::CircleRectCollision(CircleCollider* c, BoxCollider* b)
 	{
 		std::cout << "Hey hey, circle and rect are colliding!" << std::endl;
 		// INFO: Collision Detected
-		// GENERATE COLLISION EVENT HERE
+		// CALLBACKS FOR BOTH COLLIDERS PASSING IN THE OTHER COLLIDER AS PARAMETER
 	}
 }
