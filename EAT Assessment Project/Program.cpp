@@ -19,6 +19,7 @@ Program* Singleton<Program>::instance = nullptr;
 Square* square = nullptr;
 Rectangle* rectangle = nullptr;
 Circle* circle = nullptr;
+Circle* circle2 = nullptr;
 
 Program::Program() :
 	window{ nullptr },
@@ -55,6 +56,13 @@ void Program::Clean()
 		circle->Clean();
 		delete circle;
 		circle = nullptr;
+	}
+
+	if (circle2 != nullptr)
+	{
+		circle2->Clean();
+		delete circle2;
+		circle2 = nullptr;
 	}
 
 	// INFO: Destroys the SDL renderer & window
@@ -122,9 +130,10 @@ bool Program::Initialize(const char* WINDOW_TITLE, int screenWidth, int screenHe
 	InputManager::Initialize();
 
 	// TESTING INITIALIZATION OF GAME OBJECTS <--------------------------------------------------------------------------------------------------------------------------------------------
-	square = new Square(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 20);
-	rectangle = new Rectangle(SCREEN_WIDTH / 4, SCREEN_HEIGHT / 2, 50, 100);
-	circle = new Circle(SCREEN_WIDTH * 0.75f, SCREEN_HEIGHT / 2, 100);
+	square = new Square(SCREEN_WIDTH * 0.2f, SCREEN_HEIGHT * 0.1f, 40);
+	rectangle = new Rectangle(SCREEN_WIDTH * 0.4f, SCREEN_HEIGHT * 0.1f, 50, 20);
+	circle = new Circle(SCREEN_WIDTH * 0.75f, SCREEN_HEIGHT / 2, 50);
+	circle2 = new Circle(SCREEN_WIDTH * 0.25f, SCREEN_HEIGHT / 2, 25);
 
 	AssetManager::Instance()->LoadTexture(square, renderer);
 	AssetManager::Instance()->LoadTexture(rectangle, renderer);
@@ -159,6 +168,7 @@ void Program::Draw()
 	square->Draw();
 	rectangle->Draw();
 	circle->Draw();
+	circle2->Draw();
 
 	// INFO: Present the new frame to the screen
 	SDL_RenderPresent(renderer);

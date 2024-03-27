@@ -51,5 +51,8 @@ public:
 	/// </summary>
 	/// <returns>Size of the square</returns>
 	inline int GetSize() const { return size; }
+
+	// TEMP FUNCTION <--------------------------------------------------------------------------------------------------------------------------------------------
+	inline void tempMoveXLeft() { position.X -= 5; }
 };
 

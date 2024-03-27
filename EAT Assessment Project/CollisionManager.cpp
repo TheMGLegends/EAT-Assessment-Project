@@ -81,8 +81,9 @@ void CollisionManager::CircleCircleCollision(CircleCollider* c1, CircleCollider*
 	// sum of their radii, then they are colliding
 	if (std::sqrt(std::pow(dx, 2) + std::pow(dy, 2)) < totalRadius)
 	{
-		// INFO: Collision Detected
-		// CALLBACKS FOR BOTH COLLIDERS PASSING IN THE OTHER COLLIDER AS PARAMETER
+		// INFO: Collision Detected Callbacks for both colliders
+		c1->CollisionResponse(c2);
+		c2->CollisionResponse(c1);
 	}
 }
 
@@ -104,8 +105,9 @@ void CollisionManager::RectRectCollision(BoxCollider* b1, BoxCollider* b2)
 
 	if (b1MaxX > b2MinX && b1MinX < b2MaxX && b1MaxY > b2MinY && b1MinY < b2MaxY)
 	{
-		// INFO: Collision Detected
-		// CALLBACKS FOR BOTH COLLIDERS PASSING IN THE OTHER COLLIDER AS PARAMETER
+		// INFO: Collision Detected Callbacks for both colliders
+		b1->CollisionResponse(b2);
+		b2->CollisionResponse(b1);
 	}
 }
 
@@ -154,6 +156,5 @@ void CollisionManager::CircleRectCollision(CircleCollider* c, BoxCollider* b)
 		// INFO: Collision Detected Callbacks for both colliders
 		c->CollisionResponse(b);
 		b->CollisionResponse(c);
-		// CALLBACKS FOR BOTH COLLIDERS PASSING IN THE OTHER COLLIDER AS PARAMETER
 	}
 }
