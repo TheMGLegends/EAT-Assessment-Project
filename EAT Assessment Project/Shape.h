@@ -70,6 +70,12 @@ public:
 	virtual Point GetCentrePoint() = 0;
 
 	/// <summary>
+	/// Setter for the GOs is static variable
+	/// </summary>
+	/// <param name="isStatic">: Whether the GO should be static or not</param>
+	inline void SetIsStatic(bool isStatic) { this->isStatic = isStatic; }
+
+	/// <summary>
 	/// Getter for the Shapes' ID
 	/// </summary>
 	/// <returns>The ID of the Shape</returns>
