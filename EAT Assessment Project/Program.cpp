@@ -16,6 +16,11 @@
 Program* Singleton<Program>::instance = nullptr;
 
 // TESTING GAME OBJECTS <--------------------------------------------------------------------------------------------------------------------------------------------
+Rectangle* leftBorder = nullptr;
+Rectangle* rightBorder = nullptr;
+Rectangle* topBorder = nullptr;
+Rectangle* bottomBorder = nullptr;
+
 Square* square = nullptr;
 Rectangle* rectangle = nullptr;
 Circle* circle = nullptr;
@@ -37,6 +42,34 @@ void Program::Clean()
 	CollisionManager::Instance()->Clean();
 
 	// TESTING DELETE GAME OBJECTS <--------------------------------------------------------------------------------------------------------------------------------------------
+	if (leftBorder != nullptr)
+	{
+		leftBorder->Clean();
+		delete leftBorder;
+		leftBorder = nullptr;
+	}
+
+	if (rightBorder != nullptr)
+	{
+		rightBorder->Clean();
+		delete rightBorder;
+		rightBorder = nullptr;
+	}
+
+	if (topBorder != nullptr)
+	{
+		topBorder->Clean();
+		delete topBorder;
+		topBorder = nullptr;
+	}
+
+	if (bottomBorder != nullptr)
+	{
+		bottomBorder->Clean();
+		delete bottomBorder;
+		bottomBorder = nullptr;
+	}
+
 	if (square != nullptr)
 	{
 		square->Clean();
@@ -130,10 +163,21 @@ bool Program::Initialize(const char* WINDOW_TITLE, int screenWidth, int screenHe
 	InputManager::Initialize();
 
 	// TESTING INITIALIZATION OF GAME OBJECTS <--------------------------------------------------------------------------------------------------------------------------------------------
+	leftBorder = new Rectangle(0, 0, 25, SCREEN_HEIGHT, true, Color::BLUE);
+	rightBorder = new Rectangle(SCREEN_WIDTH - 25, 0, 25, SCREEN_HEIGHT, true, Color::BLUE);
+
+	topBorder = new Rectangle(0, 0, SCREEN_WIDTH, 25, true, Color::BLUE);
+	bottomBorder = new Rectangle(0, SCREEN_HEIGHT - 25, SCREEN_WIDTH, 25, true, Color::BLUE);
+
 	square = new Square(SCREEN_WIDTH * 0.2f, SCREEN_HEIGHT * 0.1f, 40);
 	rectangle = new Rectangle(SCREEN_WIDTH * 0.4f, SCREEN_HEIGHT * 0.1f, 50, 20);
 	circle = new Circle(SCREEN_WIDTH * 0.75f, SCREEN_HEIGHT / 2, 50);
 	circle2 = new Circle(SCREEN_WIDTH * 0.25f, SCREEN_HEIGHT / 2, 25);
+
+	AssetManager::Instance()->LoadTexture(leftBorder, renderer);
+	AssetManager::Instance()->LoadTexture(rightBorder, renderer);
+	AssetManager::Instance()->LoadTexture(bottomBorder, renderer);
+	AssetManager::Instance()->LoadTexture(topBorder, renderer);
 
 	AssetManager::Instance()->LoadTexture(square, renderer);
 	AssetManager::Instance()->LoadTexture(rectangle, renderer);
@@ -165,6 +209,11 @@ void Program::Draw()
 	SDL_RenderClear(renderer);
 
 	// TEST DRAWING GAME OBJECTS <--------------------------------------------------------------------------------------------------------------------------------------------
+	leftBorder->Draw();
+	rightBorder->Draw();
+	topBorder->Draw();
+	bottomBorder->Draw();
+
 	square->Draw();
 	rectangle->Draw();
 	circle->Draw();

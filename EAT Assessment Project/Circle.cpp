@@ -23,6 +23,10 @@ Circle::Circle(float x, float y, int radius, bool isStatic, Color color)
 
 void Circle::OnCollisionEnter(Collider* other)
 {
+	// INFO: Doesn't React to Collision if the object is static
+	if (isStatic)
+		return;
+
 	std::cout << "I am a circle and I have just collided with another collider" << std::endl;
 
 	switch (other->GetColliderType())

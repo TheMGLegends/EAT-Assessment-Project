@@ -23,6 +23,10 @@ Square::Square(float x, float y, int size, bool isStatic, Color color)
 
 void Square::OnCollisionEnter(Collider* other)
 {
+	// INFO: Doesn't React to Collision if the object is static
+	if (isStatic)
+		return;
+
 	std::cout << "I am a square and I have just collided with another collider" << std::endl;
 
 	switch (other->GetColliderType())

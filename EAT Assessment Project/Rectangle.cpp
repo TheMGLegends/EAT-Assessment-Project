@@ -33,6 +33,10 @@ Rectangle::Rectangle(float x, float y, int width, int height, bool isStatic, Col
 
 void Rectangle::OnCollisionEnter(Collider* other)
 {
+	// INFO: Doesn't React to Collision if the object is static
+	if (isStatic)
+		return;
+	
 	std::cout << "I am a rectangle and I have just collided with another collider" << std::endl;
 
 	switch (other->GetColliderType())
