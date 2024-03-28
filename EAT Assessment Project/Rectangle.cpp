@@ -1,6 +1,7 @@
 #include "Rectangle.h"
 
 #include "AssetManager.h"
+#include "CircleCollider.h"
 
 #include "MemoryLeakDetector.h"
 
@@ -33,6 +34,33 @@ Rectangle::Rectangle(float x, float y, int width, int height, bool isStatic, Col
 void Rectangle::OnCollisionEnter(Collider* other)
 {
 	std::cout << "I am a rectangle and I have just collided with another collider" << std::endl;
+
+	switch (other->GetColliderType())
+	{
+	case ColliderType::Rect:
+	{
+		BoxCollider* otherCollider = dynamic_cast<BoxCollider*>(other);
+
+		if (otherCollider != nullptr)
+		{
+			std::cout << "The width of otherCollider is: " << otherCollider->GetWidth() << std::endl;
+		}
+	}
+		break;
+	case ColliderType::Circle:
+	{
+		CircleCollider* otherCollider = dynamic_cast<CircleCollider*>(other);
+
+		if (otherCollider != nullptr)
+		{
+			std::cout << "The radius of otherCollider is: " << otherCollider->GetRadius() << std::endl;
+		}
+	}
+		break;
+	case ColliderType::None:
+	default:
+		break;
+	}
 }
 
 void Rectangle::Update(float dt)
