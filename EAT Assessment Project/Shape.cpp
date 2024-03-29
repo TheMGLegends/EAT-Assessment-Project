@@ -25,3 +25,4 @@ Shape::Shape(float x, float y, bool isStatic, Color color)
 	// to be set in the derived classes constructors
 	shapeType = ShapeType::None;
 }
+

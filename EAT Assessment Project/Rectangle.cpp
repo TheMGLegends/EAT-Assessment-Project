@@ -1,6 +1,7 @@
 #include "Rectangle.h"
 
 #include "AssetManager.h"
+#include "PhysicsManager.h"
 #include "CircleCollider.h"
 
 #include "MemoryLeakDetector.h"
@@ -69,6 +70,13 @@ void Rectangle::OnCollisionEnter(Collider* other)
 
 void Rectangle::Update(float dt)
 {
+	PhysicsManager::Instance()->UpdatePhysics(rb, dt);
+
+	previousPosition.X = position.X;
+	position.TranslateX(rb.displacement.X);
+	
+	previousPosition.Y = position.Y;
+	position.TranslateY(rb.displacement.Y);
 }
 
 void Rectangle::Draw()

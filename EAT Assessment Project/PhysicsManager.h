@@ -23,6 +23,9 @@ class PhysicsManager : public Singleton<PhysicsManager>
 
 private:
 	float globalGravity;
+	float dragCoefficient;
+	float airDensity;
+	float area;
 
 public:
 	/// <summary>
@@ -37,7 +40,7 @@ public:
 	/// </summary>
 	/// <param name="rb">: Reference to the Rigidbody</param>
 	/// <param name="dt">: Delta Time</param>
-	void UpdatePhysics(Rigidbody& rb, float dt) const;
+	void UpdatePhysics(Rigidbody& rb, float dt);
 
 	/// <summary>
 	/// Used to add forces to a rigidbody to change the movement of the GO that
@@ -69,5 +72,7 @@ public:
 
 private:
 	PhysicsManager();
+
+	Vector2 CalculateDragForce(Rigidbody& rb) const;
 };
 

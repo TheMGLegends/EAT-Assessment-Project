@@ -1,15 +1,20 @@
 #pragma once
 
-constexpr auto MILLISECONDS_IN_SECOND = 1000;
+const float MILLISECONDS_IN_SECOND = 1000.0f;
 
 class TimeManager
 {
 private:
-	static float deltaTime;
 	static float previousTime;
 	static float currentTime;
+	static float deltaTime;
 
 public:
+	/// <summary>
+	/// Initializes the time values
+	/// </summary>
+	static void Initialize();
+
 	/// <summary>
 	/// Calculates the deltaTime in seconds based on the previous 
 	/// and current time values

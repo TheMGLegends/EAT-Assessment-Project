@@ -28,7 +28,7 @@ private:
 
 protected:
 	Transform position;
-	Transform futurePosition;
+	Transform previousPosition;
 	Rigidbody rb;
 	Color color;
 	bool isStatic;

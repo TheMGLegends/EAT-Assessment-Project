@@ -3,6 +3,7 @@
 #include "InputManager.h"
 #include "AssetManager.h"
 #include "CollisionManager.h"
+#include "PhysicsManager.h"
 
 #include "SDL_image.h"
 
@@ -40,6 +41,7 @@ void Program::Clean()
 	InputManager::Clean();
 	AssetManager::Instance()->Clean();
 	CollisionManager::Instance()->Clean();
+	PhysicsManager::Instance()->Clean();
 
 	// TESTING DELETE GAME OBJECTS <--------------------------------------------------------------------------------------------------------------------------------------------
 	if (leftBorder != nullptr)
@@ -200,6 +202,8 @@ void Program::ProcessEvents()
 
 void Program::Update(float dt)
 {
+	rectangle->Update(dt);
+
 	CollisionManager::Instance()->CheckCollisions();
 }
 

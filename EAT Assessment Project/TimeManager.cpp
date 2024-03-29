@@ -8,6 +8,12 @@ float TimeManager::deltaTime = 0;
 float TimeManager::previousTime = 0;
 float TimeManager::currentTime = 0;
 
+void TimeManager::Initialize()
+{
+	previousTime = (float)SDL_GetTicks();
+	currentTime = previousTime;
+}
+
 void TimeManager::Tick()
 {
 	// INFO: Gets the current time
@@ -15,7 +21,7 @@ void TimeManager::Tick()
 
 	// INFO: Subtracts the previous time from the current time to
 	// get the time between frames (deltaTime) in seconds
-	deltaTime = (currentTime - previousTime) / MILLISECONDS_IN_SECOND;
+	deltaTime = (currentTime - previousTime) / 1000;
 
 	// INFO: Sets the old currentTime to the previousTime ready for
 	// the next SDL_GetTicks call

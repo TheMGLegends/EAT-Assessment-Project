@@ -3,6 +3,8 @@
 
 #include "MemoryLeakDetector.h"
 
+#include <iostream>
+
 int main(int argc, char* argv[])
 {
 	// INFO: Detection Flags for Memory Leaks
@@ -12,6 +14,7 @@ int main(int argc, char* argv[])
 	//_CrtSetBreakAlloc(LINE NUMBER)
 
 	Program::Instance()->Initialize("Engine Architecture and Tools Assessment Project");
+	TimeManager::Initialize();
 
 	while (Program::Instance()->IsRunning())
 	{
