@@ -1,3 +1,4 @@
+/*
 #pragma once
 
 /// <summary>
@@ -33,3 +34,5 @@ protected:
 
 	static T* instance;
 };
+*/
+

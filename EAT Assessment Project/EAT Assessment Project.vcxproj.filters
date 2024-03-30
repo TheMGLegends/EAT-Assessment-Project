@@ -13,9 +13,6 @@
     <Filter Include="Manager Files">
       <UniqueIdentifier>{2323b9af-4149-44a9-aae1-2afa1f99d680}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Manager Files\Manager Base Class Files">
-      <UniqueIdentifier>{cb0d7862-ccb9-43a6-beb0-c44546a1f702}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Collision System Files">
       <UniqueIdentifier>{d2e8c91c-aba7-421d-81d3-b12a1444e5f3}</UniqueIdentifier>
     </Filter>
@@ -52,6 +49,9 @@
     <Filter Include="Component Files\Component Base Class Files">
       <UniqueIdentifier>{e0e433ae-1d10-4056-99a0-66ea2b470872}</UniqueIdentifier>
     </Filter>
+    <Filter Include="OBSOLETE CLASSES\Manager Base Class Files">
+      <UniqueIdentifier>{cb0d7862-ccb9-43a6-beb0-c44546a1f702}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -61,7 +61,7 @@
       <Filter>Program Files</Filter>
     </ClCompile>
     <ClCompile Include="Singleton.cpp">
-      <Filter>Manager Files\Manager Base Class Files</Filter>
+      <Filter>OBSOLETE CLASSES\Manager Base Class Files</Filter>
     </ClCompile>
     <ClCompile Include="Square.cpp">
       <Filter>Shape Files</Filter>
@@ -123,7 +123,7 @@
       <Filter>Program Files</Filter>
     </ClInclude>
     <ClInclude Include="Singleton.h">
-      <Filter>Manager Files\Manager Base Class Files</Filter>
+      <Filter>OBSOLETE CLASSES\Manager Base Class Files</Filter>
     </ClInclude>
     <ClInclude Include="Square.h">
       <Filter>Shape Files</Filter>

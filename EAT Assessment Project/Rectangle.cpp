@@ -58,9 +58,9 @@ void Rectangle::Update(float dt)
 
 void Rectangle::Draw()
 {
-	AssetManager::Instance()->DrawRect(GetID(), (int)position.X, (int)position.Y, width, height, color);
+	AssetManager::DrawRect((int)position.X, (int)position.Y, width, height, color);
 
 	// INFO: Debug Outline for Showcasing Box Collider
-	AssetManager::Instance()->DrawBoxCollider((int)position.X, (int)position.Y, width, height);
+	AssetManager::DrawBoxCollider((int)position.X, (int)position.Y, width, height);
 }
 

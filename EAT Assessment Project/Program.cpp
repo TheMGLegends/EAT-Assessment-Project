@@ -12,7 +12,7 @@
 
 #include <iostream>
 
-Program* Singleton<Program>::instance = nullptr;
+Program* Program::instance = nullptr;
 
 Rectangle* leftBorder = nullptr;
 Rectangle* rightBorder = nullptr;
@@ -41,7 +41,6 @@ void Program::Clean()
 {
 	// INFO: Clean Managers
 	InputManager::Clean();
-	AssetManager::Instance()->Clean();
 	CollisionManager::Instance()->Clean();
 
 	// INFO: Clean Game Objects

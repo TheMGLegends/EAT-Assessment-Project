@@ -23,6 +23,12 @@ protected:
 
 public:
 	/// <summary>
+	/// Holds a bound function that is called when a collision occurs
+	/// </summary>
+	std::function<void(Collider*)> CollisionResponse;
+
+public:
+	/// <summary>
 	/// Constructor of collider, takes in the memory addresses of x and y 
 	/// values of the game object that the collider is attached to as well as
 	/// the response function that is called when a collision occurs
@@ -32,11 +38,6 @@ public:
 	/// <param name="y">: The y-coordinate of the object</param>
 	Collider(std::function<void(Collider*)> Response, float &x, float &y);
 	virtual ~Collider() {}
-
-	/// <summary>
-	/// Holds a bound function that is called when a collision occurs
-	/// </summary>
-	std::function<void(Collider*)> CollisionResponse;
 
 	/// <summary>
 	/// Getter for the Colliders' Type

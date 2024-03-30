@@ -55,9 +55,9 @@ void Square::Update(float dt)
 
 void Square::Draw()
 {
-	AssetManager::Instance()->DrawRect(GetID(), (int)position.X, (int)position.Y, size, size, color);
+	AssetManager::DrawRect((int)position.X, (int)position.Y, size, size, color);
 	
 	// INFO: Debug Outline for Showcasing Box Collider
-	AssetManager::Instance()->DrawBoxCollider((int)position.X, (int)position.Y, size, size);
+	AssetManager::DrawBoxCollider((int)position.X, (int)position.Y, size, size);
 }
 

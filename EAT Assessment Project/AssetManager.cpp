@@ -8,23 +8,7 @@
 
 #include "MemoryLeakDetector.h"
 
-AssetManager* Singleton<AssetManager>::instance = nullptr;
-
-AssetManager::AssetManager()
-{
-}
-
-void AssetManager::Clean()
-{
-	// INFO: Clean up the instance
-	if (instance != nullptr)
-	{
-		delete instance;
-		instance = nullptr;
-	}
-}
-
-void AssetManager::DrawRect(int id, int x, int y, int width, int height, Color color)
+void AssetManager::DrawRect(int x, int y, int width, int height, Color color)
 {
 	// INFO: Given that there is no renderer we exit the function
 	if (Program::Instance()->GetRenderer() == nullptr)

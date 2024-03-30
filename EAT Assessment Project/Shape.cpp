@@ -2,8 +2,6 @@
 
 #include "MemoryLeakDetector.h"
 
-int Shape::shapeCount = 0;
-
 Shape::Shape(Parameters* params)
 {
 	// INFO: Set the position of the shape
@@ -16,14 +14,6 @@ Shape::Shape(Parameters* params)
 
 	// INFO: Randomize the initial move direction
 	moveDirection = Vector2::RandomDirection();
-
-	// INFO: Set the ID of the shape based on
-	// the current shape count
-	id = shapeCount;
-
-	// INFO: Increment shape count ready for the
-	// next shape to set it as their ID
-	shapeCount++;
 
 	// INFO: Set Shape Type to None ready for it 
 	// to be set in the derived classes constructors

@@ -15,7 +15,7 @@ private:
 	std::vector<Collider*> colliders;
 
 public:
-	// INFO: Delete the Copy Constructor and Assignment Operator for, so that 
+	// INFO: Delete the Copy Constructor and Assignment Operator, so that 
 	// you can't accidentally create more than one instance of the class
 
 	CollisionManager(const CollisionManager&) = delete;

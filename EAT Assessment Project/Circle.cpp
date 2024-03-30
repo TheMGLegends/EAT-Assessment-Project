@@ -55,9 +55,9 @@ void Circle::Update(float dt)
 
 void Circle::Draw()
 {
-	AssetManager::Instance()->DrawCircle(GetCentre(), radius, color);
+	AssetManager::DrawCircle(GetCentre(), radius, color);
 
 	// INFO: Debug Outline for Showcasing Circle Collider
-	AssetManager::Instance()->DrawCircle(GetCentre(), radius, Color::RED, false);
+	AssetManager::DrawCircle(GetCentre(), radius, Color::RED, false);
 }
 

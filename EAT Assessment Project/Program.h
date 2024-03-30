@@ -1,7 +1,5 @@
 #pragma once
 
-#include "Singleton.h"
-
 #include "Color.h"
 
 #include <SDL.h>
@@ -9,13 +7,8 @@
 constexpr auto SCREEN_WIDTH = 960;
 constexpr auto SCREEN_HEIGHT = 960;
 
-class Program : public Singleton<Program>
+class Program
 {
-	// INFO: Grants the base class access to the private and protected
-	// member variables and methods of the derived class, specifically
-	// the constructor
-	friend class Singleton<Program>;
-
 private:
 	SDL_Window* window;
 	SDL_Renderer* renderer;
@@ -25,10 +18,23 @@ private:
 	Color screenColor;
 
 public:
+	// INFO: Delete the Copy Constructor and Assignment Operator, so that 
+	// you can't accidentally create more than one instance of the class
+
+	Program(const Program&) = delete;
+	void operator=(const Program&) = delete;
+
+	/// <summary>
+	/// Allows access to the singleton by returning it or creating one if one doesn't
+	/// yet exist
+	/// </summary>
+	/// <returns>A pointer to the instance of the class </returns>
+	inline static Program* Instance() { return instance != nullptr ? instance : instance = new Program(); }
+
 	/// <summary>
 	/// Clean up method during program termination
 	/// </summary>
-	void Clean() override;
+	void Clean();
 
 	/// <summary>
 	/// Initializes the SDL Libraries as well as other things like textures and game objects
@@ -99,5 +105,8 @@ public:
 
 private:
 	Program();
+	~Program() {}
+
+	static Program* instance;
 };
 

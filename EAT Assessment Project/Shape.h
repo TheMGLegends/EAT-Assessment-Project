@@ -41,8 +41,6 @@ class Shape : public ICollision
 {
 
 private:
-	static int shapeCount;
-	int id;
 	ShapeType shapeType;
 
 protected:
@@ -89,12 +87,6 @@ public:
 	/// </summary>
 	/// <param name="isStatic">: Whether the GO should be static or not</param>
 	inline void SetIsStatic(bool isStatic) { this->isStatic = isStatic; }
-
-	/// <summary>
-	/// Getter for the Shapes' ID
-	/// </summary>
-	/// <returns>The ID of the Shape</returns>
-	inline int GetID() const { return id; }
 
 	/// <summary>
 	/// Getter for the Shapes' Type
