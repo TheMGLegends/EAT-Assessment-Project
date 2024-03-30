@@ -48,7 +48,7 @@ public:
 	
 	// INFO: Debug Methods
 
-	inline void DisplayXY() const override { std::cout << "Transform Position (" << X << ", " << Y << ")" << std::endl; }
+	inline void DisplayXY() override { std::cout << "Transform Position (" << X << ", " << Y << ")" << std::endl; }
 
 private:
 	// INFO: Helper Methods

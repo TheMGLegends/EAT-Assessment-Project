@@ -5,8 +5,8 @@
 
 #include "MemoryLeakDetector.h"
 
-Square::Square(float x, float y, int size, bool isStatic, Color color) 
-	: Shape(x, y, isStatic, color)
+Square::Square(Parameters* params, int size) 
+	: Shape(params)
 {
 	this->size = size;
 
@@ -27,6 +27,28 @@ void Square::OnCollisionEnter(Collider* other)
 	if (isStatic)
 		return;
 
+	// INFO: Switch Direction Based on Collision
+	if (other->GetY() < position.Y && moveDirection.Y < 0)
+	{
+		moveDirection.Y = 1;
+	}
+	else if (other->GetY() > position.Y && moveDirection.Y > 0)
+	{
+		moveDirection.Y = -1;
+	}
+	else if (other->GetX() < position.X && moveDirection.X < 0)
+	{
+		moveDirection.X = 1;
+	}
+	else if (other->GetX() > position.X && moveDirection.X > 0)
+	{
+		moveDirection.X = -1;
+	}
+
+	// INFO: Change Color of Shape on Collision
+	color = Color::RandomColor();
+
+	/*
 	std::cout << "I am a square and I have just collided with another collider" << std::endl;
 
 	switch (other->GetColliderType())
@@ -55,15 +77,17 @@ void Square::OnCollisionEnter(Collider* other)
 	default:
 		break;
 	}
+	*/
 }
 
 void Square::Update(float dt)
 {
+	position.Translate(moveDirection * moveSpeed * dt);
 }
 
 void Square::Draw()
 {
-	AssetManager::Instance()->DrawRect(GetID(), (int)position.X, (int)position.Y, size, size);
+	AssetManager::Instance()->DrawRect(GetID(), (int)position.X, (int)position.Y, size, size, color);
 	
 	// INFO: Debug Outline for Showcasing Box Collider
 	AssetManager::Instance()->DrawBoxCollider((int)position.X, (int)position.Y, size, size);
@@ -73,7 +97,7 @@ void Square::Clean()
 {
 }
 
-Point Square::GetCentrePoint()
+Transform Square::GetCentre()
 {
-	return Point(position.X + size / 2, position.Y + size / 2);
+	return Transform(position.X + size / 2, position.Y + size / 2);
 }

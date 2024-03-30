@@ -28,4 +28,6 @@ struct Color
 		this->B = B;
 		this->A = A;
 	}
+
+	static Color RandomColor();
 };

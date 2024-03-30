@@ -8,6 +8,15 @@ const Vector2 Vector2::LEFT(-1, 0);
 const Vector2 Vector2::RIGHT(1, 0);
 const Vector2 Vector2::ZERO(0, 0);
 
+const Vector2 Vector2::TOP_LEFT(-1, 1);
+const Vector2 Vector2::TOP_RIGHT(1, 1);
+const Vector2 Vector2::BOTTOM_LEFT(-1, -1);
+const Vector2 Vector2::BOTTOM_RIGHT(1, -1);
+
+const Vector2 Vector2::DIRECTIONS[DIRECTIONS_COUNT] = {
+	TOP_LEFT , TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT
+};
+
 Vector2& Vector2::Normalize(Vector2& v)
 {
 	float magnitude = v.Magnitude();
@@ -62,7 +71,70 @@ Vector2 Vector2::normalized() const
 	return v;
 }
 
-Vector2& Vector2::operator=(const Point& p)
+Vector2 Vector2::RandomDirection()
+{
+	// INFO: Random Number between 0 and DIRECTIONS_SIZE - 1
+	int randomIndex = rand() % DIRECTIONS_COUNT;
+	return DIRECTIONS[randomIndex];
+}
+
+Vector2& Vector2::operator+=(const Vector2& p)
+{
+	X += p.X;
+	Y += p.Y;
+	return *this;
+}
+
+Vector2& Vector2::operator+=(const float s)
+{
+	X += s;
+	Y += s;
+	return *this;
+}
+
+Vector2& Vector2::operator-=(const Vector2& p)
+{
+	X -= p.X;
+	Y -= p.Y;
+	return *this;
+}
+
+Vector2& Vector2::operator-=(const float s)
+{
+	X -= s;
+	Y -= s;
+	return *this;
+}
+
+Vector2& Vector2::operator/=(const Vector2& p)
+{
+	X /= p.X;
+	Y /= p.Y;
+	return *this;
+}
+
+Vector2& Vector2::operator/=(const float s)
+{
+	X /= s;
+	Y /= s;
+	return *this;
+}
+
+Vector2& Vector2::operator*=(const Vector2& p)
+{
+	X *= p.X;
+	Y *= p.Y;
+	return *this;
+}
+
+Vector2& Vector2::operator*=(const float s)
+{
+	X *= s;
+	Y *= s;
+	return *this;
+}
+
+Vector2& Vector2::operator=(const Vector2& p)
 {
 	// INFO: Prevents Self-Assignment
 	if (this != &p)

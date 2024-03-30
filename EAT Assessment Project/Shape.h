@@ -3,6 +3,7 @@
 #include "ICollision.h"
 
 #include "Transform.h"
+#include "Vector2.h"
 #include "Rigidbody.h"
 
 #include "Color.h"
@@ -16,6 +17,24 @@ enum class ShapeType
 	Square,
 	Rectangle,
 	Circle
+};
+
+struct Parameters
+{
+	float x;
+	float y;
+	bool isStatic;
+	Color color;
+	float moveSpeed;
+
+	Parameters(float x, float y, bool isStatic = false, Color color = Color::GREEN, float moveSpeed = 100)
+	{
+		this->x = x;
+		this->y = y;
+		this->isStatic = isStatic;
+		this->color = color;
+		this->moveSpeed = moveSpeed;
+	}
 };
 
 class Shape : public ICollision
@@ -33,13 +52,15 @@ protected:
 	Color color;
 	bool isStatic;
 
+	Vector2 moveDirection;
+	float moveSpeed;
+
 public:
 	/// <summary>
 	/// Constructor
 	/// </summary>
-	/// <param name="x">: X-Coordinate of the shape</param>
-	/// <param name="y">: Y-Coordinate of the shape</param>
-	Shape(float x, float y, bool isStatic = false, Color color = Color::GREEN);
+	/// <param name="params">: The parameters to be passed in</param>
+	Shape(Parameters* params);
 
 	/// <summary>
 	/// Inherited from the ICollision interface used for responding to collisions
@@ -67,7 +88,7 @@ public:
 	/// <summary>
 	/// Gets the centre point of the shape
 	/// </summary>
-	virtual Point GetCentrePoint() = 0;
+	virtual Transform GetCentre() = 0;
 
 	/// <summary>
 	/// Setter for the GOs is static variable

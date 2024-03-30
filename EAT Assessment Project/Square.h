@@ -14,10 +14,9 @@ public:
 	/// <summary>
 	/// Constructor
 	/// </summary>
-	/// <param name="x">: X-Coordinate of the square</param>
-	/// <param name="y">: Y-Coordinate of the square</param>
+	/// <param name="params">: The parameters to be passed in</param>
 	/// <param name="size">: Size of the square</param>
-	Square(float x, float y, int size, bool isStatic = false, Color color = Color::GREEN);
+	Square(Parameters* params, int size);
 
 	/// <summary>
 	/// Inherited from the ICollision interface used for responding to collisions
@@ -44,7 +43,7 @@ public:
 	/// <summary>
 	/// Gets the centre point of the shape
 	/// </summary>
-	Point GetCentrePoint() override;
+	Transform GetCentre() override;
 
 	/// <summary>
 	/// Getter for the Squares' Size

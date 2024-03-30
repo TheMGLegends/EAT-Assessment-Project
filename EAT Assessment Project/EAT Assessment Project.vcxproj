@@ -145,7 +145,6 @@
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PhysicsManager.cpp" />
-    <ClCompile Include="Point.cpp" />
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Rigidbody.cpp" />

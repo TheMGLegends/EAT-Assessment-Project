@@ -25,29 +25,32 @@
     <Filter Include="Collision System Files\Collider Type Files">
       <UniqueIdentifier>{a3e49331-de06-4dda-8127-8144237e96a3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Component Files\Component Base Class Files">
-      <UniqueIdentifier>{e0e433ae-1d10-4056-99a0-66ea2b470872}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Collision System Files\Collider Type Files\Collider Base Class Files">
       <UniqueIdentifier>{4d4172ff-d092-420a-bab7-2d263030ae05}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Event System Files">
-      <UniqueIdentifier>{95c92a89-b479-4343-8dbd-7ec517c24640}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Event System Files\Event Type Files">
-      <UniqueIdentifier>{ed430078-8a75-492e-bddf-76a3cf950cd3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Event System Files\Event System Base Class Files">
-      <UniqueIdentifier>{c2b78142-efb9-4bd7-a2a3-aca2fd3885c5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Event System Files\Event Manager Files">
-      <UniqueIdentifier>{6890719a-4b28-40f6-ad34-e1e5e5496160}</UniqueIdentifier>
     </Filter>
     <Filter Include="Debug Files">
       <UniqueIdentifier>{7067fb57-5f02-4e56-817b-2293bbbcbdd5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Collision System Files\Collision Interface Files">
       <UniqueIdentifier>{0b0d2518-f536-479a-8921-fada86f1288e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OBSOLETE CLASSES">
+      <UniqueIdentifier>{48bae683-3892-433f-b38b-502f8a6813dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OBSOLETE CLASSES\Event System Files">
+      <UniqueIdentifier>{95c92a89-b479-4343-8dbd-7ec517c24640}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OBSOLETE CLASSES\Event System Files\Event Type Files">
+      <UniqueIdentifier>{ed430078-8a75-492e-bddf-76a3cf950cd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OBSOLETE CLASSES\Event System Files\Event System Base Class Files">
+      <UniqueIdentifier>{c2b78142-efb9-4bd7-a2a3-aca2fd3885c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OBSOLETE CLASSES\Event System Files\Event Manager Files">
+      <UniqueIdentifier>{6890719a-4b28-40f6-ad34-e1e5e5496160}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OBSOLETE CLASSES\Component Base Class Files">
+      <UniqueIdentifier>{e0e433ae-1d10-4056-99a0-66ea2b470872}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -84,15 +87,6 @@
     <ClCompile Include="TimeManager.cpp">
       <Filter>Manager Files</Filter>
     </ClCompile>
-    <ClCompile Include="PhysicsManager.cpp">
-      <Filter>Manager Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Rigidbody.cpp">
-      <Filter>Component Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Point.cpp">
-      <Filter>Component Files\Component Base Class Files</Filter>
-    </ClCompile>
     <ClCompile Include="Transform.cpp">
       <Filter>Component Files</Filter>
     </ClCompile>
@@ -109,13 +103,19 @@
       <Filter>Collision System Files\Collider Type Files</Filter>
     </ClCompile>
     <ClCompile Include="EventListener.cpp">
-      <Filter>Event System Files</Filter>
+      <Filter>OBSOLETE CLASSES\Event System Files</Filter>
     </ClCompile>
     <ClCompile Include="EventManager.cpp">
-      <Filter>Event System Files\Event Manager Files</Filter>
+      <Filter>OBSOLETE CLASSES\Event System Files\Event Manager Files</Filter>
     </ClCompile>
     <ClCompile Include="Color.cpp">
       <Filter>Component Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsManager.cpp">
+      <Filter>OBSOLETE CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="Rigidbody.cpp">
+      <Filter>OBSOLETE CLASSES</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -149,14 +149,8 @@
     <ClInclude Include="TimeManager.h">
       <Filter>Manager Files</Filter>
     </ClInclude>
-    <ClInclude Include="PhysicsManager.h">
-      <Filter>Manager Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Rigidbody.h">
-      <Filter>Component Files</Filter>
-    </ClInclude>
     <ClInclude Include="Point.h">
-      <Filter>Component Files\Component Base Class Files</Filter>
+      <Filter>OBSOLETE CLASSES\Component Base Class Files</Filter>
     </ClInclude>
     <ClInclude Include="Transform.h">
       <Filter>Component Files</Filter>
@@ -174,16 +168,16 @@
       <Filter>Collision System Files\Collider Type Files</Filter>
     </ClInclude>
     <ClInclude Include="EventListener.h">
-      <Filter>Event System Files</Filter>
+      <Filter>OBSOLETE CLASSES\Event System Files</Filter>
     </ClInclude>
     <ClInclude Include="Event.h">
-      <Filter>Event System Files\Event System Base Class Files</Filter>
+      <Filter>OBSOLETE CLASSES\Event System Files\Event System Base Class Files</Filter>
     </ClInclude>
     <ClInclude Include="CollisionEvent.h">
-      <Filter>Event System Files\Event Type Files</Filter>
+      <Filter>OBSOLETE CLASSES\Event System Files\Event Type Files</Filter>
     </ClInclude>
     <ClInclude Include="EventManager.h">
-      <Filter>Event System Files\Event Manager Files</Filter>
+      <Filter>OBSOLETE CLASSES\Event System Files\Event Manager Files</Filter>
     </ClInclude>
     <ClInclude Include="MemoryLeakDetector.h">
       <Filter>Debug Files</Filter>
@@ -193,6 +187,12 @@
     </ClInclude>
     <ClInclude Include="ICollision.h">
       <Filter>Collision System Files\Collision Interface Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsManager.h">
+      <Filter>OBSOLETE CLASSES</Filter>
+    </ClInclude>
+    <ClInclude Include="Rigidbody.h">
+      <Filter>OBSOLETE CLASSES</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

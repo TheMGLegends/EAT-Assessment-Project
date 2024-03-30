@@ -15,11 +15,10 @@ public:
 	/// <summary>
 	/// Constructor
 	/// </summary>
-	/// <param name="x">: X-Coordinate of the square</param>
-	/// <param name="y">: Y-Coordinate of the square</param>
+	/// <param name="params">: The parameters to be passed in</param>
 	/// <param name="width">: Width of the rectangle</param>
 	/// <param name="height">: Height of the rectangle</param>
-	Rectangle(float x, float y, int width, int height, bool isStatic = false, Color color = Color::GREEN);
+	Rectangle(Parameters* params, int width, int height);
 
 	/// <summary>
 	/// Inherited from the ICollision interface used for responding to collisions
@@ -46,7 +45,7 @@ public:
 	/// <summary>
 	/// Gets the centre point of the shape
 	/// </summary>
-	Point GetCentrePoint() override;
+	Transform GetCentre() override;
 
 	/// <summary>
 	/// Getter for the Rectangles' Width

@@ -4,14 +4,21 @@
 
 int Shape::shapeCount = 0;
 
-Shape::Shape(float x, float y, bool isStatic, Color color)
+Shape::Shape(Parameters* params)
 {
-	this->isStatic = isStatic;
-	this->color = color;
+	this->isStatic = params->isStatic;
+	this->color = params->color;
+	this->moveSpeed = params->moveSpeed;
 
 	// INFO: Set the position of the shape
-	position.X = x;
-	position.Y = y;
+	position.X = params->x;
+	position.Y = params->y;
+
+	// INFO: Initialize previous position of shape
+	previousPosition = position;
+
+	// INFO: Randomize the initial move direction
+	moveDirection = Vector2::RandomDirection();
 
 	// INFO: Set the ID of the shape based on
 	// the current shape count
@@ -24,5 +31,12 @@ Shape::Shape(float x, float y, bool isStatic, Color color)
 	// INFO: Set Shape Type to None ready for it 
 	// to be set in the derived classes constructors
 	shapeType = ShapeType::None;
+
+	// INFO: Delete dynamically created parameters
+	if (params != nullptr)
+	{
+		delete params;
+		params = nullptr;
+	}
 }
 

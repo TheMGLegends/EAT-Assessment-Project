@@ -165,24 +165,24 @@ bool Program::Initialize(const char* WINDOW_TITLE, int screenWidth, int screenHe
 	InputManager::Initialize();
 
 	// TESTING INITIALIZATION OF GAME OBJECTS <--------------------------------------------------------------------------------------------------------------------------------------------
-	leftBorder = new Rectangle(0, 0, 25, SCREEN_HEIGHT, true, Color::BLUE);
-	rightBorder = new Rectangle(SCREEN_WIDTH - 25, 0, 25, SCREEN_HEIGHT, true, Color::BLUE);
+	leftBorder = new Rectangle(new Parameters(0, 0, true, Color::BLUE, 0), 25, SCREEN_HEIGHT);
+	rightBorder = new Rectangle(new Parameters(SCREEN_WIDTH - 25, 0, true, Color::BLUE, 0), 25, SCREEN_HEIGHT);
 
-	topBorder = new Rectangle(0, 0, SCREEN_WIDTH, 25, true, Color::BLUE);
-	bottomBorder = new Rectangle(0, SCREEN_HEIGHT - 25, SCREEN_WIDTH, 25, true, Color::BLUE);
+	topBorder = new Rectangle(new Parameters(0, 0, true, Color::BLUE, 0), SCREEN_WIDTH, 25);
+	bottomBorder = new Rectangle(new Parameters(0, SCREEN_HEIGHT - 25, true, Color::BLUE, 0), SCREEN_WIDTH, 25);
 
-	square = new Square(SCREEN_WIDTH * 0.2f, SCREEN_HEIGHT * 0.1f, 40);
-	rectangle = new Rectangle(SCREEN_WIDTH * 0.4f, SCREEN_HEIGHT * 0.1f, 50, 20);
-	circle = new Circle(SCREEN_WIDTH * 0.75f, SCREEN_HEIGHT / 2, 50);
-	circle2 = new Circle(SCREEN_WIDTH * 0.25f, SCREEN_HEIGHT / 2, 25);
+	square = new Square(new Parameters(SCREEN_WIDTH * 0.2f, SCREEN_HEIGHT * 0.1f, false, Color::GREEN, 100), 40);
+	rectangle = new Rectangle(new Parameters(SCREEN_WIDTH * 0.4f, SCREEN_HEIGHT * 0.1f, false, Color::GREEN, 100), 50, 20);
+	circle = new Circle(new Parameters(SCREEN_WIDTH * 0.75f, SCREEN_HEIGHT / 2, false, Color::GREEN, 100), 50);
+	circle2 = new Circle(new Parameters(SCREEN_WIDTH * 0.25f, SCREEN_HEIGHT / 2, false, Color::GREEN, 100), 25);
 
-	AssetManager::Instance()->LoadTexture(leftBorder, renderer);
-	AssetManager::Instance()->LoadTexture(rightBorder, renderer);
-	AssetManager::Instance()->LoadTexture(bottomBorder, renderer);
-	AssetManager::Instance()->LoadTexture(topBorder, renderer);
-
-	AssetManager::Instance()->LoadTexture(square, renderer);
-	AssetManager::Instance()->LoadTexture(rectangle, renderer);
+	//AssetManager::Instance()->LoadTexture(leftBorder, renderer);
+	//AssetManager::Instance()->LoadTexture(rightBorder, renderer);
+	//AssetManager::Instance()->LoadTexture(bottomBorder, renderer);
+	//AssetManager::Instance()->LoadTexture(topBorder, renderer);
+	//
+	//AssetManager::Instance()->LoadTexture(square, renderer);
+	//AssetManager::Instance()->LoadTexture(rectangle, renderer);
 
 	return isRunning;
 }
@@ -202,7 +202,10 @@ void Program::ProcessEvents()
 
 void Program::Update(float dt)
 {
+	square->Update(dt);
 	rectangle->Update(dt);
+	circle->Update(dt);
+	circle2->Update(dt);
 
 	CollisionManager::Instance()->CheckCollisions();
 }

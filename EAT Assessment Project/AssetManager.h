@@ -40,7 +40,7 @@ public:
 	/// <param name="y">: The y position of the rect</param>
 	/// <param name="width">: The width of the rect</param>
 	/// <param name="height">: The height of the rect</param>
-	void DrawRect(int id, int x, int y, int width, int height);
+	void DrawRect(int id, int x, int y, int width, int height, Color color);
 
 	/// <summary>
 	/// Used for drawing the outline for a box collider
@@ -59,7 +59,7 @@ public:
 	/// <param name="radius">: The radius of the circle</param>
 	/// <param name="color">: The color that the circle will be drawn in</param>
 	/// <param name="isFilled">: Whether the shape should be colored in or outlined</param>
-	void DrawCircle(Point centre, int radius, Color color, bool isFilled = true);
+	void DrawCircle(Transform centre, int radius, Color color, bool isFilled = true);
 
 private:
 	AssetManager();

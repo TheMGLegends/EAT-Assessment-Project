@@ -5,8 +5,6 @@
 class BoxCollider : public Collider
 {
 private:
-	float* x;
-	float* y;
 	int* width;
 	int* height;
 
@@ -21,18 +19,6 @@ public:
 	/// <param name="width">: The width of the rect</param>
 	/// <param name="height">: The height of the rect</param>
 	BoxCollider(std::function<void(Collider*)> Response, float &x, float &y, int &width, int &height);
-
-	/// <summary>
-	/// Getter for the box colliders' x position
-	/// </summary>
-	/// <returns>The x position of the box collider</returns>
-	inline float GetX() { return *x; }
-
-	/// <summary>
-	/// Getter for the box colliders' y position
-	/// </summary>
-	/// <returns>The y position of the box collider</returns>
-	inline float GetY() { return *y; }
 
 	/// <summary>
 	/// Getter for the box colliders' width

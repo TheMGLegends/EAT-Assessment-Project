@@ -87,17 +87,33 @@ void AssetManager::LoadRect(int id, int width, int height, Color color, SDL_Rend
 	rectLib[id] = texture;
 }
 
-void AssetManager::DrawRect(int id, int x, int y, int width, int height)
+void AssetManager::DrawRect(int id, int x, int y, int width, int height, Color color)
 {
+	// INFO: Creates a Surface that can be colored on
+	SDL_Surface* surface = SDL_CreateRGBSurface(0, width, height, 32, 0, 0, 0, 0);
+
+	// INFO: Converts RGBA values into pixel values which can then be used
+	// to fill in the surface
+	Uint32 rectColor = SDL_MapRGBA(surface->format, color.R, color.G, color.B, color.A);
+
+	// INFO: Fills the surface provided with the specified color
+	SDL_FillRect(surface, NULL, rectColor);
+
+	SDL_Texture* texture = SDL_CreateTextureFromSurface(Program::Instance()->GetRenderer(), surface);
+
+	SDL_FreeSurface(surface);
+
 	// INFO: Given that there is no renderer or the ID doesn't match a texture
 	// we exit out of the function
-	if (Program::Instance()->GetRenderer() == nullptr || rectLib[id] == nullptr)
-		return;
+	//if (Program::Instance()->GetRenderer() == nullptr || rectLib[id] == nullptr)
+	//	return;
 
 	SDL_Rect destinationRect{ x, y, width, height };
 
-	SDL_RenderCopyEx(Program::Instance()->GetRenderer(), rectLib[id], NULL, 
+	SDL_RenderCopyEx(Program::Instance()->GetRenderer(), texture, NULL, 
 					 &destinationRect, 0, NULL, SDL_FLIP_NONE);
+
+	SDL_DestroyTexture(texture);
 }
 
 void AssetManager::DrawBoxCollider(int x, int y, int width, int height, Color color)
@@ -109,7 +125,7 @@ void AssetManager::DrawBoxCollider(int x, int y, int width, int height, Color co
 	Program::Instance()->DefaultScreenColor();
 }
 
-void AssetManager::DrawCircle(Point centre, int radius, Color color, bool isFilled)
+void AssetManager::DrawCircle(Transform centre, int radius, Color color, bool isFilled)
 {
 	// INFO: Given that there is no renderer or the ID doesn't match a texture
 	// we exit out of the function

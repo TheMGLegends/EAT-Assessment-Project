@@ -13,10 +13,13 @@ enum class ColliderType
 class Collider
 {
 protected:
+	float* X;
+	float* Y;
+
 	ColliderType colliderType;
 
 public:
-	Collider(std::function<void(Collider*)> Response);
+	Collider(std::function<void(Collider*)> Response, float &x, float &y);
 	virtual ~Collider() {}
 
 	/// <summary>
@@ -35,5 +38,17 @@ public:
 	/// </summary>
 	/// <param name="type">: The type of collider</param>
 	void SetColliderType(ColliderType type) { colliderType = type; }
+
+	/// <summary>
+	/// Getter for the colliders' x position
+	/// </summary>
+	/// <returns>The x position of the collider</returns>
+	inline float GetX() { return *X; }
+
+	/// <summary>
+	/// Getter for the colliders' y position
+	/// </summary>
+	/// <returns>The y position of the collider</returns>
+	inline float GetY() { return *Y; }
 };
 

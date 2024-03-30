@@ -5,8 +5,6 @@
 class CircleCollider : public Collider
 {
 private:
-	float* X;
-	float* Y;
 	int* radius;
 
 public:

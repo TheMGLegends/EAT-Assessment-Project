@@ -13,6 +13,9 @@ int main(int argc, char* argv[])
 	// INFO: Specify Line at which to break at
 	//_CrtSetBreakAlloc(LINE NUMBER)
 
+	// INFO: Seed for RNG
+	srand((unsigned int)time(NULL));
+
 	Program::Instance()->Initialize("Engine Architecture and Tools Assessment Project");
 	TimeManager::Initialize();
 

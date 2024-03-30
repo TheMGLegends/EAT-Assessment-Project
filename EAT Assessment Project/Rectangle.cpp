@@ -6,8 +6,8 @@
 
 #include "MemoryLeakDetector.h"
 
-Rectangle::Rectangle(float x, float y, int width, int height, bool isStatic, Color color) 
-	: Shape(x, y, isStatic, color)
+Rectangle::Rectangle(Parameters* params, int width, int height)
+	: Shape(params)
 {
 	// INFO: Check to ensure width and height aren't the same
 	// otherwise it would be a Square
@@ -37,7 +37,28 @@ void Rectangle::OnCollisionEnter(Collider* other)
 	// INFO: Doesn't React to Collision if the object is static
 	if (isStatic)
 		return;
-	
+
+	if (other->GetY() < position.Y && moveDirection.Y < 0)
+	{
+		moveDirection.Y = 1;
+	}
+	else if (other->GetY() > position.Y  && moveDirection.Y > 0)
+	{
+		moveDirection.Y = -1;
+	}
+	else if (other->GetX() < position.X && moveDirection.X < 0)
+	{
+		moveDirection.X = 1;
+	}
+	else if (other->GetX() > position.X && moveDirection.X > 0)
+	{
+		moveDirection.X = -1;
+	}
+
+	// INFO: Change Color of Shape on Collision
+	color = Color::RandomColor();
+
+	/*
 	std::cout << "I am a rectangle and I have just collided with another collider" << std::endl;
 
 	switch (other->GetColliderType())
@@ -66,22 +87,17 @@ void Rectangle::OnCollisionEnter(Collider* other)
 	default:
 		break;
 	}
+	*/
 }
 
 void Rectangle::Update(float dt)
 {
-	PhysicsManager::Instance()->UpdatePhysics(rb, dt);
-
-	previousPosition.X = position.X;
-	position.TranslateX(rb.displacement.X);
-	
-	previousPosition.Y = position.Y;
-	position.TranslateY(rb.displacement.Y);
+	position.Translate(moveDirection * moveSpeed * dt);
 }
 
 void Rectangle::Draw()
 {
-	AssetManager::Instance()->DrawRect(GetID(), (int)position.X, (int)position.Y, width, height);
+	AssetManager::Instance()->DrawRect(GetID(), (int)position.X, (int)position.Y, width, height, color);
 
 	// INFO: Debug Outline for Showcasing Box Collider
 	AssetManager::Instance()->DrawBoxCollider((int)position.X, (int)position.Y, width, height);
@@ -91,7 +107,7 @@ void Rectangle::Clean()
 {
 }
 
-Point Rectangle::GetCentrePoint()
+Transform Rectangle::GetCentre()
 {
-	return Point(position.X + width / 2, position.Y + height / 2);
+	return Transform(position.X + width / 2, position.Y + height / 2);
 }

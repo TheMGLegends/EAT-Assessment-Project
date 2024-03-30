@@ -4,6 +4,8 @@
 
 #include "cmath"
 
+const int DIRECTIONS_COUNT = 4;
+
 /// <summary>
 /// Derived from Point class used for physics purposes like velocities, forces and directions
 /// </summary>
@@ -15,6 +17,14 @@ public:
 	static const Vector2 LEFT;
 	static const Vector2 RIGHT;
 	static const Vector2 ZERO;
+
+	static const Vector2 TOP_LEFT;
+	static const Vector2 TOP_RIGHT;
+	static const Vector2 BOTTOM_LEFT;
+	static const Vector2 BOTTOM_RIGHT;
+
+private:
+	static const Vector2 DIRECTIONS[DIRECTIONS_COUNT];
 
 public:
 	inline Vector2(float x = 0, float y = 0) : Point{ x,y } {}
@@ -58,14 +68,44 @@ public:
 	/// <returns>Returns a new normalized vector</returns>
 	Vector2 normalized() const;
 
+	/// <summary>
+	/// Generates a random direction vector from an array of pre-defined directions
+	/// </summary>
+	/// <returns>A directional unit vector</returns>
+	static Vector2 RandomDirection();
+
 
 	// INFO: Overloaded Operators
 
-	Vector2& operator=(const Point& p);
+	inline Vector2 operator+(const Vector2& p) const { return Vector2(X + p.X, Y + p.Y); }
+	inline Vector2 operator-(const Vector2& p) const { return Vector2(X - p.X, Y - p.Y); }
+
+	inline Vector2 operator/(const Vector2& p) const { return Vector2(X / p.X, Y / p.Y); }
+	inline Vector2 operator/(const float s) const { return Vector2(X / s, Y / s); }
+
+	inline Vector2 operator*(const Vector2& p) const { return Vector2(X * p.X, Y * p.Y); }
+	inline Vector2 operator*(const float s) const { return Vector2(X * s, Y * s); }
+
+	Vector2& operator+=(const Vector2& p);
+	Vector2& operator+=(const float s);
+
+	Vector2& operator-=(const Vector2& p);
+	Vector2& operator-=(const float s);
+
+	Vector2& operator/=(const Vector2& p);
+	Vector2& operator/=(const float s);
+
+	Vector2& operator*=(const Vector2& p);
+	Vector2& operator*=(const float s);
+
+	Vector2& operator=(const Vector2& p);
+
+	inline bool operator==(const Vector2& p) const { return (X == p.X) && (Y == p.Y); }
+	inline bool operator!=(const Vector2& p) const { return (X != p.X) || (Y != p.Y); }
 
 
 	// INFO: Debug Methods
 
-	inline void DisplayXY() const override { std::cout << "Vector (" << X << ", " << Y << ")" << std::endl; }
+	inline void DisplayXY() override { std::cout << "Vector (" << X << ", " << Y << ")" << std::endl; }
 };
 
