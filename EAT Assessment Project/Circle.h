@@ -4,10 +4,13 @@
 
 #include "CircleCollider.h"
 
+/// <summary>
+/// Defines the circle shape
+/// </summary>
 class Circle : public Shape
 {
 private:
-	CircleCollider* circleCollider;
+	CircleCollider* circleCollider; // INFO: Gets deleted by collision manager
 	int radius;
 
 public:
@@ -36,22 +39,15 @@ public:
 	void Draw() override;
 
 	/// <summary>
-	/// Clean up method during program termination
+	/// Getter for the centre point of the circle
 	/// </summary>
-	void Clean() override;
-
-	/// <summary>
-	/// Gets the centre point of the shape
-	/// </summary>
-	Transform GetCentre() override;
+	/// <returns>The centre point of the circle</returns>
+	inline Transform GetCentre() override { return Transform(position.X + radius, position.Y + radius); }
 
 	/// <summary>
 	/// Getter for the circles' radius
 	/// </summary>
 	/// <returns>The radius of the circle</returns>
 	inline int GetRadius() const { return radius; }
-
-	// TEMP FUNCTION <--------------------------------------------------------------------------------------------------------------------------------------------
-	inline void tempMoveXLeft() { position.X -= 5; }
 };
 

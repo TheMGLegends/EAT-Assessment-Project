@@ -1,7 +1,5 @@
 #include "Collider.h"
 
-#include "MemoryLeakDetector.h"
-
 Collider::Collider(std::function<void(Collider*)> Response, float& x, float& y)
 {
 	// INFO: Set Collider Type to None ready for it 
@@ -11,6 +9,7 @@ Collider::Collider(std::function<void(Collider*)> Response, float& x, float& y)
 	// INFO: Set the bound provided function to the Collision Response
 	CollisionResponse = Response;
 
+	// INFO: Set the X and Y pointers to point to the provided x and y memory addresses
 	X = &x;
 	Y = &y;
 }

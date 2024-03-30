@@ -2,12 +2,14 @@
 
 #include "Singleton.h"
 
-#include "SDL.h"
-#include "Shape.h"
+#include "Transform.h"
 #include "Color.h"
 
-#include <unordered_map>
+#include "SDL.h"
 
+/// <summary>
+/// Defines the class responsible for managing the assets within the application
+/// </summary>
 class AssetManager : public Singleton<AssetManager>
 {
 	// INFO: Grants the base class access to the private and protected
@@ -15,22 +17,11 @@ class AssetManager : public Singleton<AssetManager>
 	// the constructor
 	friend class Singleton<AssetManager>;
 
-private:
-	std::unordered_map<int, SDL_Texture*> rectLib;
-
 public:
 	/// <summary>
 	/// Clean up method during program termination
 	/// </summary>
 	void Clean() override;
-
-	/// <summary>
-	/// Used for checking what type of shape is being passed in and based on this
-	/// a different loading function will be run
-	/// </summary>
-	/// <param name="shape">: The game object you want to load a texture for</param>
-	/// <param name="renderer">: The SDL renderer</param>
-	void LoadTexture(Shape* shape, SDL_Renderer* renderer);
 
 	/// <summary>
 	/// Used for drawing a rect
@@ -63,15 +54,5 @@ public:
 
 private:
 	AssetManager();
-
-	/// <summary>
-	/// Used for loading squares and rectangles
-	/// </summary>
-	/// <param name="id">: The id of the texture to load</param>
-	/// <param name="width">: The width of the rect</param>
-	/// <param name="height">: The height of the rect</param>
-	/// <param name="color">: The color values of the object</param>
-	/// <param name="renderer">: The SDL renderer</param>
-	void LoadRect(int id, int width, int height, Color color, SDL_Renderer* renderer);
 };
 

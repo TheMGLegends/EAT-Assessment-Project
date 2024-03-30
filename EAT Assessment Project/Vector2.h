@@ -2,16 +2,19 @@
 
 #include "Point.h"
 
+#include "iostream"
 #include "cmath"
 
 const int DIRECTIONS_COUNT = 4;
 
 /// <summary>
-/// Derived from Point class used for physics purposes like velocities, forces and directions
+/// Derived from Point class used for vector calculations
 /// </summary>
 class Vector2 : public Point
 {
 public:
+	// INFO: Generic Vectors
+
 	static const Vector2 UP;
 	static const Vector2 DOWN;
 	static const Vector2 LEFT;
@@ -104,8 +107,9 @@ public:
 	inline bool operator!=(const Vector2& p) const { return (X != p.X) || (Y != p.Y); }
 
 
-	// INFO: Debug Methods
-
+	/// <summary>
+	/// Displays the x and y coordinates onto the console output window
+	/// </summary>
 	inline void DisplayXY() override { std::cout << "Vector (" << X << ", " << Y << ")" << std::endl; }
 };
 

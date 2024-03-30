@@ -1,3 +1,4 @@
+/*
 #pragma once
 
 #include "Singleton.h"
@@ -75,4 +76,5 @@ private:
 
 	Vector2 CalculateDragForce(Rigidbody& rb) const;
 };
+*/
 

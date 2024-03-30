@@ -21,6 +21,7 @@ private:
 	SDL_Renderer* renderer;
 
 	bool isRunning;
+	bool inDebugMode;
 	Color screenColor;
 
 public:
@@ -33,21 +34,16 @@ public:
 	/// Initializes the SDL Libraries as well as other things like textures and game objects
 	/// </summary>
 	/// <param name="WINDOW_TITLE">: The title of the SDL window</param>
+	/// <param name="inDebugMode">: Whether the program is in debug mode or not</param>
 	/// <param name="screenWidth">: The width of the SDL window</param>
 	/// <param name="screenHeight">: The height of the SDL window</param>
-	/// <returns>Returns false if it was unable to initialize everything correctly</returns>
-	bool Initialize(const char* WINDOW_TITLE, int screenWidth = SCREEN_WIDTH, int screenHeight = SCREEN_HEIGHT);
+	/// <returns>False if it was unable to initialize everything correctly</returns>
+	bool Initialize(const char* WINDOW_TITLE, bool inDebugMode = false, int screenWidth = SCREEN_WIDTH, int screenHeight = SCREEN_HEIGHT);
 
 	/// <summary>
 	/// Handles the users input
 	/// </summary>
 	void HandleInput();
-
-	/// <summary>
-	/// Processes the events that occur during the execution of the program
-	/// e.g. (Collision Events)
-	/// </summary>
-	void ProcessEvents();
 
 	/// <summary>
 	/// Updates all logic associated with each game object that exists in the program
@@ -63,25 +59,37 @@ public:
 	/// <summary>
 	/// The getter for whether the program is running
 	/// </summary>
-	/// <returns>Returns the running state of the program</returns>
+	/// <returns>The running state of the program</returns>
 	inline bool IsRunning() const { return isRunning; }
 	
 	/// <summary>
 	/// The setter for whether the program is running
 	/// </summary>
-	/// <param name="isRunning">: Whether the loop should continue looping</param>
+	/// <param name="isRunning">: Whether the program should continue looping</param>
 	inline void SetIsRunning(bool isRunning) { this->isRunning = isRunning; }
+
+	/// <summary>
+	/// The getter for whether the program is in debug mode
+	/// </summary>
+	/// <returns>The debug state of the program</returns>
+	inline bool IsInDebugMode() const { return inDebugMode; }
+
+	/// <summary>
+	/// The setter for whether the program is in debug mode
+	/// </summary>
+	/// <param name="inDebugMode">: Whether the program is in debug mode or not</param>
+	inline void SetInDebugMode(bool inDebugMode) { this->inDebugMode = inDebugMode; }
 
 	/// <summary>
 	/// The getter for the renderer
 	/// </summary>
-	/// <returns>Returns the renderer member variable held inside of program</returns>
+	/// <returns>The renderer</returns>
 	inline SDL_Renderer* GetRenderer() { return renderer; }
 
 	/// <summary>
 	/// The getter for the screen color
 	/// </summary>
-	/// <returns>Returns the color of the screen</returns>
+	/// <returns>The color of the screen</returns>
 	inline Color GetScreenColor() const { return screenColor; }
 
 	/// <summary>

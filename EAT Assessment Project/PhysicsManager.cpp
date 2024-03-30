@@ -1,3 +1,4 @@
+/*
 #include "PhysicsManager.h"
 
 #include "MemoryLeakDetector.h"
@@ -72,4 +73,5 @@ Vector2 PhysicsManager::CalculateDragForce(Rigidbody& rb) const
 
 	return Vector2(dragForceX, dragForceY);
 }
+*/
 

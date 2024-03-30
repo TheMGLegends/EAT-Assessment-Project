@@ -2,7 +2,7 @@
 
 #include "Program.h"
 
-#include <iostream>
+#include <cstring>
 
 #include "MemoryLeakDetector.h"
 

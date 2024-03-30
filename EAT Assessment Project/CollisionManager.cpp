@@ -1,9 +1,6 @@
 #include "CollisionManager.h"
 
 #include <cmath>
-#include <iostream>
-
-#include "MemoryLeakDetector.h"
 
 CollisionManager* CollisionManager::instance = nullptr;
 
@@ -35,6 +32,10 @@ void CollisionManager::CheckCollisions()
 	{
 		for (int j = i + 1; j < colliders.size(); j++)
 		{
+			// INFO: Detects the Type of Collider of both i and j, then proceeds
+			// to downcast them to their respective types and calls the appropriate
+			// collision detection algorithm
+
 			// INFO: Circle & Circle
 			if (colliders[i]->GetColliderType() == ColliderType::Circle &&
 				colliders[j]->GetColliderType() == ColliderType::Circle)
@@ -128,21 +129,33 @@ void CollisionManager::CircleRectCollision(CircleCollider* c, BoxCollider* b)
 	float bMinY = b->GetY();
 	float bMaxY = b->GetY() + b->GetHeight();
 
-	// INFO: Find the closest x value to the circle
+	// INFO: Find the closest x value to the circles' centre x
 	if (cCentreX < bMinX)
+	{
 		closestX = bMinX;
+	}
 	else if (cCentreX > bMaxX)
+	{
 		closestX = bMaxX;
+	}
 	else
+	{
 		closestX = cCentreX;
+	}
 
-	// INFO: Find the closest y value to the circle
+	// INFO: Find the closest y value to the circles' centre y
 	if (cCentreY < bMinY)
+	{
 		closestY = bMinY;
+	}
 	else if (cCentreY > bMaxY)
+	{
 		closestY = bMaxY;
+	}
 	else
+	{
 		closestY = cCentreY;
+	}
 
 	// INFO: The difference between the circle's centre and 
 	// the closest x and y values

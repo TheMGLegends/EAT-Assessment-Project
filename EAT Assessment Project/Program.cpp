@@ -3,27 +3,28 @@
 #include "InputManager.h"
 #include "AssetManager.h"
 #include "CollisionManager.h"
-#include "PhysicsManager.h"
+
+#include "Square.h"
+#include "Rectangle.h"
+#include "Circle.h"
 
 #include "SDL_image.h"
 
 #include <iostream>
 
-// TESTING INCLUDES <--------------------------------------------------------------------------------------------------------------------------------------------
-#include "Square.h"
-#include "Rectangle.h"
-#include "Circle.h"
-
 Program* Singleton<Program>::instance = nullptr;
 
-// TESTING GAME OBJECTS <--------------------------------------------------------------------------------------------------------------------------------------------
 Rectangle* leftBorder = nullptr;
 Rectangle* rightBorder = nullptr;
 Rectangle* topBorder = nullptr;
 Rectangle* bottomBorder = nullptr;
 
 Square* square = nullptr;
+Square* square2 = nullptr;
+
 Rectangle* rectangle = nullptr;
+Rectangle* rectangle2 = nullptr;
+
 Circle* circle = nullptr;
 Circle* circle2 = nullptr;
 
@@ -31,6 +32,7 @@ Program::Program() :
 	window{ nullptr },
 	renderer{ nullptr },
 	isRunning{ false },
+	inDebugMode{ false },
 	screenColor{ Color::WHITE }
 {
 }
@@ -41,61 +43,64 @@ void Program::Clean()
 	InputManager::Clean();
 	AssetManager::Instance()->Clean();
 	CollisionManager::Instance()->Clean();
-	PhysicsManager::Instance()->Clean();
 
-	// TESTING DELETE GAME OBJECTS <--------------------------------------------------------------------------------------------------------------------------------------------
+	// INFO: Clean Game Objects
 	if (leftBorder != nullptr)
 	{
-		leftBorder->Clean();
 		delete leftBorder;
 		leftBorder = nullptr;
 	}
 
 	if (rightBorder != nullptr)
 	{
-		rightBorder->Clean();
 		delete rightBorder;
 		rightBorder = nullptr;
 	}
 
 	if (topBorder != nullptr)
 	{
-		topBorder->Clean();
 		delete topBorder;
 		topBorder = nullptr;
 	}
 
 	if (bottomBorder != nullptr)
 	{
-		bottomBorder->Clean();
 		delete bottomBorder;
 		bottomBorder = nullptr;
 	}
 
 	if (square != nullptr)
 	{
-		square->Clean();
 		delete square;
 		square = nullptr;
 	}
 
+	if (square2 != nullptr)
+	{
+		delete square2;
+		square2 = nullptr;
+	}
+
 	if (rectangle != nullptr)
 	{
-		rectangle->Clean();
 		delete rectangle;
 		rectangle = nullptr;
 	}
 
+	if (rectangle2 != nullptr)
+	{
+		delete rectangle2;
+		rectangle2 = nullptr;
+	}
+
 	if (circle != nullptr)
 	{
-		circle->Clean();
 		delete circle;
 		circle = nullptr;
 	}
 
 	if (circle2 != nullptr)
 	{
-		circle2->Clean();
 		delete circle2;
 		circle2 = nullptr;
 	}
@@ -118,8 +123,11 @@ void Program::Clean()
 	}
 }
 
-bool Program::Initialize(const char* WINDOW_TITLE, int screenWidth, int screenHeight)
+bool Program::Initialize(const char* WINDOW_TITLE, bool inDebugMode, int screenWidth, int screenHeight)
 {
+	// INFO: Set Debug Mode
+	this->inDebugMode = inDebugMode;
+
 	// INFO: Initialize and Verify the SDL Library
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
 	{
@@ -156,33 +164,28 @@ bool Program::Initialize(const char* WINDOW_TITLE, int screenWidth, int screenHe
 	}
 
 	// INFO: Set the Initial Screen Color
-	SDL_SetRenderDrawColor(renderer, screenColor.R, screenColor.G, screenColor.B, screenColor.A);
-
-	// INFO: Activate Program Loop
-	isRunning = true;
+	DefaultScreenColor();
 
 	// INFO: Initialize Input Manager
 	InputManager::Initialize();
 
-	// TESTING INITIALIZATION OF GAME OBJECTS <--------------------------------------------------------------------------------------------------------------------------------------------
+	// INFO: Initialize Game Objects
 	leftBorder = new Rectangle(new Parameters(0, 0, true, Color::BLUE, 0), 25, SCREEN_HEIGHT);
 	rightBorder = new Rectangle(new Parameters(SCREEN_WIDTH - 25, 0, true, Color::BLUE, 0), 25, SCREEN_HEIGHT);
-
 	topBorder = new Rectangle(new Parameters(0, 0, true, Color::BLUE, 0), SCREEN_WIDTH, 25);
 	bottomBorder = new Rectangle(new Parameters(0, SCREEN_HEIGHT - 25, true, Color::BLUE, 0), SCREEN_WIDTH, 25);
 
 	square = new Square(new Parameters(SCREEN_WIDTH * 0.2f, SCREEN_HEIGHT * 0.1f, false, Color::GREEN, 100), 40);
+	square2 = new Square(new Parameters(SCREEN_WIDTH * 0.8f, SCREEN_HEIGHT * 0.9f, false, Color::GREEN, 100), 65);
+
 	rectangle = new Rectangle(new Parameters(SCREEN_WIDTH * 0.4f, SCREEN_HEIGHT * 0.1f, false, Color::GREEN, 100), 50, 20);
+	rectangle2 = new Rectangle(new Parameters(SCREEN_WIDTH * 0.6f, SCREEN_HEIGHT * 0.9f, false, Color::GREEN, 100), 10, 75);
+
 	circle = new Circle(new Parameters(SCREEN_WIDTH * 0.75f, SCREEN_HEIGHT / 2, false, Color::GREEN, 100), 50);
 	circle2 = new Circle(new Parameters(SCREEN_WIDTH * 0.25f, SCREEN_HEIGHT / 2, false, Color::GREEN, 100), 25);
-
-	//AssetManager::Instance()->LoadTexture(leftBorder, renderer);
-	//AssetManager::Instance()->LoadTexture(rightBorder, renderer);
-	//AssetManager::Instance()->LoadTexture(bottomBorder, renderer);
-	//AssetManager::Instance()->LoadTexture(topBorder, renderer);
-	//
-	//AssetManager::Instance()->LoadTexture(square, renderer);
-	//AssetManager::Instance()->LoadTexture(rectangle, renderer);
+	
+	// INFO: Activate Program Loop
+	isRunning = true;
 
 	return isRunning;
 }
@@ -190,23 +193,21 @@ bool Program::Initialize(const char* WINDOW_TITLE, int screenWidth, int screenHe
 void Program::HandleInput()
 {
 	InputManager::PollEvents();
-
-	// TEMP TESTING <--------------------------------------------------------------------------------------------------------------------------------------------
-	if (InputManager::GetKeyDown(SDL_SCANCODE_A))
-		circle->tempMoveXLeft();
-}
-
-void Program::ProcessEvents()
-{
 }
 
 void Program::Update(float dt)
 {
+	// INFO: Update Objects
 	square->Update(dt);
+	square2->Update(dt);
+
 	rectangle->Update(dt);
+	rectangle2->Update(dt);
+
 	circle->Update(dt);
 	circle2->Update(dt);
 
+	// INFO: Check for Collisions
 	CollisionManager::Instance()->CheckCollisions();
 }
 
@@ -215,14 +216,18 @@ void Program::Draw()
 	// INFO: Clear the renderer ready for the next frame to be shown
 	SDL_RenderClear(renderer);
 
-	// TEST DRAWING GAME OBJECTS <--------------------------------------------------------------------------------------------------------------------------------------------
+	// INFO: Draw Game Objects
 	leftBorder->Draw();
 	rightBorder->Draw();
 	topBorder->Draw();
 	bottomBorder->Draw();
 
 	square->Draw();
+	square2->Draw();
+
 	rectangle->Draw();
+	rectangle2->Draw();
+
 	circle->Draw();
 	circle2->Draw();
 

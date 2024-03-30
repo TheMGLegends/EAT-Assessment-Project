@@ -49,7 +49,7 @@
     <Filter Include="OBSOLETE CLASSES\Event System Files\Event Manager Files">
       <UniqueIdentifier>{6890719a-4b28-40f6-ad34-e1e5e5496160}</UniqueIdentifier>
     </Filter>
-    <Filter Include="OBSOLETE CLASSES\Component Base Class Files">
+    <Filter Include="Component Files\Component Base Class Files">
       <UniqueIdentifier>{e0e433ae-1d10-4056-99a0-66ea2b470872}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -150,7 +150,7 @@
       <Filter>Manager Files</Filter>
     </ClInclude>
     <ClInclude Include="Point.h">
-      <Filter>OBSOLETE CLASSES\Component Base Class Files</Filter>
+      <Filter>Component Files\Component Base Class Files</Filter>
     </ClInclude>
     <ClInclude Include="Transform.h">
       <Filter>Component Files</Filter>

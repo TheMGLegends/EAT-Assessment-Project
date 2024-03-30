@@ -4,10 +4,13 @@
 
 #include "BoxCollider.h"
 
+/// <summary>
+/// Defines the square shape
+/// </summary>
 class Square : public Shape
 {
 private:
-	BoxCollider* boxCollider;
+	BoxCollider* boxCollider; // INFO: Gets deleted by collision manager
 	int size;
 
 public:
@@ -36,22 +39,15 @@ public:
 	void Draw() override;
 
 	/// <summary>
-	/// Clean up method during program termination
+	/// Getter for the centre point of the square
 	/// </summary>
-	void Clean() override;
-
-	/// <summary>
-	/// Gets the centre point of the shape
-	/// </summary>
-	Transform GetCentre() override;
+	/// <returns>The centre point of the square</returns>
+	inline Transform GetCentre() override { return Transform(position.X + size / 2, position.Y + size / 2); }
 
 	/// <summary>
 	/// Getter for the Squares' Size
 	/// </summary>
 	/// <returns>Size of the square</returns>
 	inline int GetSize() const { return size; }
-
-	// TEMP FUNCTION <--------------------------------------------------------------------------------------------------------------------------------------------
-	inline void tempMoveXLeft() { position.X -= 5; }
 };
 

@@ -4,15 +4,15 @@
 
 #include "Vector2.h"
 
-const float PI = 3.14f;
+//const float PI = 3.14f;
 
 /// <summary>
-/// Derived from Point class used to manipulate the position, orientation and size of objects
+/// Derived from Point class used to manipulate the position of objects
 /// </summary>
 class Transform : public Point
 {
-private:
-	float zRotation;
+//private:
+//	float zRotation;
 
 public:
 	Transform(float x = 0, float y = 0);
@@ -25,6 +25,7 @@ public:
 	inline void TranslateY(float y) { Y += y; }
 
 
+	/*
 	// INFO: Rotation Methods
 
 	/// <summary>
@@ -44,15 +45,17 @@ public:
 	/// </summary>
 	/// <returns>Returns the right vector based on the objects z-rotation</returns>
 	Vector2 Right();
+	*/
 
-	
-	// INFO: Debug Methods
 
+	/// <summary>
+	/// Displays the x and y coordinates onto the console output window
+	/// </summary>
 	inline void DisplayXY() override { std::cout << "Transform Position (" << X << ", " << Y << ")" << std::endl; }
 
-private:
-	// INFO: Helper Methods
-
-	inline float DegToRad(float deg) { return deg * PI / 180; }
+//private:
+//	// INFO: Helper Methods
+//
+//	inline float DegToRad(float deg) { return deg * PI / 180; }
 };
 

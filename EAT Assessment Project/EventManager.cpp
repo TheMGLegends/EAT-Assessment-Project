@@ -1,3 +1,4 @@
+/*
 #include "EventManager.h"
 
 EventManager* Singleton<EventManager>::instance = nullptr;
@@ -11,3 +12,5 @@ void EventManager::Clean()
 		instance = nullptr;
 	}
 }
+*/
+

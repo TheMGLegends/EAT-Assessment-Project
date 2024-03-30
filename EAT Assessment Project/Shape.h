@@ -3,9 +3,6 @@
 #include "ICollision.h"
 
 #include "Transform.h"
-#include "Vector2.h"
-#include "Rigidbody.h"
-
 #include "Color.h"
 
 #include <functional>
@@ -37,6 +34,9 @@ struct Parameters
 	}
 };
 
+/// <summary>
+/// Defines the base class for all shapes in the game
+/// </summary>
 class Shape : public ICollision
 {
 
@@ -47,12 +47,10 @@ private:
 
 protected:
 	Transform position;
-	Transform previousPosition;
-	Rigidbody rb;
-	Color color;
-	bool isStatic;
-
 	Vector2 moveDirection;
+	Color color;
+
+	bool isStatic;
 	float moveSpeed;
 
 public:
@@ -81,13 +79,9 @@ public:
 	virtual void Draw() = 0;
 
 	/// <summary>
-	/// Clean up method during program termination
+	/// Getter for the centre point of the shape
 	/// </summary>
-	virtual void Clean() = 0;
-
-	/// <summary>
-	/// Gets the centre point of the shape
-	/// </summary>
+	/// <returns>The centre point of the shape</returns>
 	virtual Transform GetCentre() = 0;
 
 	/// <summary>

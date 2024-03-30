@@ -6,6 +6,9 @@
 
 #include <vector>
 
+/// <summary>
+/// Defines the class responsible for managing the collisions between all colliders
+/// </summary>
 class CollisionManager
 {
 private:
@@ -22,7 +25,7 @@ public:
 	/// Allows access to the singleton by returning it or creating one if one doesn't
 	/// yet exist
 	/// </summary>
-	/// <returns>Returns a pointer to the instance of the class </returns>
+	/// <returns>A pointer to the instance of the class </returns>
 	inline static CollisionManager* Instance() { return instance != nullptr ? instance : instance = new CollisionManager(); }
 
 	/// <summary>
@@ -47,8 +50,25 @@ private:
 
 	static CollisionManager* instance;
 
+	/// <summary>
+	/// Collision Detection Algorithm between two circle colliders
+	/// </summary>
+	/// <param name="c1">: The first circle collider</param>
+	/// <param name="c2">: The second circle collider</param>
 	void CircleCircleCollision(CircleCollider* c1, CircleCollider* c2);
+
+	/// <summary>
+	/// Collision Detection Algorithm between two box colliders
+	/// </summary>
+	/// <param name="b1">: The first box collider</param>
+	/// <param name="b2">: The second box collider</param>
 	void RectRectCollision(BoxCollider* b1, BoxCollider* b2);
+
+	/// <summary>
+	/// Collision Detection Algorithm between a circle and a box collider
+	/// </summary>
+	/// <param name="c">: The circle collider</param>
+	/// <param name="b">: The box collider</param>
 	void CircleRectCollision(CircleCollider* c, BoxCollider* b);
 };
 

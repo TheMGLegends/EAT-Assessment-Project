@@ -1,10 +1,10 @@
 #include "AssetManager.h"
 
 #include "Program.h"
+#include "Vector2.h"
 #include "Square.h"
 #include "Rectangle.h"
 #include "Circle.h"
-#include "Vector2.h"
 
 #include "MemoryLeakDetector.h"
 
@@ -16,14 +16,6 @@ AssetManager::AssetManager()
 
 void AssetManager::Clean()
 {
-	// INFO: Clean up the contents of the unordered rect map
-	for (auto i = rectLib.begin(); i != rectLib.end(); i++)
-	{
-		SDL_DestroyTexture(i->second);
-	}
-
-	rectLib.clear();
-
 	// INFO: Clean up the instance
 	if (instance != nullptr)
 	{
@@ -32,63 +24,15 @@ void AssetManager::Clean()
 	}
 }
 
-void AssetManager::LoadTexture(Shape* shape, SDL_Renderer* renderer)
-{
-	// INFO: Based on the Type of Shape we will downcast to that 
-	// particular derived class, if we succeed then we'll call
-	// the relevant load texture functions for that specific shape
-	switch (shape->GetShapeType())
-	{
-	case ShapeType::Square:
-	{
-		Square* square = dynamic_cast<Square*>(shape);
-
-		if (square != nullptr)
-			LoadRect(square->GetID(), square->GetSize(),
-				square->GetSize(), square->GetColor(), renderer);
-		else
-			std::cout << "Failed downcast to square!" << std::endl;
-	}
-		break;
-	case ShapeType::Rectangle:
-	{
-		Rectangle* rectangle = dynamic_cast<Rectangle*>(shape);
-
-		if (rectangle != nullptr)
-			LoadRect(rectangle->GetID(), rectangle->GetWidth(),
-				rectangle->GetHeight(), rectangle->GetColor(), renderer);
-		else
-			std::cout << "Failed downcast to rectangle!" << std::endl;
-	}
-		break;
-	case ShapeType::Circle:
-	case ShapeType::None:
-	default:
-		break;
-	}
-}
-
-void AssetManager::LoadRect(int id, int width, int height, Color color, SDL_Renderer* renderer)
-{
-	// INFO: Creates a Surface that can be colored on
-	SDL_Surface* surface = SDL_CreateRGBSurface(0, width, height, 32, 0, 0, 0, 0);
-
-	// INFO: Converts RGBA values into pixel values which can then be used
-	// to fill in the surface
-	Uint32 rectColor = SDL_MapRGBA(surface->format, color.R, color.G, color.B, color.A);
-
-	// INFO: Fills the surface provided with the specified color
-	SDL_FillRect(surface, NULL, rectColor);
-
-	SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
-
-	SDL_FreeSurface(surface);
-
-	rectLib[id] = texture;
-}
-
 void AssetManager::DrawRect(int id, int x, int y, int width, int height, Color color)
 {
+	// INFO: Given that there is no renderer we exit the function
+	if (Program::Instance()->GetRenderer() == nullptr)
+	{
+		std::cout << "Renderer is null" << std::endl;
+		return;
+	}
+
 	// INFO: Creates a Surface that can be colored on
 	SDL_Surface* surface = SDL_CreateRGBSurface(0, width, height, 32, 0, 0, 0, 0);
 
@@ -99,17 +43,14 @@ void AssetManager::DrawRect(int id, int x, int y, int width, int height, Color c
 	// INFO: Fills the surface provided with the specified color
 	SDL_FillRect(surface, NULL, rectColor);
 
+	// INFO: Converts the surface into a texture
 	SDL_Texture* texture = SDL_CreateTextureFromSurface(Program::Instance()->GetRenderer(), surface);
 
 	SDL_FreeSurface(surface);
 
-	// INFO: Given that there is no renderer or the ID doesn't match a texture
-	// we exit out of the function
-	//if (Program::Instance()->GetRenderer() == nullptr || rectLib[id] == nullptr)
-	//	return;
-
 	SDL_Rect destinationRect{ x, y, width, height };
 
+	// INFO: Draws the texture onto the renderer
 	SDL_RenderCopyEx(Program::Instance()->GetRenderer(), texture, NULL, 
 					 &destinationRect, 0, NULL, SDL_FLIP_NONE);
 
@@ -118,6 +59,10 @@ void AssetManager::DrawRect(int id, int x, int y, int width, int height, Color c
 
 void AssetManager::DrawBoxCollider(int x, int y, int width, int height, Color color)
 {
+	// INFO: Return if the program isn't in debug mode
+	if (!Program::Instance()->IsInDebugMode())
+		return;
+
 	SDL_Rect boxCollider{ x, y, width, height };
 
 	SDL_SetRenderDrawColor(Program::Instance()->GetRenderer(), color.R, color.G, color.B, color.A);
@@ -127,9 +72,16 @@ void AssetManager::DrawBoxCollider(int x, int y, int width, int height, Color co
 
 void AssetManager::DrawCircle(Transform centre, int radius, Color color, bool isFilled)
 {
-	// INFO: Given that there is no renderer or the ID doesn't match a texture
-	// we exit out of the function
+	// INFO: Given that there is no renderer we exit the function
 	if (Program::Instance()->GetRenderer() == nullptr)
+	{
+		std::cout << "Renderer is null" << std::endl;
+		return;
+	}
+
+	// INFO: Return if the program isn't in debug mode and isFilled is set to false
+	// (Outline is used for debugging purposes)
+	if (!Program::Instance()->IsInDebugMode() && !isFilled)
 		return;
 
 	// INFO: Set the renderer draw color to the color that is going to represent
@@ -152,6 +104,7 @@ void AssetManager::DrawCircle(Transform centre, int radius, Color color, bool is
 			Vector2 displacedVector{ (float)dx, (float)dy };
 
 			// INFO: Either fills the entire inside of the circle or only the outline
+			// (Outline is used for debugging purposes)
 			if (isFilled)
 			{
 				// INFO: Given that the displaced vector is inside of the circle,
@@ -173,3 +126,4 @@ void AssetManager::DrawCircle(Transform centre, int radius, Color color, bool is
 	// drawn the circle
 	Program::Instance()->DefaultScreenColor();
 }
+

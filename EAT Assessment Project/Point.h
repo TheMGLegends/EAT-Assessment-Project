@@ -1,7 +1,5 @@
 #pragma once
 
-#include <iostream>
-
 const int DECIMAL_PRECISION = 2;
 
 /// <summary>
@@ -14,9 +12,9 @@ struct Point
 
 	inline Point(float x = 0, float y = 0) : X{ x }, Y{ y } {}
 
-
-	// INFO: Debug Methods
-
+	/// <summary>
+	/// Displays the x and y coordinates onto the console output window
+	/// </summary>
 	virtual void DisplayXY() = 0;
 };
 

@@ -2,6 +2,9 @@
 
 #include <SDL.h>
 
+/// <summary>
+/// Defines the class responsible for managing user input
+/// </summary>
 class InputManager
 {
 private:
@@ -30,10 +33,10 @@ public:
 	/// Detects whether a specific key has been pressed
 	/// </summary>
 	/// <param name="key">: The key to be checked</param>
-	/// <returns>Returns true if the key was pressed</returns>
+	/// <returns>True if the specified key was pressed</returns>
 	static inline bool GetKeyDown(SDL_Keycode key) { return !previousKeyboardState[key] && KEYBOARD_STATE[key]; }
 
 private:
-	InputManager() {}
+	InputManager();
 };
 

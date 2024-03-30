@@ -1,7 +1,14 @@
 #pragma once
 
+#include <stdlib.h>
+
+/// <summary>
+/// Struct that defines RGBA values
+/// </summary>
 struct Color
 {
+	// INFO: Generic Colors
+
 	static const Color RED;
 	static const Color GREEN;
 	static const Color BLUE;
@@ -15,10 +22,10 @@ struct Color
 
 	Color() {
 		// INFO: Default is Green
-		R = 0;
-		G = 255;
-		B = 0;
-		A = 255;
+		R = GREEN.R;
+		G = GREEN.G;
+		B = GREEN.B;
+		A = GREEN.A;
 	}
 
 	Color(int R, int G, int B, int A)
@@ -29,5 +36,10 @@ struct Color
 		this->A = A;
 	}
 
-	static Color RandomColor();
+	/// <summary>
+	/// Generates a random color with 255 alpha
+	/// </summary>
+	/// <returns>The randomly generated fully opaque color</returns>
+	inline static Color RandomColor() { return Color(rand() % 256, rand() % 256, rand() % 256, 255); }
 };
+

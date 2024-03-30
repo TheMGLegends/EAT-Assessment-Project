@@ -145,3 +145,4 @@ Vector2& Vector2::operator=(const Vector2& p)
 
 	return *this;
 }
+

@@ -4,10 +4,13 @@
 
 #include "BoxCollider.h"
 
+/// <summary>
+/// Defines the rectangle shape
+/// </summary>
 class Rectangle : public Shape
 {
 private:
-	BoxCollider* boxCollider;
+	BoxCollider* boxCollider; // INFO: Gets deleted by collision manager
 	int width;
 	int height;
 
@@ -38,14 +41,10 @@ public:
 	void Draw() override;
 
 	/// <summary>
-	/// Clean up method during program termination
+	/// Getter for the centre point of the rectangle
 	/// </summary>
-	void Clean() override;
-
-	/// <summary>
-	/// Gets the centre point of the shape
-	/// </summary>
-	Transform GetCentre() override;
+	/// <returns>The centre point of the rectangle</returns>
+	inline Transform GetCentre() override { return Transform(position.X + width / 2, position.Y + height / 2); }
 
 	/// <summary>
 	/// Getter for the Rectangles' Width

@@ -10,6 +10,9 @@ enum class ColliderType
 	Circle
 };
 
+/// <summary>
+/// Defines the base class for all colliders
+/// </summary>
 class Collider
 {
 protected:
@@ -19,6 +22,14 @@ protected:
 	ColliderType colliderType;
 
 public:
+	/// <summary>
+	/// Constructor of collider, takes in the memory addresses of x and y 
+	/// values of the game object that the collider is attached to as well as
+	/// the response function that is called when a collision occurs
+	/// </summary>
+	/// <param name="Response">: The function to be bounded as the collision response</param>
+	/// <param name="x">: The x-coordinate of the object</param>
+	/// <param name="y">: The y-coordinate of the object</param>
 	Collider(std::function<void(Collider*)> Response, float &x, float &y);
 	virtual ~Collider() {}
 
@@ -50,5 +61,17 @@ public:
 	/// </summary>
 	/// <returns>The y position of the collider</returns>
 	inline float GetY() { return *Y; }
+
+	/// <summary>
+	/// Getter for the centre x position of the collider
+	/// </summary>
+	/// <returns>The centre x position of the collider</returns>
+	virtual float GetCentreX() = 0;
+
+	/// <summary>
+	/// Getter for the centre y position of the collider
+	/// </summary>
+	/// <returns>The centre y position of the collider</returns>
+	virtual float GetCentreY() = 0;
 };
 

@@ -6,16 +6,13 @@ int Shape::shapeCount = 0;
 
 Shape::Shape(Parameters* params)
 {
-	this->isStatic = params->isStatic;
-	this->color = params->color;
-	this->moveSpeed = params->moveSpeed;
-
 	// INFO: Set the position of the shape
 	position.X = params->x;
 	position.Y = params->y;
 
-	// INFO: Initialize previous position of shape
-	previousPosition = position;
+	this->isStatic = params->isStatic;
+	this->color = params->color;
+	this->moveSpeed = params->moveSpeed;
 
 	// INFO: Randomize the initial move direction
 	moveDirection = Vector2::RandomDirection();

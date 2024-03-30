@@ -1,3 +1,4 @@
+/*
 #pragma once
 
 enum class EventType
@@ -9,3 +10,5 @@ enum class EventType
 struct Event
 {
 };
+*/
+

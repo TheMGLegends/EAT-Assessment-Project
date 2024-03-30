@@ -10,6 +10,7 @@ float TimeManager::currentTime = 0;
 
 void TimeManager::Initialize()
 {
+	// INFO: Initializes the previousTime and currentTime to the current time
 	previousTime = (float)SDL_GetTicks();
 	currentTime = previousTime;
 }

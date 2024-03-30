@@ -1,3 +1,4 @@
+/*
 #include "Rigidbody.h"
 
 #include "PhysicsManager.h"
@@ -10,4 +11,5 @@ Rigidbody::Rigidbody() :
 	displacement{}
 {
 }
+*/
 

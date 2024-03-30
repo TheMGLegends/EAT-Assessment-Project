@@ -1,5 +1,9 @@
 #pragma once
 
+/// <summary>
+/// Defines the singleton base class that other singletons can derive from
+/// </summary>
+/// <typeparam name="T">: The type of singleton</typeparam>
 template <typename T>
 class Singleton
 {
