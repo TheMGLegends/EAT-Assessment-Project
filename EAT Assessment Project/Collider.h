@@ -2,6 +2,7 @@
 
 #include <functional>
 
+/// @brief An enum class to define the different types of colliders
 enum class ColliderType
 {
 	None,
@@ -10,9 +11,7 @@ enum class ColliderType
 	Circle
 };
 
-/// <summary>
-/// Defines the base class for all colliders
-/// </summary>
+/// @brief Defines the base class for all colliders
 class Collider
 {
 protected:
@@ -22,57 +21,39 @@ protected:
 	ColliderType colliderType;
 
 public:
-	/// <summary>
-	/// Holds a bound function that is called when a collision occurs
-	/// </summary>
+	/// @brief Holds a bound function that is called when a collision occurs
 	std::function<void(Collider*)> CollisionResponse;
 
 public:
-	/// <summary>
-	/// Constructor of collider, takes in the memory addresses of x and y 
-	/// values of the game object that the collider is attached to as well as
-	/// the response function that is called when a collision occurs
-	/// </summary>
-	/// <param name="Response">: The function to be bounded as the collision response</param>
-	/// <param name="x">: The x-coordinate of the object</param>
-	/// <param name="y">: The y-coordinate of the object</param>
+	/// @brief Constructor for the Collider class
+	/// @param Response : The function to be bounded as the collision response
+	/// @param x : The memory address that holds the x position of the object
+	/// @param y : he memory address that holds the y position of the object
 	Collider(std::function<void(Collider*)> Response, float &x, float &y);
 	virtual ~Collider() {}
 
-	/// <summary>
-	/// Getter for the Colliders' Type
-	/// </summary>
-	/// <returns>The type of collider that is on the object</returns>
+	/// @brief Getter for the Colliders' Type
+	/// @return The type of collider that is on the object
 	ColliderType GetColliderType() const { return colliderType; }
 
-	/// <summary>
-	/// Setter for the Colliders' Type
-	/// </summary>
-	/// <param name="type">: The type of collider</param>
+	/// @brief Setter for the Colliders' Type
+	/// @param type : The type of collider
 	void SetColliderType(ColliderType type) { colliderType = type; }
 
-	/// <summary>
-	/// Getter for the colliders' x position
-	/// </summary>
-	/// <returns>The x position of the collider</returns>
+	/// @brief Getter for the colliders' x position
+	/// @return The x position of the collider
 	inline float GetX() { return *X; }
 
-	/// <summary>
-	/// Getter for the colliders' y position
-	/// </summary>
-	/// <returns>The y position of the collider</returns>
+	/// @brief Getter for the colliders' y position
+	/// @return The y position of the collider
 	inline float GetY() { return *Y; }
 
-	/// <summary>
-	/// Getter for the centre x position of the collider
-	/// </summary>
-	/// <returns>The centre x position of the collider</returns>
+	/// @brief Getter for the centre x position of the collider
+	/// @return The centre x position of the collider
 	virtual float GetCentreX() = 0;
 
-	/// <summary>
-	/// Getter for the centre y position of the collider
-	/// </summary>
-	/// <returns>The centre y position of the collider</returns>
+	/// @brief Getter for the centre y position of the collider
+	/// @return The centre y position of the collider
 	virtual float GetCentreY() = 0;
 };
 

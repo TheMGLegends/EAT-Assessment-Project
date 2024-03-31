@@ -4,9 +4,7 @@
 
 #include "BoxCollider.h"
 
-/// <summary>
-/// Defines the rectangle shape
-/// </summary>
+/// @brief Defines the rectangle shape
 class Rectangle : public Shape
 {
 private:
@@ -15,35 +13,25 @@ private:
 	int height;
 
 public:
-	/// <summary>
-	/// Constructor
-	/// </summary>
-	/// <param name="params">: The parameters to be passed in</param>
-	/// <param name="width">: Width of the rectangle</param>
-	/// <param name="height">: Height of the rectangle</param>
+	/// @brief Rectangle Constructor
+	/// @param params : The parameters to be passed in
+	/// @param width : Width of the rectangle
+	/// @param height : Height of the rectangle
 	Rectangle(Parameters* params, int width, int height);
 
-	/// <summary>
-	/// Draws the rectangle shape using the asset managers' drawing functionality
-	/// </summary>
+	/// @brief Draws the rectangle shape using the asset managers' drawing functionality
 	void Draw() override;
 
-	/// <summary>
-	/// Getter for the centre point of the rectangle
-	/// </summary>
-	/// <returns>The centre point of the rectangle</returns>
+	/// @brief Getter for the centre point of the rectangle
+	/// @return The centre point of the rectangle
 	inline Transform GetCentre() override { return Transform(position.X + width / 2, position.Y + height / 2); }
 
-	/// <summary>
-	/// Getter for the Rectangles' Width
-	/// </summary>
-	/// <returns>The width of the rectangle</returns>
+	/// @brief Getter for the Rectangles' Width
+	/// @return The width of the rectangle
 	inline int GetWidth() const { return width; }
 
-	/// <summary>
-	/// Getter for the Rectangles' Height
-	/// </summary>
-	/// <returns>The height of the rectangle</returns>
+	/// @brief Getter for the Rectangles' Height
+	/// @return The height of the rectangle
 	inline int GetHeight() const { return height; }
 };
 

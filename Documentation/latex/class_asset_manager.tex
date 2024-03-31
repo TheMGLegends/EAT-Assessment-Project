@@ -1,0 +1,99 @@
+\doxysection{Asset\+Manager Class Reference}
+\hypertarget{class_asset_manager}{}\label{class_asset_manager}\index{AssetManager@{AssetManager}}
+
+
+Defines the class responsible for managing the assets within the application.  
+
+
+
+
+{\ttfamily \#include $<$Asset\+Manager.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_asset_manager_af978cddc17090ffb0899b01c2e28be19}{Draw\+Rect}} (int x, int y, int width, int height, \mbox{\hyperlink{struct_color}{Color}} color)
+\begin{DoxyCompactList}\small\item\em Used for drawing a rect. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_asset_manager_ab571dcf163bfb0580681f2c40e502f27}{Draw\+Box\+Collider}} (int x, int y, int width, int height, \mbox{\hyperlink{struct_color}{Color}} color=\mbox{\hyperlink{struct_color_aae63fc23cf0d0772e8b07c776f73b019}{Color\+::\+RED}})
+\begin{DoxyCompactList}\small\item\em Used for drawing the outline for a box collider. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_asset_manager_a3611c9aadc5eae0b2d63b8bb8eedadb6}{Draw\+Circle}} (\mbox{\hyperlink{class_transform}{Transform}} centre, int radius, \mbox{\hyperlink{struct_color}{Color}} color, bool is\+Filled=true)
+\begin{DoxyCompactList}\small\item\em Used for drawing a circle as well as the outline for the circle collider. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the class responsible for managing the assets within the application. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_asset_manager_ab571dcf163bfb0580681f2c40e502f27}\label{class_asset_manager_ab571dcf163bfb0580681f2c40e502f27} 
+\index{AssetManager@{AssetManager}!DrawBoxCollider@{DrawBoxCollider}}
+\index{DrawBoxCollider@{DrawBoxCollider}!AssetManager@{AssetManager}}
+\doxysubsubsection{\texorpdfstring{DrawBoxCollider()}{DrawBoxCollider()}}
+{\footnotesize\ttfamily void Asset\+Manager\+::\+Draw\+Box\+Collider (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{\mbox{\hyperlink{struct_color}{Color}}}]{color = {\ttfamily \mbox{\hyperlink{struct_color_aae63fc23cf0d0772e8b07c776f73b019}{Color\+::\+RED}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Used for drawing the outline for a box collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: The colliders\textquotesingle{} x-\/value \\
+\hline
+{\em y} & \+: The colliders\textquotesingle{} y-\/value \\
+\hline
+{\em width} & \+: The colliders\textquotesingle{} width \\
+\hline
+{\em height} & \+: The colliders\textquotesingle{} height \\
+\hline
+{\em color} & \+: The outline color \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_asset_manager_a3611c9aadc5eae0b2d63b8bb8eedadb6}\label{class_asset_manager_a3611c9aadc5eae0b2d63b8bb8eedadb6} 
+\index{AssetManager@{AssetManager}!DrawCircle@{DrawCircle}}
+\index{DrawCircle@{DrawCircle}!AssetManager@{AssetManager}}
+\doxysubsubsection{\texorpdfstring{DrawCircle()}{DrawCircle()}}
+{\footnotesize\ttfamily void Asset\+Manager\+::\+Draw\+Circle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transform}{Transform}}}]{centre,  }\item[{int}]{radius,  }\item[{\mbox{\hyperlink{struct_color}{Color}}}]{color,  }\item[{bool}]{is\+Filled = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Used for drawing a circle as well as the outline for the circle collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em centre} & \+: The centre point of the circle \\
+\hline
+{\em radius} & \+: The radius of the circle \\
+\hline
+{\em color} & \+: The color that the circle will be drawn in \\
+\hline
+{\em is\+Filled} & \+: Whether the shape should be colored in or outlined \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_asset_manager_af978cddc17090ffb0899b01c2e28be19}\label{class_asset_manager_af978cddc17090ffb0899b01c2e28be19} 
+\index{AssetManager@{AssetManager}!DrawRect@{DrawRect}}
+\index{DrawRect@{DrawRect}!AssetManager@{AssetManager}}
+\doxysubsubsection{\texorpdfstring{DrawRect()}{DrawRect()}}
+{\footnotesize\ttfamily void Asset\+Manager\+::\+Draw\+Rect (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{\mbox{\hyperlink{struct_color}{Color}}}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Used for drawing a rect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: The x position of the rect \\
+\hline
+{\em y} & \+: The y position of the rect \\
+\hline
+{\em width} & \+: The width of the rect \\
+\hline
+{\em height} & \+: The height of the rect \\
+\hline
+{\em color} & \+: The color of the rect \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+B\+:/\+University Projects/\+EAT-\/\+Assessment-\/\+Project/\+EAT Assessment Project/\+My Classes/\mbox{\hyperlink{_asset_manager_8h}{Asset\+Manager.\+h}}\item 
+B\+:/\+University Projects/\+EAT-\/\+Assessment-\/\+Project/\+EAT Assessment Project/\+My Classes/\mbox{\hyperlink{_asset_manager_8cpp}{Asset\+Manager.\+cpp}}\end{DoxyCompactItemize}

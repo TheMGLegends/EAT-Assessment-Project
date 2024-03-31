@@ -1,0 +1,30 @@
+\doxysection{Input\+Manager.\+h}
+\hypertarget{_input_manager_8h_source}{}\label{_input_manager_8h_source}\index{B:/University Projects/EAT-\/Assessment-\/Project/EAT Assessment Project/My Classes/InputManager.h@{B:/University Projects/EAT-\/Assessment-\/Project/EAT Assessment Project/My Classes/InputManager.h}}
+\mbox{\hyperlink{_input_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_input_manager}{InputManager}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{static}\ Uint8*\ previousKeyboardState;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ Uint8*\ KEYBOARD\_STATE;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ keyLength;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_manager_a80242e2dbe1dc1384fd8c8680278f37a}{Initialize}}();}
+\DoxyCodeLine{00016\ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_manager_a70e06efcd58c00057048768fbcffa68f}{Clean}}();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_manager_ab92169c66eb328fe096c6255fdfb2455}{PollEvents}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_manager_a8ade65fd530d5460b136c1a083732a82}{GetKeyDown}}(SDL\_Keycode\ key)\ \{\ \textcolor{keywordflow}{return}\ !previousKeyboardState[key]\ \&\&\ KEYBOARD\_STATE[key];\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_input_manager}{InputManager}}();}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+
+\end{DoxyCode}

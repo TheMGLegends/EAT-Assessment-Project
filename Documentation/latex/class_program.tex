@@ -1,0 +1,276 @@
+\doxysection{Program Class Reference}
+\hypertarget{class_program}{}\label{class_program}\index{Program@{Program}}
+
+
+The main class that runs the program.  
+
+
+
+
+{\ttfamily \#include $<$Program.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_program_a7ce8292de7766a73713c19a47c0d498e}{Program}} (const \mbox{\hyperlink{class_program}{Program}} \&)=delete
+\item 
+void \mbox{\hyperlink{class_program_a0f036f0467fe639cb84b56ef921f55ba}{operator=}} (const \mbox{\hyperlink{class_program}{Program}} \&)=delete
+\item 
+void \mbox{\hyperlink{class_program_a44bac7984eeaa8a3aef5e218dd674b5d}{Clean}} ()
+\begin{DoxyCompactList}\small\item\em Cleans up the program by deleting the instance of the program. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_program_af7b239fa9b7526a47963a5aa3bbc521c}{Initialize}} (const char \texorpdfstring{$\ast$}{*}WINDOW\+\_\+\+TITLE, bool in\+Debug\+Mode=false, int screen\+Width=\mbox{\hyperlink{_program_8h_a3b9177c384d28f2095b8111429c52aaf}{SCREEN\+\_\+\+WIDTH}}, int screen\+Height=\mbox{\hyperlink{_program_8h_a0f8325b7b3e6c4e66af0b6923862ad90}{SCREEN\+\_\+\+HEIGHT}})
+\begin{DoxyCompactList}\small\item\em Initializes the SDL Libraries as well as other things like textures and game objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_program_a5894fd6e8197695617c883d08c386cb2}{Handle\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Handles the users input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_program_a06cf3e09f93e0b1e2f5c6ba726f896cb}{Update}} (float dt)
+\begin{DoxyCompactList}\small\item\em Updates all logic associated with each game object that exists in the program. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_program_ab99e8adb62bd898fcbf49d5f1743087d}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em Calls the draw function of each game object and draws them on the screen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_program_a3e338802810b90a3a98025dbb8782392}{Is\+Running}} () const
+\begin{DoxyCompactList}\small\item\em Getter for whether the program is running. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_program_ac05184f676981b8420610049062d037c}{Set\+Is\+Running}} (bool is\+Running)
+\begin{DoxyCompactList}\small\item\em Setter for whether the program is running. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_program_aed7f2173bef36f9d09b379b2a257105f}{Is\+In\+Debug\+Mode}} () const
+\begin{DoxyCompactList}\small\item\em Getter for whether the program is in debug mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_program_a2b5de27c9ce830bc1c889461adbec025}{Set\+In\+Debug\+Mode}} (bool in\+Debug\+Mode)
+\begin{DoxyCompactList}\small\item\em Setter for whether the program is in debug mode. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_program_a1b01bb8ada2a23f53f95549503c62704}{Get\+Renderer}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the renderer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{class_program_ad32fd213df4f1c54da4d2feae1382622}{Get\+Screen\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the screen color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_program_ac111c0b1423a5ffc4bd97b1dd8f16637}{Default\+Screen\+Color}} ()
+\begin{DoxyCompactList}\small\item\em Sets the renderer back to the default screen color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_program}{Program}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_program_a0e5cb35368cb4343cca35c419fee4732}{Instance}} ()
+\begin{DoxyCompactList}\small\item\em Allows access to the singleton by returning it or creating one if one doesn\textquotesingle{}t yet exist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The main class that runs the program. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_program_a7ce8292de7766a73713c19a47c0d498e}\label{class_program_a7ce8292de7766a73713c19a47c0d498e} 
+\index{Program@{Program}!Program@{Program}}
+\index{Program@{Program}!Program@{Program}}
+\doxysubsubsection{\texorpdfstring{Program()}{Program()}}
+{\footnotesize\ttfamily Program\+::\+Program (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_program}{Program}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_program_a44bac7984eeaa8a3aef5e218dd674b5d}\label{class_program_a44bac7984eeaa8a3aef5e218dd674b5d} 
+\index{Program@{Program}!Clean@{Clean}}
+\index{Clean@{Clean}!Program@{Program}}
+\doxysubsubsection{\texorpdfstring{Clean()}{Clean()}}
+{\footnotesize\ttfamily void Program\+::\+Clean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cleans up the program by deleting the instance of the program. 
+
+\Hypertarget{class_program_ac111c0b1423a5ffc4bd97b1dd8f16637}\label{class_program_ac111c0b1423a5ffc4bd97b1dd8f16637} 
+\index{Program@{Program}!DefaultScreenColor@{DefaultScreenColor}}
+\index{DefaultScreenColor@{DefaultScreenColor}!Program@{Program}}
+\doxysubsubsection{\texorpdfstring{DefaultScreenColor()}{DefaultScreenColor()}}
+{\footnotesize\ttfamily void Program\+::\+Default\+Screen\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets the renderer back to the default screen color. 
+
+\Hypertarget{class_program_ab99e8adb62bd898fcbf49d5f1743087d}\label{class_program_ab99e8adb62bd898fcbf49d5f1743087d} 
+\index{Program@{Program}!Draw@{Draw}}
+\index{Draw@{Draw}!Program@{Program}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Program\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls the draw function of each game object and draws them on the screen. 
+
+\Hypertarget{class_program_a1b01bb8ada2a23f53f95549503c62704}\label{class_program_a1b01bb8ada2a23f53f95549503c62704} 
+\index{Program@{Program}!GetRenderer@{GetRenderer}}
+\index{GetRenderer@{GetRenderer}!Program@{Program}}
+\doxysubsubsection{\texorpdfstring{GetRenderer()}{GetRenderer()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} Program\+::\+Get\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the renderer. 
+
+\begin{DoxyReturn}{Returns}
+The renderer 
+\end{DoxyReturn}
+\Hypertarget{class_program_ad32fd213df4f1c54da4d2feae1382622}\label{class_program_ad32fd213df4f1c54da4d2feae1382622} 
+\index{Program@{Program}!GetScreenColor@{GetScreenColor}}
+\index{GetScreenColor@{GetScreenColor}!Program@{Program}}
+\doxysubsubsection{\texorpdfstring{GetScreenColor()}{GetScreenColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_color}{Color}} Program\+::\+Get\+Screen\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the screen color. 
+
+\begin{DoxyReturn}{Returns}
+The color of the screen 
+\end{DoxyReturn}
+\Hypertarget{class_program_a5894fd6e8197695617c883d08c386cb2}\label{class_program_a5894fd6e8197695617c883d08c386cb2} 
+\index{Program@{Program}!HandleInput@{HandleInput}}
+\index{HandleInput@{HandleInput}!Program@{Program}}
+\doxysubsubsection{\texorpdfstring{HandleInput()}{HandleInput()}}
+{\footnotesize\ttfamily void Program\+::\+Handle\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the users input. 
+
+\Hypertarget{class_program_af7b239fa9b7526a47963a5aa3bbc521c}\label{class_program_af7b239fa9b7526a47963a5aa3bbc521c} 
+\index{Program@{Program}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Program@{Program}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily bool Program\+::\+Initialize (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{WINDOW\+\_\+\+TITLE,  }\item[{bool}]{in\+Debug\+Mode = {\ttfamily false},  }\item[{int}]{screen\+Width = {\ttfamily \mbox{\hyperlink{_program_8h_a3b9177c384d28f2095b8111429c52aaf}{SCREEN\+\_\+\+WIDTH}}},  }\item[{int}]{screen\+Height = {\ttfamily \mbox{\hyperlink{_program_8h_a0f8325b7b3e6c4e66af0b6923862ad90}{SCREEN\+\_\+\+HEIGHT}}} }\end{DoxyParamCaption})}
+
+
+
+Initializes the SDL Libraries as well as other things like textures and game objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em WINDOW\+\_\+\+TITLE} & \+: The title of the SDL window\\
+\hline
+{\em in\+Debug\+Mode} & \+: Whether the program is in debug mode or not\\
+\hline
+{\em screen\+Width} & \+: The width of the SDL window\\
+\hline
+{\em screen\+Height} & \+: The height of the SDL window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if it was unable to initialize everything correctly
+\end{DoxyReturn}
+
+
+Initializes the SDL Libraries as well as other things like textures and game objects 
+\begin{DoxyParams}{Parameters}
+{\em WINDOW\+\_\+\+TITLE} & \+: The title of the SDL window \\
+\hline
+{\em in\+Debug\+Mode} & \+: Whether the program is in debug mode or not \\
+\hline
+{\em screen\+Width} & \+: The width of the SDL window \\
+\hline
+{\em screen\+Height} & \+: The height of the SDL window \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em TRUE} & \+: If everything was initialized correctly \\
+\hline
+{\em FALSE} & \+: If it was unable to initialize everything correctly \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{class_program_a0e5cb35368cb4343cca35c419fee4732}\label{class_program_a0e5cb35368cb4343cca35c419fee4732} 
+\index{Program@{Program}!Instance@{Instance}}
+\index{Instance@{Instance}!Program@{Program}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_program}{Program}} \texorpdfstring{$\ast$}{*} Program\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Allows access to the singleton by returning it or creating one if one doesn\textquotesingle{}t yet exist. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the instance of the class 
+\end{DoxyReturn}
+\Hypertarget{class_program_aed7f2173bef36f9d09b379b2a257105f}\label{class_program_aed7f2173bef36f9d09b379b2a257105f} 
+\index{Program@{Program}!IsInDebugMode@{IsInDebugMode}}
+\index{IsInDebugMode@{IsInDebugMode}!Program@{Program}}
+\doxysubsubsection{\texorpdfstring{IsInDebugMode()}{IsInDebugMode()}}
+{\footnotesize\ttfamily bool Program\+::\+Is\+In\+Debug\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for whether the program is in debug mode. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em TRUE} & \+: If the program is in debug mode \\
+\hline
+{\em FALSE} & \+: If the program is not in debug mode \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{class_program_a3e338802810b90a3a98025dbb8782392}\label{class_program_a3e338802810b90a3a98025dbb8782392} 
+\index{Program@{Program}!IsRunning@{IsRunning}}
+\index{IsRunning@{IsRunning}!Program@{Program}}
+\doxysubsubsection{\texorpdfstring{IsRunning()}{IsRunning()}}
+{\footnotesize\ttfamily bool Program\+::\+Is\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for whether the program is running. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em TRUE} & \+: If the program is running \\
+\hline
+{\em FALSE} & \+: If the program is not running \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{class_program_a0f036f0467fe639cb84b56ef921f55ba}\label{class_program_a0f036f0467fe639cb84b56ef921f55ba} 
+\index{Program@{Program}!operator=@{operator=}}
+\index{operator=@{operator=}!Program@{Program}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void Program\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_program}{Program}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{class_program_a2b5de27c9ce830bc1c889461adbec025}\label{class_program_a2b5de27c9ce830bc1c889461adbec025} 
+\index{Program@{Program}!SetInDebugMode@{SetInDebugMode}}
+\index{SetInDebugMode@{SetInDebugMode}!Program@{Program}}
+\doxysubsubsection{\texorpdfstring{SetInDebugMode()}{SetInDebugMode()}}
+{\footnotesize\ttfamily void Program\+::\+Set\+In\+Debug\+Mode (\begin{DoxyParamCaption}\item[{bool}]{in\+Debug\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter for whether the program is in debug mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+Debug\+Mode} & \+: Whether the program is in debug mode or not \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_program_ac05184f676981b8420610049062d037c}\label{class_program_ac05184f676981b8420610049062d037c} 
+\index{Program@{Program}!SetIsRunning@{SetIsRunning}}
+\index{SetIsRunning@{SetIsRunning}!Program@{Program}}
+\doxysubsubsection{\texorpdfstring{SetIsRunning()}{SetIsRunning()}}
+{\footnotesize\ttfamily void Program\+::\+Set\+Is\+Running (\begin{DoxyParamCaption}\item[{bool}]{is\+Running }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter for whether the program is running. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Running} & \+: Whether the program should continue looping \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_program_a06cf3e09f93e0b1e2f5c6ba726f896cb}\label{class_program_a06cf3e09f93e0b1e2f5c6ba726f896cb} 
+\index{Program@{Program}!Update@{Update}}
+\index{Update@{Update}!Program@{Program}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Program\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})}
+
+
+
+Updates all logic associated with each game object that exists in the program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & \+: The delta\+Time value used for scaling things with time \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+B\+:/\+University Projects/\+EAT-\/\+Assessment-\/\+Project/\+EAT Assessment Project/\+My Classes/\mbox{\hyperlink{_program_8h}{Program.\+h}}\item 
+B\+:/\+University Projects/\+EAT-\/\+Assessment-\/\+Project/\+EAT Assessment Project/\+My Classes/\mbox{\hyperlink{_program_8cpp}{Program.\+cpp}}\end{DoxyCompactItemize}

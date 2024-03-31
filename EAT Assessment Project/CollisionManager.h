@@ -6,9 +6,7 @@
 
 #include <vector>
 
-/// <summary>
-/// Defines the class responsible for managing the collisions between all colliders
-/// </summary>
+/// @brief Defines the class responsible for managing the collisions between all colliders
 class CollisionManager
 {
 private:
@@ -21,27 +19,18 @@ public:
 	CollisionManager(const CollisionManager&) = delete;
 	void operator=(const CollisionManager&) = delete;
 
-	/// <summary>
-	/// Allows access to the singleton by returning it or creating one if one doesn't
-	/// yet exist
-	/// </summary>
-	/// <returns>A pointer to the instance of the class </returns>
+	/// @brief Allows access to the singleton by returning it or creating one if one doesn't yet exist
+	/// @return A pointer to the instance of the class
 	inline static CollisionManager* Instance() { return instance != nullptr ? instance : instance = new CollisionManager(); }
 
-	/// <summary>
-	/// Clean up method during program termination
-	/// </summary>
+	/// @brief Clean up method during program termination
 	void Clean();
-
-	/// <summary>
-	/// Checks the collisions between all colliders stored in the Collision Manager
-	/// </summary>
+	
+	/// @brief Checks the collisions between all colliders stored in the Collision Manager
 	void CheckCollisions();
 
-	/// <summary>
-	/// Used for adding a collider to the colliders list in collision manager
-	/// </summary>
-	/// <param name="c">: The reference of the collider to be added to the list</param>
+	/// @brief Used for adding a collider to the colliders list in collision manager
+	/// @param c : The collider to be added
 	void AddColliderToVector(Collider* c);
 
 private:
@@ -50,25 +39,19 @@ private:
 
 	static CollisionManager* instance;
 
-	/// <summary>
-	/// Collision Detection Algorithm between two circle colliders
-	/// </summary>
-	/// <param name="c1">: The first circle collider</param>
-	/// <param name="c2">: The second circle collider</param>
+	/// @brief Collision Detection Algorithm between two circle colliders
+	/// @param c1 : The first circle collider
+	/// @param c2 : The second circle collider
 	void CircleCircleCollision(CircleCollider* c1, CircleCollider* c2);
 
-	/// <summary>
-	/// Collision Detection Algorithm between two box colliders
-	/// </summary>
-	/// <param name="b1">: The first box collider</param>
-	/// <param name="b2">: The second box collider</param>
+	/// @brief Collision Detection Algorithm between two box colliders
+	/// @param b1 : The first box collider
+	/// @param b2 : The second box collider
 	void RectRectCollision(BoxCollider* b1, BoxCollider* b2);
 
-	/// <summary>
-	/// Collision Detection Algorithm between a circle and a box collider
-	/// </summary>
-	/// <param name="c">: The circle collider</param>
-	/// <param name="b">: The box collider</param>
+	/// @brief Collision Detection Algorithm between a circle and a box collider
+	/// @param c : The circle collider
+	/// @param b : The box collider
 	void CircleRectCollision(CircleCollider* c, BoxCollider* b);
 };
 

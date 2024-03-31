@@ -4,9 +4,7 @@
 
 #include "CircleCollider.h"
 
-/// <summary>
-/// Defines the circle shape
-/// </summary>
+/// @brief Defines the circle shape
 class Circle : public Shape
 {
 private:
@@ -14,28 +12,20 @@ private:
 	int radius;
 
 public:
-	/// <summary>
-	/// Constructor
-	/// </summary>
-	/// <param name="params">: The parameters to be passed in</param>
-	/// <param name="radius">: Radius of the circle</param>
+	/// @brief Circle Constructor
+	/// @param params : The parameters to be passed in
+	/// @param radius : Radius of the circle
 	Circle(Parameters* params, int radius);
 
-	/// <summary>
-	/// Draws the circle shape using the asset managers' drawing functionality
-	/// </summary>
+	/// @brief Draws the circle shape using the asset managers' drawing functionality
 	void Draw() override;
 
-	/// <summary>
-	/// Getter for the centre point of the circle
-	/// </summary>
-	/// <returns>The centre point of the circle</returns>
+	/// @brief Getter for the centre point of the circle
+	/// @return The centre point of the circle
 	inline Transform GetCentre() override { return Transform(position.X + radius, position.Y + radius); }
 
-	/// <summary>
-	/// Getter for the circles' radius
-	/// </summary>
-	/// <returns>The radius of the circle</returns>
+	/// @brief Getter for the radius of the circle
+	/// @return The radius of the circle
 	inline int GetRadius() const { return radius; }
 };
 

@@ -1,0 +1,49 @@
+\doxysection{Transform.\+h}
+\hypertarget{_transform_8h_source}{}\label{_transform_8h_source}\index{B:/University Projects/EAT-\/Assessment-\/Project/EAT Assessment Project/My Classes/Transform.h@{B:/University Projects/EAT-\/Assessment-\/Project/EAT Assessment Project/My Classes/Transform.h}}
+\mbox{\hyperlink{_transform_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_point_8h}{Point.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_vector2_8h}{Vector2.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//const\ float\ PI\ =\ 3.14f;}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_transform}{Transform}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct_point}{Point}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{comment}{//private:}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ float\ zRotation;}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_transform_ae45ac86e48a4d09f1cc741c6075c7cba}{Transform}}(\textcolor{keywordtype}{float}\ x\ =\ 0,\ \textcolor{keywordtype}{float}\ y\ =\ 0);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ INFO:\ Translation\ Methods}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transform_ad5f43a91759aab1c3d21e519a21e75da}{Translate}}(\mbox{\hyperlink{class_vector2}{Vector2}}\ v)\ \{\ \mbox{\hyperlink{struct_point_a7a41f3155d58d2cf5bc3319205775732}{X}}\ +=\ v.\mbox{\hyperlink{struct_point_a7a41f3155d58d2cf5bc3319205775732}{X}};\ \mbox{\hyperlink{struct_point_a48116229934f63bb7030863489cb397c}{Y}}\ +=\ v.\mbox{\hyperlink{struct_point_a48116229934f63bb7030863489cb397c}{Y}};\ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transform_ad865b5ed518db82ef34b46a85f9be2f3}{TranslateX}}(\textcolor{keywordtype}{float}\ x)\ \{\ \mbox{\hyperlink{struct_point_a7a41f3155d58d2cf5bc3319205775732}{X}}\ +=\ x;\ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transform_aab84c66cf919f3335de55280a4826843}{TranslateY}}(\textcolor{keywordtype}{float}\ y)\ \{\ \mbox{\hyperlink{struct_point_a48116229934f63bb7030863489cb397c}{Y}}\ +=\ y;\ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ //\ INFO:\ Rotation\ Methods}}
+\DoxyCodeLine{00031\ \textcolor{comment}{}}
+\DoxyCodeLine{00036\ \ \ \ \ void\ Rotate(float\ zAngle);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ Vector2\ Up();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ Vector2\ Right();}
+\DoxyCodeLine{00049\ \ \ \ \ */}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transform_a00342c0354ba5ef9d9afa74e3940d91e}{DisplayXY}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}Transform\ Position\ ("{}}\ <<\ \mbox{\hyperlink{struct_point_a7a41f3155d58d2cf5bc3319205775732}{X}}\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ \mbox{\hyperlink{struct_point_a48116229934f63bb7030863489cb397c}{Y}}\ <<\ \textcolor{stringliteral}{"{})"{}}\ <<\ std::endl;\ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{comment}{//private:}}
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ \ //\ INFO:\ Helper\ Methods}}
+\DoxyCodeLine{00057\ \textcolor{comment}{//}}
+\DoxyCodeLine{00058\ \textcolor{comment}{//\ \ inline\ float\ DegToRad(float\ deg)\ \{\ return\ deg\ *\ PI\ /\ 180;\ \}}}
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+
+\end{DoxyCode}

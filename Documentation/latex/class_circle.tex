@@ -1,0 +1,135 @@
+\doxysection{Circle Class Reference}
+\hypertarget{class_circle}{}\label{class_circle}\index{Circle@{Circle}}
+
+
+Defines the circle shape.  
+
+
+
+
+{\ttfamily \#include $<$Circle.\+h$>$}
+
+Inheritance diagram for Circle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_circle}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_circle_a8ce905b0df17861eeea3e05cb80c406c}{Circle}} (\mbox{\hyperlink{struct_parameters}{Parameters}} \texorpdfstring{$\ast$}{*}params, int radius)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_circle}{Circle} Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_circle_a20c77dcbe4a61b3f0464919023b2d4da}{Draw}} () override
+\begin{DoxyCompactList}\small\item\em Draws the circle shape using the asset managers\textquotesingle{} drawing functionality. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_transform}{Transform}} \mbox{\hyperlink{class_circle_a754e38606fa23a03ad2500ca0efba3ef}{Get\+Centre}} () override
+\begin{DoxyCompactList}\small\item\em Getter for the centre point of the circle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_circle_a616f7fcde6e9570d0aae9a3ee7dd3dc9}{Get\+Radius}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the radius of the circle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_shape}{Shape}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shape_a00688fbbde4a8f6c234eff625bc31a41}{Shape}} (\mbox{\hyperlink{struct_parameters}{Parameters}} \texorpdfstring{$\ast$}{*}params)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_shape}{Shape} Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_ada653a889c387233e4d511cb7a05e57d}{On\+Collision\+Enter}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}other) override
+\begin{DoxyCompactList}\small\item\em Inherited from the \doxylink{class_i_collision}{ICollision} interface used for responding to collisions. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_shape_aa4bc7880ecf529bb5ed2736f21f98b3a}{Update}} (float dt)
+\begin{DoxyCompactList}\small\item\em Updates values like the position of the shape. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_a37324d4053c56711d849b46b5257bcf8}{Set\+Is\+Static}} (bool \mbox{\hyperlink{class_shape_ac1b09af928ba7ab565fcf62df0a31d70}{is\+Static}})
+\begin{DoxyCompactList}\small\item\em Setter for the objects\textquotesingle{} is static variable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_shape_8h_a5a4538eeab397888d88a4eefcc5a1345}{Shape\+Type}} \mbox{\hyperlink{class_shape_ad69c28d5f2386416beda453825568c0d}{Get\+Shape\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the Shapes\textquotesingle{} Type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_a7c62bb53be36b586bc388bc3a799a999}{Set\+Shape\+Type}} (\mbox{\hyperlink{_shape_8h_a5a4538eeab397888d88a4eefcc5a1345}{Shape\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Setter for the Shapes\textquotesingle{} Type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{class_shape_aa983209dd4889067caae26a4f8619bda}{Get\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the color of the shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_shape}{Shape}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} \mbox{\hyperlink{class_shape_a4080fc0b8680dc94bbf5d5c8c3ebc7d5}{position}}
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_shape_a39433e513a3593b6185542958b7ca5a2}{move\+Direction}}
+\item 
+\mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{class_shape_ac56e2bf5eb24cf37b6e08c671501566b}{color}}
+\item 
+bool \mbox{\hyperlink{class_shape_ac1b09af928ba7ab565fcf62df0a31d70}{is\+Static}}
+\item 
+float \mbox{\hyperlink{class_shape_ae69092fa23fdde7f09dc3d3b1058c332}{move\+Speed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the circle shape. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_circle_a8ce905b0df17861eeea3e05cb80c406c}\label{class_circle_a8ce905b0df17861eeea3e05cb80c406c} 
+\index{Circle@{Circle}!Circle@{Circle}}
+\index{Circle@{Circle}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{Circle()}{Circle()}}
+{\footnotesize\ttfamily Circle\+::\+Circle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_parameters}{Parameters}} \texorpdfstring{$\ast$}{*}}]{params,  }\item[{int}]{radius }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_circle}{Circle} Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & \+: The parameters to be passed in \\
+\hline
+{\em radius} & \+: Radius of the circle \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_circle_a20c77dcbe4a61b3f0464919023b2d4da}\label{class_circle_a20c77dcbe4a61b3f0464919023b2d4da} 
+\index{Circle@{Circle}!Draw@{Draw}}
+\index{Draw@{Draw}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Circle\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws the circle shape using the asset managers\textquotesingle{} drawing functionality. 
+
+
+
+Implements \mbox{\hyperlink{class_shape_a6e15a417965101913a5657e9d2ed3967}{Shape}}.
+
+\Hypertarget{class_circle_a754e38606fa23a03ad2500ca0efba3ef}\label{class_circle_a754e38606fa23a03ad2500ca0efba3ef} 
+\index{Circle@{Circle}!GetCentre@{GetCentre}}
+\index{GetCentre@{GetCentre}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{GetCentre()}{GetCentre()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transform}{Transform}} Circle\+::\+Get\+Centre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Getter for the centre point of the circle. 
+
+\begin{DoxyReturn}{Returns}
+The centre point of the circle 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_a9bbf19bb8473e5227f0106994575c74f}{Shape}}.
+
+\Hypertarget{class_circle_a616f7fcde6e9570d0aae9a3ee7dd3dc9}\label{class_circle_a616f7fcde6e9570d0aae9a3ee7dd3dc9} 
+\index{Circle@{Circle}!GetRadius@{GetRadius}}
+\index{GetRadius@{GetRadius}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{GetRadius()}{GetRadius()}}
+{\footnotesize\ttfamily int Circle\+::\+Get\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the radius of the circle. 
+
+\begin{DoxyReturn}{Returns}
+The radius of the circle 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+B\+:/\+University Projects/\+EAT-\/\+Assessment-\/\+Project/\+EAT Assessment Project/\+My Classes/\mbox{\hyperlink{_circle_8h}{Circle.\+h}}\item 
+B\+:/\+University Projects/\+EAT-\/\+Assessment-\/\+Project/\+EAT Assessment Project/\+My Classes/\mbox{\hyperlink{_circle_8cpp}{Circle.\+cpp}}\end{DoxyCompactItemize}

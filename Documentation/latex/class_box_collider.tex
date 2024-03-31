@@ -1,0 +1,158 @@
+\doxysection{Box\+Collider Class Reference}
+\hypertarget{class_box_collider}{}\label{class_box_collider}\index{BoxCollider@{BoxCollider}}
+
+
+Defines the box collider class to be used by rect shaped objects.  
+
+
+
+
+{\ttfamily \#include $<$Box\+Collider.\+h$>$}
+
+Inheritance diagram for Box\+Collider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_box_collider}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_box_collider_a72f802d0eb69c269f80fbebbfb255316}{Box\+Collider}} (std\+::function$<$ void(\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*})$>$ Response, float \&x, float \&y, int \&width, int \&height)
+\begin{DoxyCompactList}\small\item\em Constructor of Box \doxylink{class_collider}{Collider}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_box_collider_a8b031974b71d4c168b8ff115f7b3897b}{Get\+Width}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the box colliders\textquotesingle{} width. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_box_collider_a8f56cd80c007275405f06e9993f0db04}{Get\+Height}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the box colliders\textquotesingle{} height. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_box_collider_af34c307ede6ae5d3911d36aa0505f0ad}{Get\+CentreX}} () override
+\begin{DoxyCompactList}\small\item\em Getter for the box colliders\textquotesingle{} centre x. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_box_collider_ab3759de415ea0c8ee41d7e6870e068c7}{Get\+CentreY}} () override
+\begin{DoxyCompactList}\small\item\em Getter for the box colliders\textquotesingle{} centre y. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_collider}{Collider}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_collider_ac9a1ba7409e13c20984a9c9666de9ed4}{Collider}} (std\+::function$<$ void(\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*})$>$ Response, float \&x, float \&y)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_collider}{Collider} class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_collider_abf1ce43b287c870fd72918b023217a33}{\texorpdfstring{$\sim$}{\string~}\+Collider}} ()
+\item 
+\mbox{\hyperlink{_collider_8h_a7f138e75fc3cc79e825c39e040690395}{Collider\+Type}} \mbox{\hyperlink{class_collider_a2948592d0e03e8033d95c7a38baeafad}{Get\+Collider\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the Colliders\textquotesingle{} Type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_collider_a515a6cc5988878812fc41b3b08508525}{Set\+Collider\+Type}} (\mbox{\hyperlink{_collider_8h_a7f138e75fc3cc79e825c39e040690395}{Collider\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Setter for the Colliders\textquotesingle{} Type. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_collider_a311ad893e4b969330378a71999e0d387}{GetX}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the colliders\textquotesingle{} x position. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_collider_a04a81a21760cc227bbf977720a2d2c03}{GetY}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the colliders\textquotesingle{} y position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_collider}{Collider}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}) \mbox{\hyperlink{class_collider_ab2eef13032e975571b013f13c7dbefcb}{Collision\+Response}} )
+\begin{DoxyCompactList}\small\item\em Holds a bound function that is called when a collision occurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_collider}{Collider}}}
+\begin{DoxyCompactItemize}
+\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_collider_ad15752b433ab62493ef044e8d431a6b5}{X}}
+\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_collider_ab3cf001ab6d9aeb890d08d7f5dd51504}{Y}}
+\item 
+\mbox{\hyperlink{_collider_8h_a7f138e75fc3cc79e825c39e040690395}{Collider\+Type}} \mbox{\hyperlink{class_collider_a9a7dcf95e0a0cf31f08ceaba945c75e5}{collider\+Type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the box collider class to be used by rect shaped objects. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_box_collider_a72f802d0eb69c269f80fbebbfb255316}\label{class_box_collider_a72f802d0eb69c269f80fbebbfb255316} 
+\index{BoxCollider@{BoxCollider}!BoxCollider@{BoxCollider}}
+\index{BoxCollider@{BoxCollider}!BoxCollider@{BoxCollider}}
+\doxysubsubsection{\texorpdfstring{BoxCollider()}{BoxCollider()}}
+{\footnotesize\ttfamily Box\+Collider\+::\+Box\+Collider (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*})$>$}]{Response,  }\item[{float \&}]{x,  }\item[{float \&}]{y,  }\item[{int \&}]{width,  }\item[{int \&}]{height }\end{DoxyParamCaption})}
+
+
+
+Constructor of Box \doxylink{class_collider}{Collider}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Response} & \+: The function to be bounded as the collision response \\
+\hline
+{\em x} & \+: The memory address that holds the x position of the rect \\
+\hline
+{\em y} & \+: The memory address that holds the y position of the rect \\
+\hline
+{\em width} & \+: The memory address that holds the width of the rect \\
+\hline
+{\em height} & \+: The memory address that holds the height of the rect \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_box_collider_af34c307ede6ae5d3911d36aa0505f0ad}\label{class_box_collider_af34c307ede6ae5d3911d36aa0505f0ad} 
+\index{BoxCollider@{BoxCollider}!GetCentreX@{GetCentreX}}
+\index{GetCentreX@{GetCentreX}!BoxCollider@{BoxCollider}}
+\doxysubsubsection{\texorpdfstring{GetCentreX()}{GetCentreX()}}
+{\footnotesize\ttfamily float Box\+Collider\+::\+Get\+CentreX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Getter for the box colliders\textquotesingle{} centre x. 
+
+\begin{DoxyReturn}{Returns}
+The centre x of the box collider 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_collider_a93c59c6ead5200720c7eadcdaeb1174d}{Collider}}.
+
+\Hypertarget{class_box_collider_ab3759de415ea0c8ee41d7e6870e068c7}\label{class_box_collider_ab3759de415ea0c8ee41d7e6870e068c7} 
+\index{BoxCollider@{BoxCollider}!GetCentreY@{GetCentreY}}
+\index{GetCentreY@{GetCentreY}!BoxCollider@{BoxCollider}}
+\doxysubsubsection{\texorpdfstring{GetCentreY()}{GetCentreY()}}
+{\footnotesize\ttfamily float Box\+Collider\+::\+Get\+CentreY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Getter for the box colliders\textquotesingle{} centre y. 
+
+\begin{DoxyReturn}{Returns}
+The centre y of the box collider 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_collider_af5a97acfb2f028e2d5908d7c31c7e753}{Collider}}.
+
+\Hypertarget{class_box_collider_a8f56cd80c007275405f06e9993f0db04}\label{class_box_collider_a8f56cd80c007275405f06e9993f0db04} 
+\index{BoxCollider@{BoxCollider}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!BoxCollider@{BoxCollider}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily int Box\+Collider\+::\+Get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the box colliders\textquotesingle{} height. 
+
+\begin{DoxyReturn}{Returns}
+The height of the box collider 
+\end{DoxyReturn}
+\Hypertarget{class_box_collider_a8b031974b71d4c168b8ff115f7b3897b}\label{class_box_collider_a8b031974b71d4c168b8ff115f7b3897b} 
+\index{BoxCollider@{BoxCollider}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!BoxCollider@{BoxCollider}}
+\doxysubsubsection{\texorpdfstring{GetWidth()}{GetWidth()}}
+{\footnotesize\ttfamily int Box\+Collider\+::\+Get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the box colliders\textquotesingle{} width. 
+
+\begin{DoxyReturn}{Returns}
+The width of the box collider 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+B\+:/\+University Projects/\+EAT-\/\+Assessment-\/\+Project/\+EAT Assessment Project/\+My Classes/\mbox{\hyperlink{_box_collider_8h}{Box\+Collider.\+h}}\item 
+B\+:/\+University Projects/\+EAT-\/\+Assessment-\/\+Project/\+EAT Assessment Project/\+My Classes/\mbox{\hyperlink{_box_collider_8cpp}{Box\+Collider.\+cpp}}\end{DoxyCompactItemize}

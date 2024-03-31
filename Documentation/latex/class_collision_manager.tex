@@ -1,0 +1,104 @@
+\doxysection{Collision\+Manager Class Reference}
+\hypertarget{class_collision_manager}{}\label{class_collision_manager}\index{CollisionManager@{CollisionManager}}
+
+
+Defines the class responsible for managing the collisions between all colliders.  
+
+
+
+
+{\ttfamily \#include $<$Collision\+Manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_collision_manager_a1a3bf1bd4afe92cf349b44cbd19a1cb4}{Collision\+Manager}} (const \mbox{\hyperlink{class_collision_manager}{Collision\+Manager}} \&)=delete
+\item 
+void \mbox{\hyperlink{class_collision_manager_a2ae59a9b706acff0dbb2a07f08294fe5}{operator=}} (const \mbox{\hyperlink{class_collision_manager}{Collision\+Manager}} \&)=delete
+\item 
+void \mbox{\hyperlink{class_collision_manager_af8c10287bfab30f3320063c89009f8f1}{Clean}} ()
+\begin{DoxyCompactList}\small\item\em Clean up method during program termination. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_collision_manager_aa1c1b2c09960c0bad6b9c980324f9f92}{Check\+Collisions}} ()
+\begin{DoxyCompactList}\small\item\em Checks the collisions between all colliders stored in the Collision Manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_collision_manager_a9469bbec687edf5926753557fcb1b230}{Add\+Collider\+To\+Vector}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}c)
+\begin{DoxyCompactList}\small\item\em Used for adding a collider to the colliders list in collision manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_collision_manager}{Collision\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_collision_manager_aa35a177131b165770cf038b0fc99b884}{Instance}} ()
+\begin{DoxyCompactList}\small\item\em Allows access to the singleton by returning it or creating one if one doesn\textquotesingle{}t yet exist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the class responsible for managing the collisions between all colliders. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_collision_manager_a1a3bf1bd4afe92cf349b44cbd19a1cb4}\label{class_collision_manager_a1a3bf1bd4afe92cf349b44cbd19a1cb4} 
+\index{CollisionManager@{CollisionManager}!CollisionManager@{CollisionManager}}
+\index{CollisionManager@{CollisionManager}!CollisionManager@{CollisionManager}}
+\doxysubsubsection{\texorpdfstring{CollisionManager()}{CollisionManager()}}
+{\footnotesize\ttfamily Collision\+Manager\+::\+Collision\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_collision_manager}{Collision\+Manager}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_collision_manager_a9469bbec687edf5926753557fcb1b230}\label{class_collision_manager_a9469bbec687edf5926753557fcb1b230} 
+\index{CollisionManager@{CollisionManager}!AddColliderToVector@{AddColliderToVector}}
+\index{AddColliderToVector@{AddColliderToVector}!CollisionManager@{CollisionManager}}
+\doxysubsubsection{\texorpdfstring{AddColliderToVector()}{AddColliderToVector()}}
+{\footnotesize\ttfamily void Collision\+Manager\+::\+Add\+Collider\+To\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}}]{c }\end{DoxyParamCaption})}
+
+
+
+Used for adding a collider to the colliders list in collision manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & \+: The collider to be added \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_collision_manager_aa1c1b2c09960c0bad6b9c980324f9f92}\label{class_collision_manager_aa1c1b2c09960c0bad6b9c980324f9f92} 
+\index{CollisionManager@{CollisionManager}!CheckCollisions@{CheckCollisions}}
+\index{CheckCollisions@{CheckCollisions}!CollisionManager@{CollisionManager}}
+\doxysubsubsection{\texorpdfstring{CheckCollisions()}{CheckCollisions()}}
+{\footnotesize\ttfamily void Collision\+Manager\+::\+Check\+Collisions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks the collisions between all colliders stored in the Collision Manager. 
+
+\Hypertarget{class_collision_manager_af8c10287bfab30f3320063c89009f8f1}\label{class_collision_manager_af8c10287bfab30f3320063c89009f8f1} 
+\index{CollisionManager@{CollisionManager}!Clean@{Clean}}
+\index{Clean@{Clean}!CollisionManager@{CollisionManager}}
+\doxysubsubsection{\texorpdfstring{Clean()}{Clean()}}
+{\footnotesize\ttfamily void Collision\+Manager\+::\+Clean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clean up method during program termination. 
+
+\Hypertarget{class_collision_manager_aa35a177131b165770cf038b0fc99b884}\label{class_collision_manager_aa35a177131b165770cf038b0fc99b884} 
+\index{CollisionManager@{CollisionManager}!Instance@{Instance}}
+\index{Instance@{Instance}!CollisionManager@{CollisionManager}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_collision_manager}{Collision\+Manager}} \texorpdfstring{$\ast$}{*} Collision\+Manager\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Allows access to the singleton by returning it or creating one if one doesn\textquotesingle{}t yet exist. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the instance of the class 
+\end{DoxyReturn}
+\Hypertarget{class_collision_manager_a2ae59a9b706acff0dbb2a07f08294fe5}\label{class_collision_manager_a2ae59a9b706acff0dbb2a07f08294fe5} 
+\index{CollisionManager@{CollisionManager}!operator=@{operator=}}
+\index{operator=@{operator=}!CollisionManager@{CollisionManager}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void Collision\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_collision_manager}{Collision\+Manager}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+B\+:/\+University Projects/\+EAT-\/\+Assessment-\/\+Project/\+EAT Assessment Project/\+My Classes/\mbox{\hyperlink{_collision_manager_8h}{Collision\+Manager.\+h}}\item 
+B\+:/\+University Projects/\+EAT-\/\+Assessment-\/\+Project/\+EAT Assessment Project/\+My Classes/\mbox{\hyperlink{_collision_manager_8cpp}{Collision\+Manager.\+cpp}}\end{DoxyCompactItemize}

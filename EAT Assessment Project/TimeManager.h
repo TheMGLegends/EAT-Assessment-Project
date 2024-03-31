@@ -2,9 +2,7 @@
 
 const float MILLISECONDS_IN_SECOND = 1000.0f;
 
-/// <summary>
-/// Defines the class responsible for managing the time
-/// </summary>
+/// @brief Defines the class responsible for managing the time
 class TimeManager
 {
 private:
@@ -13,21 +11,15 @@ private:
 	static float deltaTime;
 
 public:
-	/// <summary>
-	/// Initializes the time values
-	/// </summary>
+	/// @brief Initializes the time values
 	static void Initialize();
 
-	/// <summary>
-	/// Calculates the deltaTime in seconds based on the previous 
-	/// and current time values
-	/// </summary>
+	/// @brief Calculates the delta time in seconds based on the 
+	/// previous and current time values
 	static void Tick();
 
-	/// <summary>
-	/// The getter for delta time
-	/// </summary>
-	/// <returns>The current delta time</returns>
+	/// @brief The getter for delta time
+	/// @return The current delta time
 	static inline float DeltaTime() { return deltaTime; }
 
 private:

@@ -1,0 +1,141 @@
+\doxysection{Circle\+Collider Class Reference}
+\hypertarget{class_circle_collider}{}\label{class_circle_collider}\index{CircleCollider@{CircleCollider}}
+
+
+Defines the circle collider class to be used by spherically shaped objects.  
+
+
+
+
+{\ttfamily \#include $<$Circle\+Collider.\+h$>$}
+
+Inheritance diagram for Circle\+Collider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_circle_collider}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_circle_collider_a28afa67a8620d55634ea9a2f5cc435cb}{Circle\+Collider}} (std\+::function$<$ void(\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*})$>$ Response, float \&x, float \&y, int \&radius)
+\begin{DoxyCompactList}\small\item\em Constructor for the circle collider. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_circle_collider_a9e13010bd162a2776c3129508dab2194}{Get\+Radius}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the circle colliders\textquotesingle{} radius. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_circle_collider_a900ae53376b8fd9fcbef65ffd2fc750e}{Get\+CentreX}} () override
+\begin{DoxyCompactList}\small\item\em Getter for the circle colliders\textquotesingle{} centre x. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_circle_collider_a72b1d82fcff70ab0fb39bb729de3b2d5}{Get\+CentreY}} () override
+\begin{DoxyCompactList}\small\item\em Getter for the circle colliders\textquotesingle{} centre y. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_collider}{Collider}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_collider_ac9a1ba7409e13c20984a9c9666de9ed4}{Collider}} (std\+::function$<$ void(\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*})$>$ Response, float \&x, float \&y)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_collider}{Collider} class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_collider_abf1ce43b287c870fd72918b023217a33}{\texorpdfstring{$\sim$}{\string~}\+Collider}} ()
+\item 
+\mbox{\hyperlink{_collider_8h_a7f138e75fc3cc79e825c39e040690395}{Collider\+Type}} \mbox{\hyperlink{class_collider_a2948592d0e03e8033d95c7a38baeafad}{Get\+Collider\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the Colliders\textquotesingle{} Type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_collider_a515a6cc5988878812fc41b3b08508525}{Set\+Collider\+Type}} (\mbox{\hyperlink{_collider_8h_a7f138e75fc3cc79e825c39e040690395}{Collider\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Setter for the Colliders\textquotesingle{} Type. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_collider_a311ad893e4b969330378a71999e0d387}{GetX}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the colliders\textquotesingle{} x position. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_collider_a04a81a21760cc227bbf977720a2d2c03}{GetY}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the colliders\textquotesingle{} y position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_collider}{Collider}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}) \mbox{\hyperlink{class_collider_ab2eef13032e975571b013f13c7dbefcb}{Collision\+Response}} )
+\begin{DoxyCompactList}\small\item\em Holds a bound function that is called when a collision occurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_collider}{Collider}}}
+\begin{DoxyCompactItemize}
+\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_collider_ad15752b433ab62493ef044e8d431a6b5}{X}}
+\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_collider_ab3cf001ab6d9aeb890d08d7f5dd51504}{Y}}
+\item 
+\mbox{\hyperlink{_collider_8h_a7f138e75fc3cc79e825c39e040690395}{Collider\+Type}} \mbox{\hyperlink{class_collider_a9a7dcf95e0a0cf31f08ceaba945c75e5}{collider\+Type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the circle collider class to be used by spherically shaped objects. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_circle_collider_a28afa67a8620d55634ea9a2f5cc435cb}\label{class_circle_collider_a28afa67a8620d55634ea9a2f5cc435cb} 
+\index{CircleCollider@{CircleCollider}!CircleCollider@{CircleCollider}}
+\index{CircleCollider@{CircleCollider}!CircleCollider@{CircleCollider}}
+\doxysubsubsection{\texorpdfstring{CircleCollider()}{CircleCollider()}}
+{\footnotesize\ttfamily Circle\+Collider\+::\+Circle\+Collider (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*})$>$}]{Response,  }\item[{float \&}]{x,  }\item[{float \&}]{y,  }\item[{int \&}]{radius }\end{DoxyParamCaption})}
+
+
+
+Constructor for the circle collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Response} & \+: The function to be bounded as the collision response \\
+\hline
+{\em x} & \+: The memory address that holds the x-\/coordinate of the circle \\
+\hline
+{\em y} & \+: The memory address that holds the y-\/coordinate of the circle \\
+\hline
+{\em radius} & \+: The memory address that holds the radius of the circle \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_circle_collider_a900ae53376b8fd9fcbef65ffd2fc750e}\label{class_circle_collider_a900ae53376b8fd9fcbef65ffd2fc750e} 
+\index{CircleCollider@{CircleCollider}!GetCentreX@{GetCentreX}}
+\index{GetCentreX@{GetCentreX}!CircleCollider@{CircleCollider}}
+\doxysubsubsection{\texorpdfstring{GetCentreX()}{GetCentreX()}}
+{\footnotesize\ttfamily float Circle\+Collider\+::\+Get\+CentreX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Getter for the circle colliders\textquotesingle{} centre x. 
+
+\begin{DoxyReturn}{Returns}
+The centre x of the circle collider 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_collider_a93c59c6ead5200720c7eadcdaeb1174d}{Collider}}.
+
+\Hypertarget{class_circle_collider_a72b1d82fcff70ab0fb39bb729de3b2d5}\label{class_circle_collider_a72b1d82fcff70ab0fb39bb729de3b2d5} 
+\index{CircleCollider@{CircleCollider}!GetCentreY@{GetCentreY}}
+\index{GetCentreY@{GetCentreY}!CircleCollider@{CircleCollider}}
+\doxysubsubsection{\texorpdfstring{GetCentreY()}{GetCentreY()}}
+{\footnotesize\ttfamily float Circle\+Collider\+::\+Get\+CentreY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Getter for the circle colliders\textquotesingle{} centre y. 
+
+\begin{DoxyReturn}{Returns}
+The centre y of the circle collider 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_collider_af5a97acfb2f028e2d5908d7c31c7e753}{Collider}}.
+
+\Hypertarget{class_circle_collider_a9e13010bd162a2776c3129508dab2194}\label{class_circle_collider_a9e13010bd162a2776c3129508dab2194} 
+\index{CircleCollider@{CircleCollider}!GetRadius@{GetRadius}}
+\index{GetRadius@{GetRadius}!CircleCollider@{CircleCollider}}
+\doxysubsubsection{\texorpdfstring{GetRadius()}{GetRadius()}}
+{\footnotesize\ttfamily int Circle\+Collider\+::\+Get\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the circle colliders\textquotesingle{} radius. 
+
+\begin{DoxyReturn}{Returns}
+The radius of the circle collider 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+B\+:/\+University Projects/\+EAT-\/\+Assessment-\/\+Project/\+EAT Assessment Project/\+My Classes/\mbox{\hyperlink{_circle_collider_8h}{Circle\+Collider.\+h}}\item 
+B\+:/\+University Projects/\+EAT-\/\+Assessment-\/\+Project/\+EAT Assessment Project/\+My Classes/\mbox{\hyperlink{_circle_collider_8cpp}{Circle\+Collider.\+cpp}}\end{DoxyCompactItemize}

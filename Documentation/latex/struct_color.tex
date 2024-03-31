@@ -1,0 +1,144 @@
+\doxysection{Color Struct Reference}
+\hypertarget{struct_color}{}\label{struct_color}\index{Color@{Color}}
+
+
+Struct that defines RGBA values.  
+
+
+
+
+{\ttfamily \#include $<$Color.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_color_a9a742cbe9f9f4037f5d9f4e81a9b2428}{Color}} ()
+\item 
+\mbox{\hyperlink{struct_color_a5c829b2d25c10b5e9b81b450880c60ae}{Color}} (int \mbox{\hyperlink{struct_color_aed083afcc2c689243df7fbc3da5203d3}{R}}, int \mbox{\hyperlink{struct_color_a494fcf569d0e0cdcb1f16843a59173ae}{G}}, int \mbox{\hyperlink{struct_color_a0460664d0d091fbe42cf4307744dcaca}{B}}, int \mbox{\hyperlink{struct_color_a13db704e48f5e851817f9e9fd67ec76d}{A}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{struct_color_aebee358551905595b039dcbc11e955bf}{Random\+Color}} ()
+\begin{DoxyCompactList}\small\item\em Generates a random color with 255 alpha. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_color_aed083afcc2c689243df7fbc3da5203d3}{R}}
+\item 
+int \mbox{\hyperlink{struct_color_a494fcf569d0e0cdcb1f16843a59173ae}{G}}
+\item 
+int \mbox{\hyperlink{struct_color_a0460664d0d091fbe42cf4307744dcaca}{B}}
+\item 
+int \mbox{\hyperlink{struct_color_a13db704e48f5e851817f9e9fd67ec76d}{A}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{struct_color_aae63fc23cf0d0772e8b07c776f73b019}{RED}} = \{ 255, 0, 0, 2555 \}
+\item 
+static const \mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{struct_color_a1995c0ef6be986e023c4a79392d6d6d9}{GREEN}} = \{ 0, 255, 0, 255 \}
+\item 
+static const \mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{struct_color_a76c4d495cab47dea6fa6c240d5652b46}{BLUE}} = \{ 0, 0, 255, 255 \}
+\item 
+static const \mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{struct_color_a29452f4e0fad1f192715226605c0f03a}{WHITE}} = \{ 255, 255, 255, 255 \}
+\item 
+static const \mbox{\hyperlink{struct_color}{Color}} \mbox{\hyperlink{struct_color_a597af2ae9a5d469660ca4524970c15c4}{BLACK}} = \{ 0, 0, 0, 255 \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct that defines RGBA values. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_color_a9a742cbe9f9f4037f5d9f4e81a9b2428}\label{struct_color_a9a742cbe9f9f4037f5d9f4e81a9b2428} 
+\index{Color@{Color}!Color@{Color}}
+\index{Color@{Color}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{Color()}{Color()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Color\+::\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_color_a5c829b2d25c10b5e9b81b450880c60ae}\label{struct_color_a5c829b2d25c10b5e9b81b450880c60ae} 
+\index{Color@{Color}!Color@{Color}}
+\index{Color@{Color}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{Color()}{Color()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Color\+::\+Color (\begin{DoxyParamCaption}\item[{int}]{R,  }\item[{int}]{G,  }\item[{int}]{B,  }\item[{int}]{A }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_color_aebee358551905595b039dcbc11e955bf}\label{struct_color_aebee358551905595b039dcbc11e955bf} 
+\index{Color@{Color}!RandomColor@{RandomColor}}
+\index{RandomColor@{RandomColor}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{RandomColor()}{RandomColor()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_color}{Color}} Color\+::\+Random\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Generates a random color with 255 alpha. 
+
+\begin{DoxyReturn}{Returns}
+The randomly generated fully opaque color
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_color_a13db704e48f5e851817f9e9fd67ec76d}\label{struct_color_a13db704e48f5e851817f9e9fd67ec76d} 
+\index{Color@{Color}!A@{A}}
+\index{A@{A}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{A}{A}}
+{\footnotesize\ttfamily int Color\+::A}
+
+\Hypertarget{struct_color_a0460664d0d091fbe42cf4307744dcaca}\label{struct_color_a0460664d0d091fbe42cf4307744dcaca} 
+\index{Color@{Color}!B@{B}}
+\index{B@{B}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{B}{B}}
+{\footnotesize\ttfamily int Color\+::B}
+
+\Hypertarget{struct_color_a597af2ae9a5d469660ca4524970c15c4}\label{struct_color_a597af2ae9a5d469660ca4524970c15c4} 
+\index{Color@{Color}!BLACK@{BLACK}}
+\index{BLACK@{BLACK}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{BLACK}{BLACK}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_color}{Color}} Color\+::\+BLACK = \{ 0, 0, 0, 255 \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{struct_color_a76c4d495cab47dea6fa6c240d5652b46}\label{struct_color_a76c4d495cab47dea6fa6c240d5652b46} 
+\index{Color@{Color}!BLUE@{BLUE}}
+\index{BLUE@{BLUE}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{BLUE}{BLUE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_color}{Color}} Color\+::\+BLUE = \{ 0, 0, 255, 255 \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{struct_color_a494fcf569d0e0cdcb1f16843a59173ae}\label{struct_color_a494fcf569d0e0cdcb1f16843a59173ae} 
+\index{Color@{Color}!G@{G}}
+\index{G@{G}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{G}{G}}
+{\footnotesize\ttfamily int Color\+::G}
+
+\Hypertarget{struct_color_a1995c0ef6be986e023c4a79392d6d6d9}\label{struct_color_a1995c0ef6be986e023c4a79392d6d6d9} 
+\index{Color@{Color}!GREEN@{GREEN}}
+\index{GREEN@{GREEN}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{GREEN}{GREEN}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_color}{Color}} Color\+::\+GREEN = \{ 0, 255, 0, 255 \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{struct_color_aed083afcc2c689243df7fbc3da5203d3}\label{struct_color_aed083afcc2c689243df7fbc3da5203d3} 
+\index{Color@{Color}!R@{R}}
+\index{R@{R}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily int Color\+::R}
+
+\Hypertarget{struct_color_aae63fc23cf0d0772e8b07c776f73b019}\label{struct_color_aae63fc23cf0d0772e8b07c776f73b019} 
+\index{Color@{Color}!RED@{RED}}
+\index{RED@{RED}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{RED}{RED}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_color}{Color}} Color\+::\+RED = \{ 255, 0, 0, 2555 \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{struct_color_a29452f4e0fad1f192715226605c0f03a}\label{struct_color_a29452f4e0fad1f192715226605c0f03a} 
+\index{Color@{Color}!WHITE@{WHITE}}
+\index{WHITE@{WHITE}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{WHITE}{WHITE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_color}{Color}} Color\+::\+WHITE = \{ 255, 255, 255, 255 \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+B\+:/\+University Projects/\+EAT-\/\+Assessment-\/\+Project/\+EAT Assessment Project/\+My Classes/\mbox{\hyperlink{_color_8h}{Color.\+h}}\item 
+B\+:/\+University Projects/\+EAT-\/\+Assessment-\/\+Project/\+EAT Assessment Project/\+My Classes/\mbox{\hyperlink{_color_8cpp}{Color.\+cpp}}\end{DoxyCompactItemize}

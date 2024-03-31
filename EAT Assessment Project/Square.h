@@ -4,9 +4,7 @@
 
 #include "BoxCollider.h"
 
-/// <summary>
-/// Defines the square shape
-/// </summary>
+/// @brief Defines the square shape
 class Square : public Shape
 {
 private:
@@ -14,28 +12,20 @@ private:
 	int size;
 
 public:
-	/// <summary>
-	/// Constructor
-	/// </summary>
-	/// <param name="params">: The parameters to be passed in</param>
-	/// <param name="size">: Size of the square</param>
+	/// @brief Square Constructor
+	/// @param params : The parameters to be passed in
+	/// @param size : Size of the square
 	Square(Parameters* params, int size);
 
-	/// <summary>
-	/// Draws the square shape using the asset managers' drawing functionality
-	/// </summary>
+	/// @brief Draws the square shape using the asset managers' drawing functionality
 	void Draw() override;
 
-	/// <summary>
-	/// Getter for the centre point of the square
-	/// </summary>
-	/// <returns>The centre point of the square</returns>
+	/// @brief Getter for the centre point of the square
+	/// @return The centre point of the square
 	inline Transform GetCentre() override { return Transform(position.X + size / 2, position.Y + size / 2); }
 
-	/// <summary>
-	/// Getter for the Squares' Size
-	/// </summary>
-	/// <returns>Size of the square</returns>
+	/// @brief Getter for the size of the square
+	/// @return The size of the square
 	inline int GetSize() const { return size; }
 };
 

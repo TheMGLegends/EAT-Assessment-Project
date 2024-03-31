@@ -1,0 +1,46 @@
+\doxysection{Collider.\+h}
+\hypertarget{_collider_8h_source}{}\label{_collider_8h_source}\index{B:/University Projects/EAT-\/Assessment-\/Project/EAT Assessment Project/My Classes/Collider.h@{B:/University Projects/EAT-\/Assessment-\/Project/EAT Assessment Project/My Classes/Collider.h}}
+\mbox{\hyperlink{_collider_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{_collider_8h_a7f138e75fc3cc79e825c39e040690395}{ColliderType}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{_collider_8h_a7f138e75fc3cc79e825c39e040690395a6adf97f83acf6453d4a6a4b1070f3754}{None}},}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{_collider_8h_a7f138e75fc3cc79e825c39e040690395a69ad58d91eec91b5c152d21ca117dc81}{Rect}},}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_circle}{Circle}}}
+\DoxyCodeLine{00012\ \};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_collider}{Collider}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{float}*\ \mbox{\hyperlink{class_collider_ad15752b433ab62493ef044e8d431a6b5}{X}};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{float}*\ \mbox{\hyperlink{class_collider_ab3cf001ab6d9aeb890d08d7f5dd51504}{Y}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{_collider_8h_a7f138e75fc3cc79e825c39e040690395}{ColliderType}}\ \mbox{\hyperlink{class_collider_a9a7dcf95e0a0cf31f08ceaba945c75e5}{colliderType}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ std::function<void(\mbox{\hyperlink{class_collider}{Collider}}*)>\ \mbox{\hyperlink{class_collider_ab2eef13032e975571b013f13c7dbefcb}{CollisionResponse}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_collider_ac9a1ba7409e13c20984a9c9666de9ed4}{Collider}}(std::function<\textcolor{keywordtype}{void}(\mbox{\hyperlink{class_collider}{Collider}}*)>\ Response,\ \textcolor{keywordtype}{float}\ \&x,\ \textcolor{keywordtype}{float}\ \&y);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_collider_abf1ce43b287c870fd72918b023217a33}{\string~Collider}}()\ \{\}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{_collider_8h_a7f138e75fc3cc79e825c39e040690395}{ColliderType}}\ \mbox{\hyperlink{class_collider_a2948592d0e03e8033d95c7a38baeafad}{GetColliderType}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_collider_a9a7dcf95e0a0cf31f08ceaba945c75e5}{colliderType}};\ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_collider_a515a6cc5988878812fc41b3b08508525}{SetColliderType}}(\mbox{\hyperlink{_collider_8h_a7f138e75fc3cc79e825c39e040690395}{ColliderType}}\ type)\ \{\ \mbox{\hyperlink{class_collider_a9a7dcf95e0a0cf31f08ceaba945c75e5}{colliderType}}\ =\ type;\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_collider_a311ad893e4b969330378a71999e0d387}{GetX}}()\ \{\ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{class_collider_ad15752b433ab62493ef044e8d431a6b5}{X}};\ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_collider_a04a81a21760cc227bbf977720a2d2c03}{GetY}}()\ \{\ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{class_collider_ab3cf001ab6d9aeb890d08d7f5dd51504}{Y}};\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_collider_a93c59c6ead5200720c7eadcdaeb1174d}{GetCentreX}}()\ =\ 0;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_collider_af5a97acfb2f028e2d5908d7c31c7e753}{GetCentreY}}()\ =\ 0;}
+\DoxyCodeLine{00058\ \};}
+\DoxyCodeLine{00059\ }
+
+\end{DoxyCode}

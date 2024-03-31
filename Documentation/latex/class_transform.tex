@@ -1,0 +1,107 @@
+\doxysection{Transform Class Reference}
+\hypertarget{class_transform}{}\label{class_transform}\index{Transform@{Transform}}
+
+
+Derived from \doxylink{struct_point}{Point} class used to manipulate the position of objects.  
+
+
+
+
+{\ttfamily \#include $<$Transform.\+h$>$}
+
+Inheritance diagram for Transform\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_transform}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_transform_ae45ac86e48a4d09f1cc741c6075c7cba}{Transform}} (float x=0, float y=0)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_transform}{Transform} Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_ad5f43a91759aab1c3d21e519a21e75da}{Translate}} (\mbox{\hyperlink{class_vector2}{Vector2}} v)
+\item 
+void \mbox{\hyperlink{class_transform_ad865b5ed518db82ef34b46a85f9be2f3}{TranslateX}} (float x)
+\item 
+void \mbox{\hyperlink{class_transform_aab84c66cf919f3335de55280a4826843}{TranslateY}} (float y)
+\item 
+void \mbox{\hyperlink{class_transform_a00342c0354ba5ef9d9afa74e3940d91e}{Display\+XY}} () override
+\begin{DoxyCompactList}\small\item\em Displays the x and y coordinates onto the console output window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{struct_point}{Point}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_point_a65763f2589e36f5058f3be4df3d7a7d0}{Point}} (float x=0, float y=0)
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_point}{Point} Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{struct_point}{Point}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{struct_point_a7a41f3155d58d2cf5bc3319205775732}{X}}
+\item 
+float \mbox{\hyperlink{struct_point_a48116229934f63bb7030863489cb397c}{Y}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Derived from \doxylink{struct_point}{Point} class used to manipulate the position of objects. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_transform_ae45ac86e48a4d09f1cc741c6075c7cba}\label{class_transform_ae45ac86e48a4d09f1cc741c6075c7cba} 
+\index{Transform@{Transform}!Transform@{Transform}}
+\index{Transform@{Transform}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{Transform()}{Transform()}}
+{\footnotesize\ttfamily Transform\+::\+Transform (\begin{DoxyParamCaption}\item[{float}]{x = {\ttfamily 0},  }\item[{float}]{y = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_transform}{Transform} Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: x-\/coordinate \\
+\hline
+{\em y} & \+: y-\/coordinate \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_transform_a00342c0354ba5ef9d9afa74e3940d91e}\label{class_transform_a00342c0354ba5ef9d9afa74e3940d91e} 
+\index{Transform@{Transform}!DisplayXY@{DisplayXY}}
+\index{DisplayXY@{DisplayXY}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{DisplayXY()}{DisplayXY()}}
+{\footnotesize\ttfamily void Transform\+::\+Display\+XY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Displays the x and y coordinates onto the console output window. 
+
+
+
+Implements \mbox{\hyperlink{struct_point_a73ff3d1a3ea556b11872d8402f6c559d}{Point}}.
+
+\Hypertarget{class_transform_ad5f43a91759aab1c3d21e519a21e75da}\label{class_transform_ad5f43a91759aab1c3d21e519a21e75da} 
+\index{Transform@{Transform}!Translate@{Translate}}
+\index{Translate@{Translate}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{Translate()}{Translate()}}
+{\footnotesize\ttfamily void Transform\+::\+Translate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_transform_ad865b5ed518db82ef34b46a85f9be2f3}\label{class_transform_ad865b5ed518db82ef34b46a85f9be2f3} 
+\index{Transform@{Transform}!TranslateX@{TranslateX}}
+\index{TranslateX@{TranslateX}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{TranslateX()}{TranslateX()}}
+{\footnotesize\ttfamily void Transform\+::\+TranslateX (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_transform_aab84c66cf919f3335de55280a4826843}\label{class_transform_aab84c66cf919f3335de55280a4826843} 
+\index{Transform@{Transform}!TranslateY@{TranslateY}}
+\index{TranslateY@{TranslateY}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{TranslateY()}{TranslateY()}}
+{\footnotesize\ttfamily void Transform\+::\+TranslateY (\begin{DoxyParamCaption}\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+B\+:/\+University Projects/\+EAT-\/\+Assessment-\/\+Project/\+EAT Assessment Project/\+My Classes/\mbox{\hyperlink{_transform_8h}{Transform.\+h}}\item 
+B\+:/\+University Projects/\+EAT-\/\+Assessment-\/\+Project/\+EAT Assessment Project/\+My Classes/\mbox{\hyperlink{_transform_8cpp}{Transform.\+cpp}}\end{DoxyCompactItemize}

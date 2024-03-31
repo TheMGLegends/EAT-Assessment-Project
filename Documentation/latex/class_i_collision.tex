@@ -1,0 +1,52 @@
+\doxysection{ICollision Class Reference}
+\hypertarget{class_i_collision}{}\label{class_i_collision}\index{ICollision@{ICollision}}
+
+
+Abstract (Interface) class to be inherited by any class that needs to handle collision events.  
+
+
+
+
+{\ttfamily \#include $<$ICollision.\+h$>$}
+
+Inheritance diagram for ICollision\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_i_collision}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_i_collision_a0596f4bcdfd183ddf9c3178a4444bf7c}{On\+Collision\+Enter}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}other)=0
+\begin{DoxyCompactList}\small\item\em The function that will be called when a collision event occurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract (Interface) class to be inherited by any class that needs to handle collision events. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_collision_a0596f4bcdfd183ddf9c3178a4444bf7c}\label{class_i_collision_a0596f4bcdfd183ddf9c3178a4444bf7c} 
+\index{ICollision@{ICollision}!OnCollisionEnter@{OnCollisionEnter}}
+\index{OnCollisionEnter@{OnCollisionEnter}!ICollision@{ICollision}}
+\doxysubsubsection{\texorpdfstring{OnCollisionEnter()}{OnCollisionEnter()}}
+{\footnotesize\ttfamily virtual void ICollision\+::\+On\+Collision\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The function that will be called when a collision event occurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \+: The collider that this object collided with \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_shape_ada653a889c387233e4d511cb7a05e57d}{Shape}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+B\+:/\+University Projects/\+EAT-\/\+Assessment-\/\+Project/\+EAT Assessment Project/\+My Classes/\mbox{\hyperlink{_i_collision_8h}{ICollision.\+h}}\end{DoxyCompactItemize}

@@ -6,15 +6,16 @@
 
 //const float PI = 3.14f;
 
-/// <summary>
-/// Derived from Point class used to manipulate the position of objects
-/// </summary>
+/// @brief Derived from Point class used to manipulate the position of objects
 class Transform : public Point
 {
 //private:
 //	float zRotation;
 
 public:
+	/// @brief Transform Constructor
+	/// @param x : x-coordinate
+	/// @param y : y-coordinate
 	Transform(float x = 0, float y = 0);
 
 
@@ -48,9 +49,7 @@ public:
 	*/
 
 
-	/// <summary>
-	/// Displays the x and y coordinates onto the console output window
-	/// </summary>
+	/// @brief Displays the x and y coordinates onto the console output window
 	inline void DisplayXY() override { std::cout << "Transform Position (" << X << ", " << Y << ")" << std::endl; }
 
 //private:
