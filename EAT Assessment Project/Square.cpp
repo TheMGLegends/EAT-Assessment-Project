@@ -15,9 +15,6 @@ Square::Square(Parameters* params, int size)
 
 	// INFO: Specify the Shape Type to be Square
 	SetShapeType(ShapeType::Square);
-
-	// INFO: Specify the Collider Type to be Rect
-	boxCollider->SetColliderType(ColliderType::Rect);
 }
 
 void Square::Draw()

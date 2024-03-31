@@ -15,9 +15,6 @@ Circle::Circle(Parameters* params, int radius)
 
 	// INFO: Specify the Shape Type to be Rectangle
 	SetShapeType(ShapeType::Circle);
-
-	// INFO: Specify the Collider Type to be Circle
-	circleCollider->SetColliderType(ColliderType::Circle);
 }
 
 void Circle::Draw()

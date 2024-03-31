@@ -18,9 +18,6 @@ Rectangle::Rectangle(Parameters* params, int width, int height)
 
 	// INFO: Specify the Shape Type to be Rectangle
 	SetShapeType(ShapeType::Rectangle);
-
-	// INFO: Specify the Collider Type to be Rect
-	boxCollider->SetColliderType(ColliderType::Rect);
 }
 
 void Rectangle::Draw()

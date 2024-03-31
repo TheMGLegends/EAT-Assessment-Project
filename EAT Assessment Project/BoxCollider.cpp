@@ -10,6 +10,9 @@ BoxCollider::BoxCollider(std::function<void(Collider*)> Response, float &x, floa
 	this->width = &width;
 	this->height = &height;
 
+	// INFO: Specify the Collider Type to be Rect
+	SetColliderType(ColliderType::Rect);
+
 	// INFO: Adds the Collider to the Collision Manager
 	CollisionManager::Instance()->AddColliderToVector(this);
 }
