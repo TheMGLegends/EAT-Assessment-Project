@@ -24,18 +24,6 @@ public:
 	Rectangle(Parameters* params, int width, int height);
 
 	/// <summary>
-	/// Inherited from the ICollision interface used for responding to collisions
-	/// </summary>
-	/// <param name="other">: The other collider involved in the collision</param>
-	void OnCollisionEnter(Collider* other) override;
-
-	/// <summary>
-	/// Updates the various values of the game object e.g. (rb values, position)
-	/// </summary>
-	/// <param name="dt">: Delta Time</param>
-	void Update(float dt) override;
-
-	/// <summary>
 	/// Draws the rectangle shape using the asset managers' drawing functionality
 	/// </summary>
 	void Draw() override;

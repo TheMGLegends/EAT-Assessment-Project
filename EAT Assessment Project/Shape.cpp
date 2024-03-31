@@ -27,3 +27,36 @@ Shape::Shape(Parameters* params)
 	}
 }
 
+void Shape::OnCollisionEnter(Collider* other)
+{
+	// INFO: Doesn't React to Collision if the object is static
+	if (isStatic)
+		return;
+
+	// INFO: Change Direction on Collision
+	if (other->GetCentreY() < position.Y && moveDirection.Y < 0)
+	{
+		moveDirection.Y = 1;
+	}
+	else if (other->GetCentreY() > position.Y && moveDirection.Y > 0)
+	{
+		moveDirection.Y = -1;
+	}
+	else if (other->GetCentreX() < position.X && moveDirection.X < 0)
+	{
+		moveDirection.X = 1;
+	}
+	else if (other->GetCentreX() > position.X && moveDirection.X > 0)
+	{
+		moveDirection.X = -1;
+	}
+
+	// INFO: Change Color of Shape on Collision
+	color = Color::RandomColor();
+}
+
+void Shape::Update(float dt)
+{
+	position.Translate(moveDirection * moveSpeed * dt);
+}
+

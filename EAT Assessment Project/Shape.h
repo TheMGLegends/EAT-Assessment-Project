@@ -62,13 +62,13 @@ public:
 	/// Inherited from the ICollision interface used for responding to collisions
 	/// </summary>
 	/// <param name="other">: The other collider involved in the collision</param>
-	virtual void OnCollisionEnter(Collider* other) = 0;
+	void OnCollisionEnter(Collider* other) override;
 
 	/// <summary>
 	/// Updates the various values of the game object e.g. (rb values, position)
 	/// </summary>
 	/// <param name="dt">: Delta Time</param>
-	virtual void Update(float dt) = 0;
+	virtual void Update(float dt);
 
 	/// <summary>
 	/// Draws the shape from which this function is called from using the asset
