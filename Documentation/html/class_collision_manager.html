@@ -47,6 +47,9 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_collision_manager-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">CollisionManager Class Reference</div></div>
 </div><!--header-->
@@ -78,12 +81,38 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aa35a177131b165770cf038b0fc99b884" id="r_aa35a177131b165770cf038b0fc99b884"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_collision_manager.html">CollisionManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa35a177131b165770cf038b0fc99b884">Instance</a> ()</td></tr>
 <tr class="memdesc:aa35a177131b165770cf038b0fc99b884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows access to the singleton by returning it or creating one if one doesn't yet exist.  <br /></td></tr>
 <tr class="separator:aa35a177131b165770cf038b0fc99b884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a81f0b3f0cc0268c80f54714cd7ddb55f" id="r_a81f0b3f0cc0268c80f54714cd7ddb55f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81f0b3f0cc0268c80f54714cd7ddb55f">CollisionManager</a> ()</td></tr>
+<tr class="separator:a81f0b3f0cc0268c80f54714cd7ddb55f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdbb3c842f0ef1c7a028d3f080855766" id="r_acdbb3c842f0ef1c7a028d3f080855766"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdbb3c842f0ef1c7a028d3f080855766">~CollisionManager</a> ()</td></tr>
+<tr class="separator:acdbb3c842f0ef1c7a028d3f080855766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad533bad18981264b1295815fc096f902" id="r_ad533bad18981264b1295815fc096f902"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad533bad18981264b1295815fc096f902">CircleCircleCollision</a> (<a class="el" href="class_circle_collider.html">CircleCollider</a> *c1, <a class="el" href="class_circle_collider.html">CircleCollider</a> *c2)</td></tr>
+<tr class="memdesc:ad533bad18981264b1295815fc096f902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collision Detection Algorithm between two circle colliders.  <br /></td></tr>
+<tr class="separator:ad533bad18981264b1295815fc096f902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aad628539d5b1ee13d9b0e3a46ac1a7" id="r_a5aad628539d5b1ee13d9b0e3a46ac1a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5aad628539d5b1ee13d9b0e3a46ac1a7">RectRectCollision</a> (<a class="el" href="class_box_collider.html">BoxCollider</a> *b1, <a class="el" href="class_box_collider.html">BoxCollider</a> *b2)</td></tr>
+<tr class="memdesc:a5aad628539d5b1ee13d9b0e3a46ac1a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collision Detection Algorithm between two box colliders.  <br /></td></tr>
+<tr class="separator:a5aad628539d5b1ee13d9b0e3a46ac1a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5974f8dbf45c662596066dce1ae1d8a" id="r_ae5974f8dbf45c662596066dce1ae1d8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5974f8dbf45c662596066dce1ae1d8a">CircleRectCollision</a> (<a class="el" href="class_circle_collider.html">CircleCollider</a> *c, <a class="el" href="class_box_collider.html">BoxCollider</a> *b)</td></tr>
+<tr class="memdesc:ae5974f8dbf45c662596066dce1ae1d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collision Detection Algorithm between a circle and a box collider.  <br /></td></tr>
+<tr class="separator:ae5974f8dbf45c662596066dce1ae1d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a1f41c3480395f88560ade7cba6f40e4a" id="r_a1f41c3480395f88560ade7cba6f40e4a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_collider.html">Collider</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f41c3480395f88560ade7cba6f40e4a">colliders</a></td></tr>
+<tr class="separator:a1f41c3480395f88560ade7cba6f40e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a76ef17b7efa16dd35c0c761502a13dde" id="r_a76ef17b7efa16dd35c0c761502a13dde"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_collision_manager.html">CollisionManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76ef17b7efa16dd35c0c761502a13dde">instance</a> = nullptr</td></tr>
+<tr class="separator:a76ef17b7efa16dd35c0c761502a13dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines the class responsible for managing the collisions between all colliders. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1a3bf1bd4afe92cf349b44cbd19a1cb4" name="a1a3bf1bd4afe92cf349b44cbd19a1cb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a3bf1bd4afe92cf349b44cbd19a1cb4">&#9670;&#160;</a></span>CollisionManager()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a3bf1bd4afe92cf349b44cbd19a1cb4">&#9670;&#160;</a></span>CollisionManager() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -101,6 +130,56 @@ Static Public Member Functions</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81f0b3f0cc0268c80f54714cd7ddb55f" name="a81f0b3f0cc0268c80f54714cd7ddb55f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81f0b3f0cc0268c80f54714cd7ddb55f">&#9670;&#160;</a></span>CollisionManager() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CollisionManager::CollisionManager </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdbb3c842f0ef1c7a028d3f080855766" name="acdbb3c842f0ef1c7a028d3f080855766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdbb3c842f0ef1c7a028d3f080855766">&#9670;&#160;</a></span>~CollisionManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CollisionManager::~CollisionManager </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -149,6 +228,82 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Checks the collisions between all colliders stored in the Collision Manager. </p>
+
+</div>
+</div>
+<a id="ad533bad18981264b1295815fc096f902" name="ad533bad18981264b1295815fc096f902"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad533bad18981264b1295815fc096f902">&#9670;&#160;</a></span>CircleCircleCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionManager::CircleCircleCollision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_circle_collider.html">CircleCollider</a> *</td>          <td class="paramname"><span class="paramname"><em>c1</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_circle_collider.html">CircleCollider</a> *</td>          <td class="paramname"><span class="paramname"><em>c2</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Collision Detection Algorithm between two circle colliders. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c1</td><td>: The first circle collider </td></tr>
+    <tr><td class="paramname">c2</td><td>: The second circle collider </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae5974f8dbf45c662596066dce1ae1d8a" name="ae5974f8dbf45c662596066dce1ae1d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5974f8dbf45c662596066dce1ae1d8a">&#9670;&#160;</a></span>CircleRectCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionManager::CircleRectCollision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_circle_collider.html">CircleCollider</a> *</td>          <td class="paramname"><span class="paramname"><em>c</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_box_collider.html">BoxCollider</a> *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Collision Detection Algorithm between a circle and a box collider. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>: The circle collider </td></tr>
+    <tr><td class="paramname">b</td><td>: The box collider </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -218,6 +373,89 @@ Static Public Member Functions</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5aad628539d5b1ee13d9b0e3a46ac1a7" name="a5aad628539d5b1ee13d9b0e3a46ac1a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aad628539d5b1ee13d9b0e3a46ac1a7">&#9670;&#160;</a></span>RectRectCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionManager::RectRectCollision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_box_collider.html">BoxCollider</a> *</td>          <td class="paramname"><span class="paramname"><em>b1</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_box_collider.html">BoxCollider</a> *</td>          <td class="paramname"><span class="paramname"><em>b2</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Collision Detection Algorithm between two box colliders. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b1</td><td>: The first box collider </td></tr>
+    <tr><td class="paramname">b2</td><td>: The second box collider </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1f41c3480395f88560ade7cba6f40e4a" name="a1f41c3480395f88560ade7cba6f40e4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f41c3480395f88560ade7cba6f40e4a">&#9670;&#160;</a></span>colliders</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_collider.html">Collider</a>*&gt; CollisionManager::colliders</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76ef17b7efa16dd35c0c761502a13dde" name="a76ef17b7efa16dd35c0c761502a13dde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76ef17b7efa16dd35c0c761502a13dde">&#9670;&#160;</a></span>instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_collision_manager.html">CollisionManager</a> * CollisionManager::instance = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

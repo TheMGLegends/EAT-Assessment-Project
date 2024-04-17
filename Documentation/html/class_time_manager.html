@@ -46,6 +46,8 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_time_manager-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">TimeManager Class Reference</div></div>
 </div><!--header-->
@@ -67,10 +69,50 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a119e253abf5c23921c9b47bf7ce8066b" id="r_a119e253abf5c23921c9b47bf7ce8066b"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a119e253abf5c23921c9b47bf7ce8066b">DeltaTime</a> ()</td></tr>
 <tr class="memdesc:a119e253abf5c23921c9b47bf7ce8066b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The getter for delta time.  <br /></td></tr>
 <tr class="separator:a119e253abf5c23921c9b47bf7ce8066b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab1c3cbb48ad68d928bb8b9a4ef210ed6" id="r_ab1c3cbb48ad68d928bb8b9a4ef210ed6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1c3cbb48ad68d928bb8b9a4ef210ed6">TimeManager</a> ()</td></tr>
+<tr class="separator:ab1c3cbb48ad68d928bb8b9a4ef210ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:aec1c1974ec4b187f1bf4ad0b71a47559" id="r_aec1c1974ec4b187f1bf4ad0b71a47559"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec1c1974ec4b187f1bf4ad0b71a47559">previousTime</a> = 0</td></tr>
+<tr class="separator:aec1c1974ec4b187f1bf4ad0b71a47559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afefd14377fac7cc8512ee211b4a94415" id="r_afefd14377fac7cc8512ee211b4a94415"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afefd14377fac7cc8512ee211b4a94415">currentTime</a> = 0</td></tr>
+<tr class="separator:afefd14377fac7cc8512ee211b4a94415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0cbdd823b24671560c886ad06cf6b26" id="r_ae0cbdd823b24671560c886ad06cf6b26"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0cbdd823b24671560c886ad06cf6b26">deltaTime</a> = 0</td></tr>
+<tr class="separator:ae0cbdd823b24671560c886ad06cf6b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines the class responsible for managing the time. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab1c3cbb48ad68d928bb8b9a4ef210ed6" name="ab1c3cbb48ad68d928bb8b9a4ef210ed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1c3cbb48ad68d928bb8b9a4ef210ed6">&#9670;&#160;</a></span>TimeManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TimeManager::TimeManager </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a119e253abf5c23921c9b47bf7ce8066b" name="a119e253abf5c23921c9b47bf7ce8066b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a119e253abf5c23921c9b47bf7ce8066b">&#9670;&#160;</a></span>DeltaTime()</h2>
 
@@ -150,6 +192,73 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Calculates the delta time in seconds based on the previous and current time values. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="afefd14377fac7cc8512ee211b4a94415" name="afefd14377fac7cc8512ee211b4a94415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afefd14377fac7cc8512ee211b4a94415">&#9670;&#160;</a></span>currentTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TimeManager::currentTime = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0cbdd823b24671560c886ad06cf6b26" name="ae0cbdd823b24671560c886ad06cf6b26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0cbdd823b24671560c886ad06cf6b26">&#9670;&#160;</a></span>deltaTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TimeManager::deltaTime = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec1c1974ec4b187f1bf4ad0b71a47559" name="aec1c1974ec4b187f1bf4ad0b71a47559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec1c1974ec4b187f1bf4ad0b71a47559">&#9670;&#160;</a></span>previousTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TimeManager::previousTime = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -46,6 +46,7 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_box_collider-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">BoxCollider Class Reference</div></div>
 </div><!--header-->
@@ -67,7 +68,7 @@ Inheritance diagram for BoxCollider:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a72f802d0eb69c269f80fbebbfb255316" id="r_a72f802d0eb69c269f80fbebbfb255316"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72f802d0eb69c269f80fbebbfb255316">BoxCollider</a> (std::function&lt; void(<a class="el" href="class_collider.html">Collider</a> *)&gt; Response, float &amp;x, float &amp;y, int &amp;width, int &amp;height)</td></tr>
+<tr class="memitem:a72f802d0eb69c269f80fbebbfb255316" id="r_a72f802d0eb69c269f80fbebbfb255316"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72f802d0eb69c269f80fbebbfb255316">BoxCollider</a> (std::function&lt; void(<a class="el" href="class_collider.html">Collider</a> *)&gt; Response, float &amp;x, float &amp;y, int &amp;<a class="el" href="#a7727c8bde860e8922aab59081df386aa">width</a>, int &amp;<a class="el" href="#ab7593baabf2aa9efb86a3e05ed3eeb63">height</a>)</td></tr>
 <tr class="memdesc:a72f802d0eb69c269f80fbebbfb255316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of Box <a class="el" href="class_collider.html" title="Defines the base class for all colliders.">Collider</a>.  <br /></td></tr>
 <tr class="separator:a72f802d0eb69c269f80fbebbfb255316"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b031974b71d4c168b8ff115f7b3897b" id="r_a8b031974b71d4c168b8ff115f7b3897b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b031974b71d4c168b8ff115f7b3897b">GetWidth</a> ()</td></tr>
@@ -100,6 +101,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a04a81a21760cc227bbf977720a2d2c03 inherit pub_methods_class_collider" id="r_a04a81a21760cc227bbf977720a2d2c03"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collider.html#a04a81a21760cc227bbf977720a2d2c03">GetY</a> ()</td></tr>
 <tr class="memdesc:a04a81a21760cc227bbf977720a2d2c03 inherit pub_methods_class_collider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the colliders' y position.  <br /></td></tr>
 <tr class="separator:a04a81a21760cc227bbf977720a2d2c03 inherit pub_methods_class_collider"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7727c8bde860e8922aab59081df386aa" id="r_a7727c8bde860e8922aab59081df386aa"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7727c8bde860e8922aab59081df386aa">width</a></td></tr>
+<tr class="separator:a7727c8bde860e8922aab59081df386aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7593baabf2aa9efb86a3e05ed3eeb63" id="r_ab7593baabf2aa9efb86a3e05ed3eeb63"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7593baabf2aa9efb86a3e05ed3eeb63">height</a></td></tr>
+<tr class="separator:ab7593baabf2aa9efb86a3e05ed3eeb63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -280,6 +288,51 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Getter for the box colliders' width. </p>
 <dl class="section return"><dt>Returns</dt><dd>The width of the box collider </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab7593baabf2aa9efb86a3e05ed3eeb63" name="ab7593baabf2aa9efb86a3e05ed3eeb63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7593baabf2aa9efb86a3e05ed3eeb63">&#9670;&#160;</a></span>height</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* BoxCollider::height</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7727c8bde860e8922aab59081df386aa" name="a7727c8bde860e8922aab59081df386aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7727c8bde860e8922aab59081df386aa">&#9670;&#160;</a></span>width</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* BoxCollider::width</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

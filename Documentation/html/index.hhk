@@ -7,6 +7,11 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_color.html#a13db704e48f5e851817f9e9fd67ec76d"><param name="Name" value="A"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#a9469bbec687edf5926753557fcb1b230"><param name="Name" value="AddColliderToVector(Collider *c)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_asset_manager.html"><param name="Name" value="AssetManager"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_asset_manager.html#a750ae7b39b633fbb6594443aa3ca704b"><param name="Name" value="AssetManager()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_asset_manager.html"><param name="Name" value="AssetManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_asset_manager.html#a750ae7b39b633fbb6594443aa3ca704b"><param name="Name" value="AssetManager()"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_asset_manager.html"><param name="Name" value="AssetManager"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_asset_manager.html#ab571dcf163bfb0580681f2c40e502f27"><param name="Name" value="DrawBoxCollider(int x, int y, int width, int height, Color color=Color::RED)"></OBJECT>
@@ -46,6 +51,14 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_box_collider.html#a8b031974b71d4c168b8ff115f7b3897b"><param name="Name" value="GetWidth()"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_box_collider.html"><param name="Name" value="BoxCollider"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_box_collider.html#ab7593baabf2aa9efb86a3e05ed3eeb63"><param name="Name" value="height"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_box_collider.html"><param name="Name" value="BoxCollider"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_box_collider.html#a7727c8bde860e8922aab59081df386aa"><param name="Name" value="width"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#aa1c1b2c09960c0bad6b9c980324f9f92"><param name="Name" value="CheckCollisions()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_circle.html"><param name="Name" value="Circle"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_circle.html#a8ce905b0df17861eeea3e05cb80c406c"><param name="Name" value="Circle(Parameters *params, int radius)"></OBJECT>
@@ -73,6 +86,15 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="_shape_8h.html#a5a4538eeab397888d88a4eefcc5a1345a30954d90085f6eaaf5817917fc5fecb3"><param name="Name" value="Shape.h"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_circle.html"><param name="Name" value="Circle"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_circle.html#ae0a49aa5f63bbb0c9d122db760bf0eae"><param name="Name" value="circleCollider"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_circle.html"><param name="Name" value="Circle"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_circle.html#a897ad7e556f1e90142093c69079d8b05"><param name="Name" value="radius"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#ad533bad18981264b1295815fc096f902"><param name="Name" value="CircleCircleCollision(CircleCollider *c1, CircleCollider *c2)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_circle_collider.html"><param name="Name" value="CircleCollider"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_circle_collider.html#a28afa67a8620d55634ea9a2f5cc435cb"><param name="Name" value="CircleCollider(std::function&lt; void(Collider *)&gt; Response, float &amp;x, float &amp;y, int &amp;radius)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_circle_collider.html"><param name="Name" value="CircleCollider"></OBJECT>
@@ -91,6 +113,11 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_circle_collider.html#a9e13010bd162a2776c3129508dab2194"><param name="Name" value="GetRadius()"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_circle_collider.html"><param name="Name" value="CircleCollider"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_circle_collider.html#a63a9ff33761c4e82acb7c3f9a6614f76"><param name="Name" value="radius"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#ae5974f8dbf45c662596066dce1ae1d8a"><param name="Name" value="CircleRectCollision(CircleCollider *c, BoxCollider *b)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#af8c10287bfab30f3320063c89009f8f1"><param name="Name" value="Clean()"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#af8c10287bfab30f3320063c89009f8f1"><param name="Name" value="CollisionManager"></OBJECT>
@@ -171,6 +198,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_collider_8h.html#a7f138e75fc3cc79e825c39e040690395"><param name="Name" value="ColliderType"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html"><param name="Name" value="CollisionManager"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#a81f0b3f0cc0268c80f54714cd7ddb55f"><param name="Name" value="CollisionManager()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#a1a3bf1bd4afe92cf349b44cbd19a1cb4"><param name="Name" value="CollisionManager(const CollisionManager &amp;)=delete"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html"><param name="Name" value="CollisionManager"></OBJECT>
   <UL>
@@ -182,7 +210,19 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html"><param name="Name" value="CollisionManager"></OBJECT>
   <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#ad533bad18981264b1295815fc096f902"><param name="Name" value="CircleCircleCollision(CircleCollider *c1, CircleCollider *c2)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html"><param name="Name" value="CollisionManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#ae5974f8dbf45c662596066dce1ae1d8a"><param name="Name" value="CircleRectCollision(CircleCollider *c, BoxCollider *b)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html"><param name="Name" value="CollisionManager"></OBJECT>
+  <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#af8c10287bfab30f3320063c89009f8f1"><param name="Name" value="Clean()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html"><param name="Name" value="CollisionManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#a81f0b3f0cc0268c80f54714cd7ddb55f"><param name="Name" value="CollisionManager()"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html"><param name="Name" value="CollisionManager"></OBJECT>
   <UL>
@@ -194,7 +234,23 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html"><param name="Name" value="CollisionManager"></OBJECT>
   <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#a5aad628539d5b1ee13d9b0e3a46ac1a7"><param name="Name" value="RectRectCollision(BoxCollider *b1, BoxCollider *b2)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html"><param name="Name" value="CollisionManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#a1f41c3480395f88560ade7cba6f40e4a"><param name="Name" value="colliders"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html"><param name="Name" value="CollisionManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#a76ef17b7efa16dd35c0c761502a13dde"><param name="Name" value="instance"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html"><param name="Name" value="CollisionManager"></OBJECT>
+  <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#a2ae59a9b706acff0dbb2a07f08294fe5"><param name="Name" value="operator=(const CollisionManager &amp;)=delete"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html"><param name="Name" value="CollisionManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#acdbb3c842f0ef1c7a028d3f080855766"><param name="Name" value="~CollisionManager()"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collider.html#ab2eef13032e975571b013f13c7dbefcb"><param name="Name" value="CollisionResponse)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_color.html"><param name="Name" value="Color"></OBJECT>
@@ -250,6 +306,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_memory_leak_detector_8h.html#a95d1b97f67f97c7e0f27519372822f43"><param name="Name" value="DBG_NEW"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_point_8h.html#a8cffb9d8ae33e3b921de36163a262c04"><param name="Name" value="DECIMAL_PRECISION"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_vector2.html#a170d5aa69295829b7a713ee6154d7fd4"><param name="Name" value="DIRECTIONS[DIRECTIONS_COUNT]"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_vector2_8h.html#a06d176931388e80cb6aa26e2bbba2647"><param name="Name" value="DIRECTIONS_COUNT"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_vector2.html#a080cfc88021b52fff01150f6d011c5e3"><param name="Name" value="DOWN"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#ac111c0b1423a5ffc4bd97b1dd8f16637"><param name="Name" value="DefaultScreenColor()"></OBJECT>
@@ -346,6 +403,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#af7b239fa9b7526a47963a5aa3bbc521c"><param name="Name" value="Initialize(const char *WINDOW_TITLE, bool inDebugMode=false, int screenWidth=SCREEN_WIDTH, int screenHeight=SCREEN_HEIGHT)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_input_manager.html"><param name="Name" value="InputManager"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_input_manager.html#a8be46886da639b26d67181c29dab6d6c"><param name="Name" value="InputManager()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_input_manager.html"><param name="Name" value="InputManager"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_input_manager.html#a70e06efcd58c00057048768fbcffa68f"><param name="Name" value="Clean()"></OBJECT>
@@ -360,7 +418,23 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_input_manager.html"><param name="Name" value="InputManager"></OBJECT>
   <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_input_manager.html#a8be46886da639b26d67181c29dab6d6c"><param name="Name" value="InputManager()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_input_manager.html"><param name="Name" value="InputManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_input_manager.html#ae405eb5930eec36c5d606e52cdf5d761"><param name="Name" value="KEYBOARD_STATE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_input_manager.html"><param name="Name" value="InputManager"></OBJECT>
+  <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_input_manager.html#ab92169c66eb328fe096c6255fdfb2455"><param name="Name" value="PollEvents()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_input_manager.html"><param name="Name" value="InputManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_input_manager.html#adf630bcacffa9fd15925a5484829b92e"><param name="Name" value="keyLength"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_input_manager.html"><param name="Name" value="InputManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_input_manager.html#a8aa4cd8cc6d4a0ef20ca96f781c79d52"><param name="Name" value="previousKeyboardState"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#aa35a177131b165770cf038b0fc99b884"><param name="Name" value="Instance()"></OBJECT>
   <UL>
@@ -372,6 +446,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#aed7f2173bef36f9d09b379b2a257105f"><param name="Name" value="IsInDebugMode() const"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#a3e338802810b90a3a98025dbb8782392"><param name="Name" value="IsRunning() const"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_input_manager.html#ae405eb5930eec36c5d606e52cdf5d761"><param name="Name" value="KEYBOARD_STATE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_vector2.html#ab91b776ba585731af241d1c321dd7244"><param name="Name" value="LEFT"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_time_manager_8h.html#a75b3e6626476298cde9cf19b4baa7571"><param name="Name" value="MILLISECONDS_IN_SECOND"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_vector2.html#afd0eb6f05e1a15b3d8656d5e0e12798a"><param name="Name" value="Magnitude()"></OBJECT>
@@ -441,6 +516,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_input_manager.html#ab92169c66eb328fe096c6255fdfb2455"><param name="Name" value="PollEvents()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html"><param name="Name" value="Program"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#aaefaa0df08f3484476fc4d61e97acbdc"><param name="Name" value="Program()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#a7ce8292de7766a73713c19a47c0d498e"><param name="Name" value="Program(const Program &amp;)=delete"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_program_8cpp.html"><param name="Name" value="Program.cpp"></OBJECT>
   <UL>
@@ -532,6 +608,10 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html"><param name="Name" value="Program"></OBJECT>
   <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#aaefaa0df08f3484476fc4d61e97acbdc"><param name="Name" value="Program()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html"><param name="Name" value="Program"></OBJECT>
+  <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#a7ce8292de7766a73713c19a47c0d498e"><param name="Name" value="Program(const Program &amp;)=delete"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html"><param name="Name" value="Program"></OBJECT>
@@ -548,7 +628,35 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html"><param name="Name" value="Program"></OBJECT>
   <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#adba377208c47a7cf41c26fb2198145f4"><param name="Name" value="inDebugMode"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html"><param name="Name" value="Program"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#a1126481cff556a706ad03bf6a854626e"><param name="Name" value="instance"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html"><param name="Name" value="Program"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#a71dc4ccfa65beb8173109a07f3990f26"><param name="Name" value="isRunning"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html"><param name="Name" value="Program"></OBJECT>
+  <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#a0f036f0467fe639cb84b56ef921f55ba"><param name="Name" value="operator=(const Program &amp;)=delete"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html"><param name="Name" value="Program"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#a4f889885c87136c7f791b1811c762d35"><param name="Name" value="renderer"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html"><param name="Name" value="Program"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#a14db028cdf8f0a179ba4da5ba255d0b2"><param name="Name" value="screenColor"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html"><param name="Name" value="Program"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#a987f04d2a7b27178c3f9ab4f402b87fb"><param name="Name" value="window"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html"><param name="Name" value="Program"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#a986aef1c50e1d338a3315a47ba6df549"><param name="Name" value="~Program()"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_color.html#aed083afcc2c689243df7fbc3da5203d3"><param name="Name" value="R"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_color.html#aae63fc23cf0d0772e8b07c776f73b019"><param name="Name" value="RED"></OBJECT>
@@ -556,6 +664,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_color.html#aebee358551905595b039dcbc11e955bf"><param name="Name" value="RandomColor()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_vector2.html#a093efcb0635a7063cac999c1ee24c0a7"><param name="Name" value="RandomDirection()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_collider_8h.html#a7f138e75fc3cc79e825c39e040690395a69ad58d91eec91b5c152d21ca117dc81"><param name="Name" value="Rect"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#a5aad628539d5b1ee13d9b0e3a46ac1a7"><param name="Name" value="RectRectCollision(BoxCollider *b1, BoxCollider *b2)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_rectangle.html"><param name="Name" value="Rectangle"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_rectangle.html#a1cbd659e82a645b853400133e7920cec"><param name="Name" value="Rectangle(Parameters *params, int width, int height)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_rectangle.html"><param name="Name" value="Rectangle"></OBJECT>
@@ -581,6 +690,18 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_shape_8h.html#a5a4538eeab397888d88a4eefcc5a1345ace9291906a4c3b042650b70d7f3b152e"><param name="Name" value="Rectangle"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="_shape_8h.html#a5a4538eeab397888d88a4eefcc5a1345ace9291906a4c3b042650b70d7f3b152e"><param name="Name" value="Shape.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_rectangle.html"><param name="Name" value="Rectangle"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_rectangle.html#ae1ef8d4ac12c22bd5664e460db9e7771"><param name="Name" value="boxCollider"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_rectangle.html"><param name="Name" value="Rectangle"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_rectangle.html#ac564db1ed0dd61dd82a5276399bc72ad"><param name="Name" value="height"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_rectangle.html"><param name="Name" value="Rectangle"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_rectangle.html#a019ed802523594472e0032953b6062d4"><param name="Name" value="width"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_program_8h.html#a0f8325b7b3e6c4e66af0b6923862ad90"><param name="Name" value="SCREEN_HEIGHT"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_program_8h.html#a3b9177c384d28f2095b8111429c52aaf"><param name="Name" value="SCREEN_WIDTH"></OBJECT>
@@ -667,6 +788,10 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_shape.html#a4080fc0b8680dc94bbf5d5c8c3ebc7d5"><param name="Name" value="position"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_shape.html"><param name="Name" value="Shape"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_shape.html#a18af04fdf7a9e121518f3c7278693c60"><param name="Name" value="shapeType"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_shape_8h.html#a5a4538eeab397888d88a4eefcc5a1345"><param name="Name" value="ShapeType"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_square.html"><param name="Name" value="Square"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_square.html#afc31cfc64dd2ded6f0a3b03b73b33e40"><param name="Name" value="Square(Parameters *params, int size)"></OBJECT>
@@ -690,10 +815,19 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_square.html#afc31cfc64dd2ded6f0a3b03b73b33e40"><param name="Name" value="Square(Parameters *params, int size)"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_square.html"><param name="Name" value="Square"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_square.html#a6d1fb65339d90269f8052db9d3d0461a"><param name="Name" value="boxCollider"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_square.html"><param name="Name" value="Square"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_square.html#aae94641867db7a6b4d8558d0462f5f38"><param name="Name" value="size"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_vector2.html#a7ee008f1dbbaa9cec2014cbd07dd22ab"><param name="Name" value="TOP_LEFT"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_vector2.html#a57bd372fd5fd1a32acc2c4e5dcf9323e"><param name="Name" value="TOP_RIGHT"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_time_manager.html#ae25db5d446387e86ceb7367ccaf44b02"><param name="Name" value="Tick()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_time_manager.html"><param name="Name" value="TimeManager"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_time_manager.html#ab1c3cbb48ad68d928bb8b9a4ef210ed6"><param name="Name" value="TimeManager()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_time_manager_8h.html#a75b3e6626476298cde9cf19b4baa7571"><param name="Name" value="TimeManager.h"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_time_manager.html"><param name="Name" value="TimeManager"></OBJECT>
   <UL>
@@ -706,6 +840,22 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_time_manager.html"><param name="Name" value="TimeManager"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_time_manager.html#ae25db5d446387e86ceb7367ccaf44b02"><param name="Name" value="Tick()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_time_manager.html"><param name="Name" value="TimeManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_time_manager.html#ab1c3cbb48ad68d928bb8b9a4ef210ed6"><param name="Name" value="TimeManager()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_time_manager.html"><param name="Name" value="TimeManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_time_manager.html#afefd14377fac7cc8512ee211b4a94415"><param name="Name" value="currentTime"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_time_manager.html"><param name="Name" value="TimeManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_time_manager.html#ae0cbdd823b24671560c886ad06cf6b26"><param name="Name" value="deltaTime"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_time_manager.html"><param name="Name" value="TimeManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_time_manager.html#aec1c1974ec4b187f1bf4ad0b71a47559"><param name="Name" value="previousTime"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_transform.html"><param name="Name" value="Transform"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_transform.html#ae45ac86e48a4d09f1cc741c6075c7cba"><param name="Name" value="Transform(float x=0, float y=0)"></OBJECT>
@@ -751,6 +901,10 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_vector2.html"><param name="Name" value="Vector2"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_vector2.html#a33aa839f8510b2d9e27a330f0f35bd99"><param name="Name" value="BOTTOM_RIGHT"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_vector2.html"><param name="Name" value="Vector2"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_vector2.html#a170d5aa69295829b7a713ee6154d7fd4"><param name="Name" value="DIRECTIONS[DIRECTIONS_COUNT]"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_vector2.html"><param name="Name" value="Vector2"></OBJECT>
   <UL>
@@ -900,9 +1054,19 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_vector2.html#aa229b967fdb213d19a76e8ea588e53a0"><param name="Name" value="ZERO"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_memory_leak_detector_8h.html#afc30e481f763a8d68a861dba91be7316"><param name="Name" value="_CRTDBG_MAP_ALLOC"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_program_8cpp.html#ae103bf7801b875894a5b4333c45fc5de"><param name="Name" value="bottomBorder"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_rectangle.html#ae1ef8d4ac12c22bd5664e460db9e7771"><param name="Name" value="boxCollider"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_rectangle.html#ae1ef8d4ac12c22bd5664e460db9e7771"><param name="Name" value="Rectangle"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_square.html#a6d1fb65339d90269f8052db9d3d0461a"><param name="Name" value="boxCollider"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_square.html#a6d1fb65339d90269f8052db9d3d0461a"><param name="Name" value="Square"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_program_8cpp.html#a184be676ffa7d44068764a0ec9275afd"><param name="Name" value="circle2"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_program_8cpp.html#a434ba65fc7743a3e0c21731540eaef71"><param name="Name" value="circle"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_circle.html#ae0a49aa5f63bbb0c9d122db760bf0eae"><param name="Name" value="circleCollider"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collider.html#a9a7dcf95e0a0cf31f08ceaba945c75e5"><param name="Name" value="colliderType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#a1f41c3480395f88560ade7cba6f40e4a"><param name="Name" value="colliders"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_parameters.html#a79f18ad215120de28c630b99e1f49d7f"><param name="Name" value="color"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_parameters.html#a79f18ad215120de28c630b99e1f49d7f"><param name="Name" value="Parameters"></OBJECT>
@@ -911,6 +1075,26 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_shape.html#ac56e2bf5eb24cf37b6e08c671501566b"><param name="Name" value="Shape"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_time_manager.html#afefd14377fac7cc8512ee211b4a94415"><param name="Name" value="currentTime"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_time_manager.html#ae0cbdd823b24671560c886ad06cf6b26"><param name="Name" value="deltaTime"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_box_collider.html#ab7593baabf2aa9efb86a3e05ed3eeb63"><param name="Name" value="height"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_box_collider.html#ab7593baabf2aa9efb86a3e05ed3eeb63"><param name="Name" value="BoxCollider"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_rectangle.html#ac564db1ed0dd61dd82a5276399bc72ad"><param name="Name" value="height"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_rectangle.html#ac564db1ed0dd61dd82a5276399bc72ad"><param name="Name" value="Rectangle"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#adba377208c47a7cf41c26fb2198145f4"><param name="Name" value="inDebugMode"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#a76ef17b7efa16dd35c0c761502a13dde"><param name="Name" value="instance"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#a76ef17b7efa16dd35c0c761502a13dde"><param name="Name" value="CollisionManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#a1126481cff556a706ad03bf6a854626e"><param name="Name" value="instance"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#a1126481cff556a706ad03bf6a854626e"><param name="Name" value="Program"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#a71dc4ccfa65beb8173109a07f3990f26"><param name="Name" value="isRunning"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_parameters.html#abf8148a9f950a171d6635fc4be648bbc"><param name="Name" value="isStatic"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_parameters.html#abf8148a9f950a171d6635fc4be648bbc"><param name="Name" value="Parameters"></OBJECT>
@@ -919,6 +1103,7 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_shape.html#ac1b09af928ba7ab565fcf62df0a31d70"><param name="Name" value="Shape"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_input_manager.html#adf630bcacffa9fd15925a5484829b92e"><param name="Name" value="keyLength"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_program_8cpp.html#a78d0623abb45e61bf1d88486d0d16406"><param name="Name" value="leftBorder"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97"><param name="Name" value="main(int argc, char *argv[])"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97"><param name="Name" value="main.cpp"></OBJECT>
@@ -952,15 +1137,40 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_vector2.html#a3914e04b03d8727584d8a8fc5c04ec8a"><param name="Name" value="operator=(const Vector2 &amp;p)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_vector2.html#a8b6814259ad04d29bf35d560082d4e48"><param name="Name" value="operator==(const Vector2 &amp;p) const"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_shape.html#a4080fc0b8680dc94bbf5d5c8c3ebc7d5"><param name="Name" value="position"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_input_manager.html#a8aa4cd8cc6d4a0ef20ca96f781c79d52"><param name="Name" value="previousKeyboardState"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_time_manager.html#aec1c1974ec4b187f1bf4ad0b71a47559"><param name="Name" value="previousTime"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_circle.html#a897ad7e556f1e90142093c69079d8b05"><param name="Name" value="radius"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_circle.html#a897ad7e556f1e90142093c69079d8b05"><param name="Name" value="Circle"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_circle_collider.html#a63a9ff33761c4e82acb7c3f9a6614f76"><param name="Name" value="radius"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_circle_collider.html#a63a9ff33761c4e82acb7c3f9a6614f76"><param name="Name" value="CircleCollider"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_program_8cpp.html#af24350eeee8340be58b2d4a7627e80d0"><param name="Name" value="rectangle2"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_program_8cpp.html#a44a28df2114c541998bf6247f3eb2005"><param name="Name" value="rectangle"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#a4f889885c87136c7f791b1811c762d35"><param name="Name" value="renderer"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_program_8cpp.html#a10893fbe4fe969a7383362f1d9861100"><param name="Name" value="rightBorder"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#a14db028cdf8f0a179ba4da5ba255d0b2"><param name="Name" value="screenColor"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_shape.html#a18af04fdf7a9e121518f3c7278693c60"><param name="Name" value="shapeType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_square.html#aae94641867db7a6b4d8558d0462f5f38"><param name="Name" value="size"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_program_8cpp.html#aa7f9f384b4687e3ac7380fd9e36f6f02"><param name="Name" value="square2"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_program_8cpp.html#af7676916109582ac533bb7fadfd49cd8"><param name="Name" value="square"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="_program_8cpp.html#adfbc81dca2519b41fb665a54a82991e8"><param name="Name" value="topBorder"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_box_collider.html#a7727c8bde860e8922aab59081df386aa"><param name="Name" value="width"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_box_collider.html#a7727c8bde860e8922aab59081df386aa"><param name="Name" value="BoxCollider"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_rectangle.html#a019ed802523594472e0032953b6062d4"><param name="Name" value="width"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_rectangle.html#a019ed802523594472e0032953b6062d4"><param name="Name" value="Rectangle"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#a987f04d2a7b27178c3f9ab4f402b87fb"><param name="Name" value="window"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_parameters.html#a836151a176f94d23d6ea01fa43882362"><param name="Name" value="x"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_parameters.html#a3976edde0792b2d1bc42d11ff8a9c1f0"><param name="Name" value="y"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collider.html#abf1ce43b287c870fd72918b023217a33"><param name="Name" value="~Collider()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_collision_manager.html#acdbb3c842f0ef1c7a028d3f080855766"><param name="Name" value="~CollisionManager()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_program.html#a986aef1c50e1d338a3315a47ba6df549"><param name="Name" value="~Program()"></OBJECT>
 </UL>
 </BODY>
 </HTML>
