@@ -178,7 +178,7 @@ bool Program::Initialize(const char* WINDOW_TITLE, bool inDebugMode, int screenW
 	square2 = new Square(new Parameters(SCREEN_WIDTH * 0.8f, SCREEN_HEIGHT * 0.9f, false, Color::GREEN, 100), 65);
 
 	rectangle = new Rectangle(new Parameters(SCREEN_WIDTH * 0.4f, SCREEN_HEIGHT * 0.1f, false, Color::GREEN, 100), 50, 20);
-	rectangle2 = new Rectangle(new Parameters(SCREEN_WIDTH * 0.6f, SCREEN_HEIGHT * 0.9f, false, Color::GREEN, 100), 10, 75);
+	rectangle2 = new Rectangle(new Parameters(SCREEN_WIDTH * 0.6f, SCREEN_HEIGHT * 0.9f, false, Color::GREEN, 100), 20, 75);
 
 	circle = new Circle(new Parameters(SCREEN_WIDTH * 0.75f, SCREEN_HEIGHT / 2, false, Color::GREEN, 100), 50);
 	circle2 = new Circle(new Parameters(SCREEN_WIDTH * 0.25f, SCREEN_HEIGHT / 2, false, Color::GREEN, 100), 25);
